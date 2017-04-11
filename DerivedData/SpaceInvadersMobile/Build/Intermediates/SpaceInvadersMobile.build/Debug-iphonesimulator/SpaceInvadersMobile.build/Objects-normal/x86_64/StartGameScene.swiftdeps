@@ -1,0 +1,319 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "StartGameScene"
+provides-nominal:
+- "C19SpaceInvadersMobile14StartGameScene"
+provides-member:
+- ["C19SpaceInvadersMobile14StartGameScene", ""]
+provides-dynamic-lookup:
+- "didMove"
+depends-top-level:
+- !private "/"
+- "StartGameScene"
+- !private "CGPoint"
+- "AssignmentPrecedence"
+- "SKView"
+- !private "StringLiteralType"
+- "SKScene"
+- !private "SKSpriteNode"
+depends-member:
+- !private ["Ps9AnyObject", "CGPoint"]
+- !private ["Ps9AnyObject", "SKSpriteNode"]
+- !private ["Ps9AnyObject", "addChild"]
+- ["Ps9AnyObject", "didMove"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "position"]
+- !private ["Ps9AnyObject", "size"]
+- ["Ps9AnyObject", ""]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["VSC7CGPoint", "deinit"]
+- !private ["VSC7CGPoint", "init"]
+- ["VSC6CGSize", "deinit"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "width"]
+- !private ["Ps7CVarArg", "CGPoint"]
+- !private ["Ps7CVarArg", "SKSpriteNode"]
+- !private ["Ps7CVarArg", "addChild"]
+- ["Ps7CVarArg", "didMove"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "name"]
+- !private ["Ps7CVarArg", "position"]
+- !private ["Ps7CVarArg", "size"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
+- !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
+- !private ["Ps28CustomDebugStringConvertible", "addChild"]
+- ["Ps28CustomDebugStringConvertible", "didMove"]
+- !private ["Ps28CustomDebugStringConvertible", "height"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "position"]
+- !private ["Ps28CustomDebugStringConvertible", "size"]
+- !private ["Ps28CustomDebugStringConvertible", "width"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "height"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "name"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "position"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "width"]
+- !private ["Ps17CustomReflectable", "height"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "width"]
+- !private ["Ps23CustomStringConvertible", "CGPoint"]
+- !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
+- !private ["Ps23CustomStringConvertible", "addChild"]
+- ["Ps23CustomStringConvertible", "didMove"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "position"]
+- !private ["Ps23CustomStringConvertible", "size"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "CGPoint"]
+- !private ["Ps9Equatable", "SKSpriteNode"]
+- !private ["Ps9Equatable", "addChild"]
+- ["Ps9Equatable", "didMove"]
+- !private ["Ps9Equatable", "height"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "position"]
+- !private ["Ps9Equatable", "size"]
+- !private ["Ps9Equatable", "width"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["PSo19GKSceneRootNodeType", "CGPoint"]
+- !private ["PSo19GKSceneRootNodeType", "SKSpriteNode"]
+- !private ["PSo19GKSceneRootNodeType", "addChild"]
+- ["PSo19GKSceneRootNodeType", "didMove"]
+- !private ["PSo19GKSceneRootNodeType", "init"]
+- !private ["PSo19GKSceneRootNodeType", "size"]
+- ["PSo19GKSceneRootNodeType", ""]
+- !private ["Ps8Hashable", "CGPoint"]
+- !private ["Ps8Hashable", "SKSpriteNode"]
+- !private ["Ps8Hashable", "addChild"]
+- ["Ps8Hashable", "didMove"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "position"]
+- !private ["Ps8Hashable", "size"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "CGPoint"]
+- !private ["PSo8NSCoding", "SKSpriteNode"]
+- !private ["PSo8NSCoding", "addChild"]
+- ["PSo8NSCoding", "didMove"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "name"]
+- !private ["PSo8NSCoding", "position"]
+- !private ["PSo8NSCoding", "size"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "CGPoint"]
+- !private ["PSo9NSCopying", "SKSpriteNode"]
+- !private ["PSo9NSCopying", "addChild"]
+- ["PSo9NSCopying", "didMove"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "name"]
+- !private ["PSo9NSCopying", "position"]
+- !private ["PSo9NSCopying", "size"]
+- ["PSo9NSCopying", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "CGPoint"]
+- !private ["CSo8NSObject", "SKSpriteNode"]
+- ["CSo8NSObject", "SKView"]
+- !private ["CSo8NSObject", "addChild"]
+- ["CSo8NSObject", "didMove"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "position"]
+- !private ["CSo8NSObject", "size"]
+- !private ["PSo16NSObjectProtocol", "CGPoint"]
+- !private ["PSo16NSObjectProtocol", "SKSpriteNode"]
+- !private ["PSo16NSObjectProtocol", "addChild"]
+- ["PSo16NSObjectProtocol", "didMove"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "position"]
+- !private ["PSo16NSObjectProtocol", "size"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- !private ["CSo12SKEffectNode", "CGPoint"]
+- !private ["CSo12SKEffectNode", "SKSpriteNode"]
+- ["CSo12SKEffectNode", "SKView"]
+- !private ["CSo12SKEffectNode", "addChild"]
+- ["CSo12SKEffectNode", "didMove"]
+- ["CSo12SKEffectNode", "init"]
+- !private ["CSo12SKEffectNode", "size"]
+- !private ["CSo6SKNode", "CGPoint"]
+- !private ["CSo6SKNode", "SKSpriteNode"]
+- ["CSo6SKNode", "SKView"]
+- !private ["CSo6SKNode", "addChild"]
+- ["CSo6SKNode", "didMove"]
+- ["CSo6SKNode", "init"]
+- !private ["CSo6SKNode", "name"]
+- !private ["CSo6SKNode", "position"]
+- !private ["CSo6SKNode", "size"]
+- !private ["CSo7SKScene", "CGPoint"]
+- !private ["CSo7SKScene", "SKSpriteNode"]
+- ["CSo7SKScene", "SKView"]
+- !private ["CSo7SKScene", "addChild"]
+- ["CSo7SKScene", "deinit"]
+- ["CSo7SKScene", "didMove"]
+- ["CSo7SKScene", "init"]
+- !private ["CSo7SKScene", "size"]
+- ["CSo7SKScene", ""]
+- ["CSo12SKSpriteNode", "deinit"]
+- !private ["CSo12SKSpriteNode", "init"]
+- !private ["CSo12SKSpriteNode", "name"]
+- !private ["CSo12SKSpriteNode", "position"]
+- !private ["PSo10SKWarpable", "CGPoint"]
+- !private ["PSo10SKWarpable", "SKSpriteNode"]
+- !private ["PSo10SKWarpable", "addChild"]
+- ["PSo10SKWarpable", "didMove"]
+- !private ["PSo10SKWarpable", "init"]
+- !private ["PSo10SKWarpable", "name"]
+- !private ["PSo10SKWarpable", "position"]
+- !private ["PSo10SKWarpable", "size"]
+- ["PSo10SKWarpable", ""]
+- !private ["C19SpaceInvadersMobile14StartGameScene", "CGPoint"]
+- !private ["C19SpaceInvadersMobile14StartGameScene", "SKSpriteNode"]
+- ["C19SpaceInvadersMobile14StartGameScene", "SKView"]
+- !private ["C19SpaceInvadersMobile14StartGameScene", "addChild"]
+- ["C19SpaceInvadersMobile14StartGameScene", "deinit"]
+- ["C19SpaceInvadersMobile14StartGameScene", "didMove"]
+- ["C19SpaceInvadersMobile14StartGameScene", "init"]
+- !private ["C19SpaceInvadersMobile14StartGameScene", "size"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo18UIFocusEnvironment", "CGPoint"]
+- !private ["PSo18UIFocusEnvironment", "SKSpriteNode"]
+- !private ["PSo18UIFocusEnvironment", "addChild"]
+- ["PSo18UIFocusEnvironment", "didMove"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "name"]
+- !private ["PSo18UIFocusEnvironment", "position"]
+- !private ["PSo18UIFocusEnvironment", "size"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "CGPoint"]
+- !private ["PSo11UIFocusItem", "SKSpriteNode"]
+- !private ["PSo11UIFocusItem", "addChild"]
+- ["PSo11UIFocusItem", "didMove"]
+- !private ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "name"]
+- !private ["PSo11UIFocusItem", "position"]
+- !private ["PSo11UIFocusItem", "size"]
+- ["PSo11UIFocusItem", ""]
+- !private ["CSo11UIResponder", "CGPoint"]
+- !private ["CSo11UIResponder", "SKSpriteNode"]
+- ["CSo11UIResponder", "SKView"]
+- !private ["CSo11UIResponder", "addChild"]
+- ["CSo11UIResponder", "didMove"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "name"]
+- !private ["CSo11UIResponder", "position"]
+- !private ["CSo11UIResponder", "size"]
+- !private ["PSo30UIResponderStandardEditActions", "CGPoint"]
+- !private ["PSo30UIResponderStandardEditActions", "SKSpriteNode"]
+- !private ["PSo30UIResponderStandardEditActions", "addChild"]
+- ["PSo30UIResponderStandardEditActions", "didMove"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "name"]
+- !private ["PSo30UIResponderStandardEditActions", "position"]
+- !private ["PSo30UIResponderStandardEditActions", "size"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "CGPoint"]
+- !private ["Ps9_Hashable", "SKSpriteNode"]
+- !private ["Ps9_Hashable", "addChild"]
+- ["Ps9_Hashable", "didMove"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "name"]
+- !private ["Ps9_Hashable", "position"]
+- !private ["Ps9_Hashable", "size"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "height"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "width"]
+depends-nominal:
+- "Ps9AnyObject"
+- "V12CoreGraphics7CGFloat"
+- "VSC7CGPoint"
+- "VSC6CGSize"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "PSo19GKSceneRootNodeType"
+- "Ps8Hashable"
+- !private "Si"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- "CSo12SKEffectNode"
+- "CSo6SKNode"
+- "CSo7SKScene"
+- "CSo12SKSpriteNode"
+- "PSo10SKWarpable"
+- "C19SpaceInvadersMobile14StartGameScene"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- "PSo18UIFocusEnvironment"
+- "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+interface-hash: "94481f6032bbd11de939a54a19d3caee"
