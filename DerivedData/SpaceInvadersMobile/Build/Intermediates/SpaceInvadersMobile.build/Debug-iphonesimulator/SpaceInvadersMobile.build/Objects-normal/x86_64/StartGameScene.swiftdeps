@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 - "didMove"
 depends-top-level:
-- !private "/"
-- "StartGameScene"
 - !private "CGPoint"
 - "AssignmentPrecedence"
-- "SKView"
 - !private "StringLiteralType"
-- "SKScene"
+- "SKView"
 - !private "SKSpriteNode"
+- "SKScene"
+- "StartGameScene"
+- !private "/"
 depends-member:
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "SKSpriteNode"]

@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		ZgVE18/wBq4ztUpKsTEQ3hQhRkk=
+		1S2a9u3Baqnc+B1EPqykARZIlko=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -100,10 +100,6 @@
 		<data>
 		sBD1Oc7VJEzxgWdLl6VjGGu1+g8=
 		</data>
-		<key>images/button.png</key>
-		<data>
-		oSQq0eDCx6NsIUb0n0LNv2R1qng=
-		</data>
 		<key>images/invader1.png</key>
 		<data>
 		nAv57LBzIz7D7xJ9/zkX2ccfvVQ=
@@ -174,11 +170,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZgVE18/wBq4ztUpKsTEQ3hQhRkk=
+			1S2a9u3Baqnc+B1EPqykARZIlko=
 			</data>
 			<key>hash2</key>
 			<data>
-			TEneiHuElf76YehCVVicvdcfYSZVbgd5LP6D5ZF49jI=
+			nEKXs1H4tYhAkuu3F7GWxLucmfMWiK/dlFFO3B8CjGk=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -399,17 +395,6 @@
 			<key>hash2</key>
 			<data>
 			H5HSxkIGl+Y2X0a/dakvOa0FTgQaL9ds3SXkvwgVgy4=
-			</data>
-		</dict>
-		<key>images/button.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oSQq0eDCx6NsIUb0n0LNv2R1qng=
-			</data>
-			<key>hash2</key>
-			<data>
-			eTD8WcyjO1vQefDV29k66ltfJ/wH6e0h/gBFMjvVO0c=
 			</data>
 		</dict>
 		<key>images/invader1.png</key>
