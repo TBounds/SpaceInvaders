@@ -6,12 +6,21 @@
 //  Copyright © 2017 Tyler James Bounds. All rights reserved.
 //
 
+// https://code.tutsplus.com/tutorials/create-space-invaders-with-swift-and-sprite-kit-implementing-gameplay--cms-23372
+
 import SpriteKit
 import GameplayKit
 
 var invaderNum = 1
 
-class GameScene: SKScene {
+struct CollisionCategories{
+    static let Invader : UInt32 = 0x1 << 0
+    static let Player: UInt32 = 0x1 << 1
+    static let InvaderBullet: UInt32 = 0x1 << 2
+    static let PlayerBullet: UInt32 = 0x1 << 3
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Invader Variables
     let rowsOfInvaders = 4
@@ -27,6 +36,9 @@ class GameScene: SKScene {
 
     
     override func didMove(to view: SKView) {
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        self.physicsWorld.contactDelegate = self
+
         backgroundColor = SKColor.black
         rightBounds = self.size.width - 30
         setupInvaders()
@@ -47,8 +59,6 @@ class GameScene: SKScene {
         /* Called before each frame is rendered */
         moveInvaders()
     }
-    
-    
     
     func setupInvaders() {
         var invaderRow = 0
@@ -117,6 +127,36 @@ class GameScene: SKScene {
     func fireInvaderBullet(){
         let randomInvader = invadersWhoCanFire.randomElement()
         randomInvader.fireBullet(scene: self)
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
+            (secondBody.categoryBitMask & CollisionCategories.PlayerBullet != 0)){
+            NSLog("Invader and Player Bullet Conatact")
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) &&
+            (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0)) {
+            NSLog("Player and Invader Bullet Contact")
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
+            (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
+            NSLog("Invader and Player Collision Contact")
+            
+        }
+        
     }
     
     

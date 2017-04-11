@@ -154,9 +154,10 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 @class SKView;
 @class UITouch;
 @class UIEvent;
+@class SKPhysicsContact;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
-@interface GameScene : SKScene
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic, readonly) NSInteger rowsOfInvaders;
 @property (nonatomic) NSInteger invaderSpeed;
 @property (nonatomic, readonly) CGFloat leftBounds;
@@ -171,6 +172,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 - (void)moveInvaders;
 - (void)invokeInvaderFire;
 - (void)fireInvaderBullet;
+- (void)didBeginContactWithContact:(SKPhysicsContact * _Nonnull)contact;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
