@@ -137,9 +137,20 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class Invader;
-@class SKView;
 @class NSCoder;
+@class SKTexture;
+@class UIColor;
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
+@interface Bullet : SKSpriteNode
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+@class Invader;
+@class Player;
+@class SKView;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene
@@ -148,8 +159,10 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, readonly) CGFloat leftBounds;
 @property (nonatomic) CGFloat rightBounds;
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
+@property (nonatomic, strong) Player * _Nonnull player;
 - (void)didMoveToView:(SKView * _Nonnull)view;
-- (void)setUpInvaders;
+- (void)setupInvaders;
+- (void)setupPlayer;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -165,8 +178,6 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile18GameViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class SKTexture;
-@class UIColor;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
 @interface Invader : SKSpriteNode
@@ -176,6 +187,32 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile13InvaderBullet")
+@interface InvaderBullet : Bullet
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
+@interface Player : SKSpriteNode
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)die;
+- (void)kill;
+- (void)respawn;
+- (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile12PlayerBullet")
+@interface PlayerBullet : Bullet
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UITouch;

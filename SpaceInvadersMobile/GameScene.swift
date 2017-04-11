@@ -13,15 +13,22 @@ var invaderNum = 1
 
 class GameScene: SKScene {
     
+    // Invader Variables
     let rowsOfInvaders = 4
     var invaderSpeed = 2
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
     var invadersWhoCanFire: [Invader] = []
+    
+    // Player Variables
+    var player : Player = Player()
+    
+    
 
     
     override func didMove(to view: SKView) {
-        setUpInvaders()
+        setupInvaders()
+        setupPlayer()
     }
     
 //    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -33,7 +40,7 @@ class GameScene: SKScene {
 //        /* Called before each frame is rendered */
 //    }
     
-    func setUpInvaders() {
+    func setupInvaders() {
         var invaderRow = 0
         var invaderCol = 0
         let numberOfInvaders = invaderNum * 2 + 1
@@ -57,4 +64,12 @@ class GameScene: SKScene {
             }
         }
     }
+    
+    func setupPlayer() {
+        player.position = CGPoint(x: self.frame.midX, y: player.size.height/2 + 10)
+        addChild(player)
+    }
+    
+    
+    
 }
