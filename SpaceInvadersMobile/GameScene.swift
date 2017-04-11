@@ -39,6 +39,10 @@ class GameScene: SKScene {
 //        
 //    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.fireBullet(scene: self)
+    }
+    
     override func update(_ currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         moveInvaders()

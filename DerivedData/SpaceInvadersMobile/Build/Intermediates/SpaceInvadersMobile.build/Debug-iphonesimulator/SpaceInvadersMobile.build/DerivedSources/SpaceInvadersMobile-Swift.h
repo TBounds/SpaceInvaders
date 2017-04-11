@@ -152,6 +152,8 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 @class Invader;
 @class Player;
 @class SKView;
+@class UITouch;
+@class UIEvent;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene
@@ -162,6 +164,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
 @property (nonatomic, strong) Player * _Nonnull player;
 - (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)update:(CFTimeInterval)currentTime;
 - (void)setupInvaders;
 - (void)setupPlayer;
@@ -220,8 +223,6 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile12PlayerBullet")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITouch;
-@class UIEvent;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile14StartGameScene")
 @interface StartGameScene : SKScene
