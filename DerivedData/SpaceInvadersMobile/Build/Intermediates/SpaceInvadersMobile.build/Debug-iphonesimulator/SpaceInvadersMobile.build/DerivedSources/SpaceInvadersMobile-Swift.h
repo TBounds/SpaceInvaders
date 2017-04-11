@@ -118,7 +118,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import SpriteKit;
 @import CoreGraphics;
-@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -138,22 +137,19 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class Invader;
 @class SKView;
-@class UITouch;
-@class UIEvent;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene
+@property (nonatomic, readonly) NSInteger rowsOfInvaders;
+@property (nonatomic) NSInteger invaderSpeed;
+@property (nonatomic, readonly) CGFloat leftBounds;
+@property (nonatomic) CGFloat rightBounds;
+@property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
 - (void)didMoveToView:(SKView * _Nonnull)view;
-- (void)touchDownAtPoint:(CGPoint)pos;
-- (void)touchMovedToPoint:(CGPoint)pos;
-- (void)touchUpAtPoint:(CGPoint)pos;
-- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)update:(NSTimeInterval)currentTime;
+- (void)setUpInvaders;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -169,6 +165,21 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile18GameViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class SKTexture;
+@class UIColor;
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
+@interface Invader : SKSpriteNode
+@property (nonatomic) NSInteger invaderRow;
+@property (nonatomic) NSInteger invaderCol;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+@class UITouch;
+@class UIEvent;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile14StartGameScene")
 @interface StartGameScene : SKScene

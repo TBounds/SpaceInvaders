@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F894D7961E9D6CD500035764 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7951E9D6CD500035764 /* Invader.swift */; };
 		F8B73FF71E9D3F4B00042272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */; };
 		F8B73FFB1E9D3F4B00042272 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8B73FFA1E9D3F4B00042272 /* Actions.sks */; };
 		F8B73FFD1E9D3F4B00042272 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B73FFC1E9D3F4B00042272 /* GameScene.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F894D7951E9D6CD500035764 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Invader.swift; path = ../Invader.swift; sourceTree = "<group>"; };
 		F8B73FF31E9D3F4B00042272 /* SpaceInvadersMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceInvadersMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B73FFA1E9D3F4B00042272 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		F8B73FF51E9D3F4B00042272 /* SpaceInvadersMobile */ = {
 			isa = PBXGroup;
 			children = (
+				F894D7951E9D6CD500035764 /* Invader.swift */,
 				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8B73FFA1E9D3F4B00042272 /* Actions.sks */,
 				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
@@ -152,6 +155,7 @@
 			files = (
 				F8B73FFD1E9D3F4B00042272 /* GameScene.swift in Sources */,
 				F8B7400F1E9D5ADB00042272 /* StartGameScene.swift in Sources */,
+				F894D7961E9D6CD500035764 /* Invader.swift in Sources */,
 				F8B73FFF1E9D3F4B00042272 /* GameViewController.swift in Sources */,
 				F8B73FF71E9D3F4B00042272 /* AppDelegate.swift in Sources */,
 			);
@@ -315,6 +319,7 @@
 				F8B7400D1E9D3F4B00042272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

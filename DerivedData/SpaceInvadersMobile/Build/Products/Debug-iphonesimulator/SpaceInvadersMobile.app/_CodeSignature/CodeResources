@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		1S2a9u3Baqnc+B1EPqykARZIlko=
+		8xfeqk6ip/ijrCR67heBpIiY8W4=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -79,6 +79,10 @@
 		<key>Frameworks/libswiftSpriteKit.dylib</key>
 		<data>
 		E7uEyi/3yB6AeoQjQNxfLbc0H+E=
+		</data>
+		<key>Frameworks/libswiftSwiftOnoneSupport.dylib</key>
+		<data>
+		UIWHE/Dy6+jPX0wz0/+wacnjp9o=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
@@ -170,11 +174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1S2a9u3Baqnc+B1EPqykARZIlko=
+			8xfeqk6ip/ijrCR67heBpIiY8W4=
 			</data>
 			<key>hash2</key>
 			<data>
-			nEKXs1H4tYhAkuu3F7GWxLucmfMWiK/dlFFO3B8CjGk=
+			oYZfp93bBEq7PTySKJGiMD47+MjhgEabAZWojClFC6s=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -362,6 +366,17 @@
 			<key>hash2</key>
 			<data>
 			TgPyC+U1ewTXC/PwNU8obDh7ulz0EbZaGFRSlLkCq0Q=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftSwiftOnoneSupport.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UIWHE/Dy6+jPX0wz0/+wacnjp9o=
+			</data>
+			<key>hash2</key>
+			<data>
+			nHurgKzrJA2HAB3zAAcrsBbrWB7w6l7ECEsEmb/5UmE=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftUIKit.dylib</key>
