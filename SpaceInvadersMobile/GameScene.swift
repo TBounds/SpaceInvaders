@@ -27,8 +27,11 @@ class GameScene: SKScene {
 
     
     override func didMove(to view: SKView) {
+        backgroundColor = SKColor.black
+        rightBounds = self.size.width - 30
         setupInvaders()
         setupPlayer()
+        invokeInvaderFire()
     }
     
 //    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -36,9 +39,12 @@ class GameScene: SKScene {
 //        
 //    }
     
-//    override func update(currentTime: CFTimeInterval) {
-//        /* Called before each frame is rendered */
-//    }
+    override func update(_ currentTime: CFTimeInterval) {
+        /* Called before each frame is rendered */
+        moveInvaders()
+    }
+    
+    
     
     func setupInvaders() {
         var invaderRow = 0
@@ -68,6 +74,45 @@ class GameScene: SKScene {
     func setupPlayer() {
         player.position = CGPoint(x: self.frame.midX, y: player.size.height/2 + 10)
         addChild(player)
+    }
+    
+    func moveInvaders(){
+        var changeDirection = false
+        enumerateChildNodes(withName: "invader") { node, stop in
+            let invader = node as! SKSpriteNode
+            let invaderHalfWidth = invader.size.width/2
+            invader.position.x -= CGFloat(self.invaderSpeed)
+            if(invader.position.x > self.rightBounds - invaderHalfWidth || invader.position.x < self.leftBounds + invaderHalfWidth){
+                changeDirection = true
+            }
+            
+        }
+        
+        if(changeDirection == true){
+            self.invaderSpeed *= -1
+            self.enumerateChildNodes(withName: "invader") { node, stop in
+                let invader = node as! SKSpriteNode
+                invader.position.y -= CGFloat(46)
+            }
+            changeDirection = false
+        }
+        
+    }
+    
+    func invokeInvaderFire(){
+        let fireBullet = SKAction.run(){
+            self.fireInvaderBullet()
+        }
+        
+        let waitToFireInvaderBullet = SKAction.wait(forDuration: 1.5)
+        let invaderFire = SKAction.sequence([fireBullet,waitToFireInvaderBullet])
+        let repeatForeverAction = SKAction.repeatForever(invaderFire)
+        run(repeatForeverAction)
+    }
+    
+    func fireInvaderBullet(){
+        let randomInvader = invadersWhoCanFire.randomElement()
+        randomInvader.fireBullet(scene: self)
     }
     
     

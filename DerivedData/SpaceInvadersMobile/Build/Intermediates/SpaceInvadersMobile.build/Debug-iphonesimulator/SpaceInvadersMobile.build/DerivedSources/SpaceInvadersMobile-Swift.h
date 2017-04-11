@@ -118,6 +118,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import SpriteKit;
 @import CoreGraphics;
+@import CoreFoundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -161,8 +162,12 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
 @property (nonatomic, strong) Player * _Nonnull player;
 - (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)update:(CFTimeInterval)currentTime;
 - (void)setupInvaders;
 - (void)setupPlayer;
+- (void)moveInvaders;
+- (void)invokeInvaderFire;
+- (void)fireInvaderBullet;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
