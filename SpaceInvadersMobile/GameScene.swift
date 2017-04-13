@@ -32,9 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Player Variables
     var player : Player = Player()
     
-    
 
-    
     override func didMove(to view: SKView) {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
@@ -45,11 +43,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupPlayer()
         invokeInvaderFire()
     }
-    
-//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-//        /* Called when a touch begins */
-//        
-//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         player.fireBullet(scene: self)
@@ -129,14 +122,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         randomInvader.fireBullet(scene: self)
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
+        
+        
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
-        } else {
+        }
+        else {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
@@ -149,11 +145,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0)) {
             NSLog("Player and Invader Bullet Contact")
+            player.die()
         }
         
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
             NSLog("Invader and Player Collision Contact")
+            player.kill()
             
         }
         

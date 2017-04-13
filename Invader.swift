@@ -25,6 +25,7 @@ class Invader: SKSpriteNode {
         self.physicsBody?.categoryBitMask = CollisionCategories.Invader
         self.physicsBody?.contactTestBitMask = CollisionCategories.PlayerBullet | CollisionCategories.Player
         self.physicsBody?.collisionBitMask = 0x0
+//        self.physicsBody?.collisionBitMask = CollisionCategories.PlayerBullet | CollisionCategories.Player
     }
     
     required init? (coder aDecoder: NSCoder) {

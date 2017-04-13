@@ -75,7 +75,6 @@
 		F8B73FF51E9D3F4B00042272 /* SpaceInvadersMobile */ = {
 			isa = PBXGroup;
 			children = (
-				F894D7951E9D6CD500035764 /* Invader.swift */,
 				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8B73FFA1E9D3F4B00042272 /* Actions.sks */,
 				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
@@ -83,6 +82,7 @@
 				F894D7991E9D764C00035764 /* Bullet.swift */,
 				F894D79B1E9D76CD00035764 /* InvaderBullet.swift */,
 				F894D79D1E9D771300035764 /* PlayerBullet.swift */,
+				F894D7951E9D6CD500035764 /* Invader.swift */,
 				F894D7971E9D72D700035764 /* Player.swift */,
 				F8B73FFE1E9D3F4B00042272 /* GameViewController.swift */,
 				F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */,

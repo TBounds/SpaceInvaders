@@ -12,6 +12,17 @@ import SpriteKit
 class Player: SKSpriteNode {
     
     private var canFire = true
+    private var invincible = false
+    private var lives:Int = 3 {
+        didSet {
+            if (lives < 0) {
+                kill()
+            }
+            else {
+                respawn()
+            }
+        }
+    }
 
     init() {
         let texture = SKTexture(imageNamed: "images/player1")
@@ -22,7 +33,8 @@ class Player: SKSpriteNode {
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Player
         self.physicsBody?.contactTestBitMask = CollisionCategories.InvaderBullet | CollisionCategories.Invader
-        self.physicsBody?.collisionBitMask = 0x0
+         self.physicsBody?.collisionBitMask = 0x0
+//        self.physicsBody?.collisionBitMask = CollisionCategories.InvaderBullet | CollisionCategories.Invader
         
         animate()
     }
@@ -44,14 +56,36 @@ class Player: SKSpriteNode {
     }
     
     func die() {
-        
+        NSLog("\nXXX died\n")
+        if(invincible == false){
+            lives -= 1
+        }
     }
     
     func kill() {
+        invaderNum = 1
         
+        let gameOverScene = StartGameScene(size: self.scene!.size)
+        gameOverScene.scaleMode = self.scene!.scaleMode
+        
+        let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+        self.scene!.view!.presentScene(gameOverScene,transition: transitionType)
+
     }
     
     func respawn() {
+        invincible = true
+        
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.4)
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.4)
+        
+        let fadeOutIn = SKAction.sequence([fadeOutAction,fadeInAction])
+        let fadeOutInAction = SKAction.repeat(fadeOutIn, count: 5)
+        
+        let setInvicibleFalse = SKAction.run(){
+            self.invincible = false
+        }
+        run(SKAction.sequence([fadeOutInAction,setInvicibleFalse]))
         
     }
     

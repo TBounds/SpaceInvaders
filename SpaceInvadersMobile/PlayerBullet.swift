@@ -19,8 +19,10 @@ class PlayerBullet: Bullet {
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.categoryBitMask = CollisionCategories.PlayerBullet
         self.physicsBody?.contactTestBitMask = CollisionCategories.Invader
-        self.physicsBody?.collisionBitMask = 0x0
+         self.physicsBody?.collisionBitMask = 0x0
+//        self.physicsBody?.collisionBitMask = CollisionCategories.Invader
     }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

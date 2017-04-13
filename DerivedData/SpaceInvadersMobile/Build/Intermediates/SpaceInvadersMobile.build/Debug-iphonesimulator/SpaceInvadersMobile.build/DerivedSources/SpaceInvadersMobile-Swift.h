@@ -172,7 +172,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 - (void)moveInvaders;
 - (void)invokeInvaderFire;
 - (void)fireInvaderBullet;
-- (void)didBeginContactWithContact:(SKPhysicsContact * _Nonnull)contact;
+- (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
