@@ -27,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Invader Variables
     let rowsOfInvaders = 4
     var invaderSpeed = 2
+    let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no vertical space between enemies.
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
     var invadersWhoCanFire: [Invader] = []
@@ -87,8 +88,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let tempInvader: Invader = Invader()
                 let invaderHalfWidth: CGFloat = tempInvader.size.width/2
                 let xPositionStart: CGFloat = size.width/2 - invaderHalfWidth - (CGFloat(invaderNum) * tempInvader.size.width) + CGFloat(10)
-                
-                tempInvader.position = CGPoint(x:xPositionStart + ((tempInvader.size.width+CGFloat(10))*(CGFloat(j-1))), y:CGFloat(self.size.height - CGFloat(i) * 46))
+
+                tempInvader.position = CGPoint(x:xPositionStart + ((tempInvader.size.width * enemySpacing)*(CGFloat(j-1))),
+                                               y:CGFloat(self.size.height - CGFloat(i) * (tempInvader.size.height) * enemySpacing))
                 tempInvader.invaderRow = invaderRow
                 tempInvader.invaderCol = invaderCol
                 addChild(tempInvader)

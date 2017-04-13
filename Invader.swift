@@ -9,18 +9,24 @@
 import UIKit
 import SpriteKit
 
+
+
 class Invader: SKSpriteNode {
 
     var invaderRow = 0
     var invaderCol = 0
+    let desiredWidthRatio : CGFloat = 5 // Percentage of screen width you want the enemies' width to take
     
     init() {
         
         let texture = SKTexture(imageNamed: "images/invader1.png")
-        super.init(texture: texture, color: SKColor.clear, size: texture.size())
+        let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
+        let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
+        
+        super.init(texture: texture, color: SKColor.clear, size: newSize)
         self.name = "invader"
         
-        self.physicsBody = SKPhysicsBody(texture: self.texture!, size: self.size)
+        self.physicsBody = SKPhysicsBody(texture: self.texture!, size: newSize)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Invader

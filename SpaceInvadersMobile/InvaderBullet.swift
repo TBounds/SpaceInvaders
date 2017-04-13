@@ -21,14 +21,9 @@ class InvaderBullet: Bullet {
         self.physicsBody?.categoryBitMask = CollisionCategories.InvaderBullet
         self.physicsBody?.contactTestBitMask = CollisionCategories.Player
         self.physicsBody?.collisionBitMask = 0x0
-
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
     }
-    
-    
-    
 }

@@ -161,6 +161,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic, readonly) NSInteger rowsOfInvaders;
 @property (nonatomic) NSInteger invaderSpeed;
+@property (nonatomic, readonly) CGFloat enemySpacing;
 @property (nonatomic, readonly) CGFloat leftBounds;
 @property (nonatomic) CGFloat rightBounds;
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
@@ -201,6 +202,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
 @interface Invader : SKSpriteNode
 @property (nonatomic) NSInteger invaderRow;
 @property (nonatomic) NSInteger invaderCol;
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)fireBulletWithScene:(SKScene * _Nonnull)scene;

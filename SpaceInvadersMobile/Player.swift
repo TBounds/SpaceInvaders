@@ -28,8 +28,8 @@ class Player: SKSpriteNode {
     }
 
     init() {
-        let texture = SKTexture(imageNamed: "images/player1")
         
+        let texture = SKTexture(imageNamed: "images/player1")
         let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
 
