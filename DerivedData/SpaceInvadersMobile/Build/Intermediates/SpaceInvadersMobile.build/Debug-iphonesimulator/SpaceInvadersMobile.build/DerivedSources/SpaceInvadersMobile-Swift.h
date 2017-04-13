@@ -151,6 +151,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 
 @class Invader;
 @class Player;
+@class CMMotionManager;
 @class SKView;
 @class UITouch;
 @class UIEvent;
@@ -164,6 +165,9 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic) CGFloat rightBounds;
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
 @property (nonatomic, strong) Player * _Nonnull player;
+@property (nonatomic, readonly, strong) CMMotionManager * _Nonnull motionManager;
+@property (nonatomic) CGFloat accelerationX;
+@property (nonatomic) NSInteger maxLevels;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)update:(CFTimeInterval)currentTime;
@@ -173,6 +177,10 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 - (void)invokeInvaderFire;
 - (void)fireInvaderBullet;
 - (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
+- (void)levelComplete;
+- (void)newGame;
+- (void)setupAccelerometer;
+- (void)didSimulatePhysics;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -207,8 +215,19 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile13InvaderBullet")
 @end
 
 
+SWIFT_CLASS("_TtC19SpaceInvadersMobile18LevelCompleteScene")
+@interface LevelCompleteScene : SKScene
+- (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
 @interface Player : SKSpriteNode
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)die;
@@ -222,6 +241,15 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
 SWIFT_CLASS("_TtC19SpaceInvadersMobile12PlayerBullet")
 @interface PlayerBullet : Bullet
 - (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile13PulsatingText")
+@interface PulsatingText : SKLabelNode
+- (void)setTextFontSizeAndPulsateWithTheText:(NSString * _Nonnull)theText theFontSize:(CGFloat)theFontSize;
+- (nonnull instancetype)initWithFontNamed:(NSString * _Nullable)fontName OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A141C1EA0050400263144 /* LevelCompleteScene.swift */; };
+		F80A14211EA00E5C00263144 /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = F80A14201EA00E5C00263144 /* StarField.sks */; };
 		F894D7961E9D6CD500035764 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7951E9D6CD500035764 /* Invader.swift */; };
 		F894D7981E9D72D700035764 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7971E9D72D700035764 /* Player.swift */; };
 		F894D79A1E9D764C00035764 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7991E9D764C00035764 /* Bullet.swift */; };
@@ -22,9 +24,12 @@
 		F8B740071E9D3F4B00042272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B740051E9D3F4B00042272 /* LaunchScreen.storyboard */; };
 		F8B7400F1E9D5ADB00042272 /* StartGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */; };
 		F8B740121E9D66AB00042272 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F8B740101E9D5E2600042272 /* images */; };
+		F8D8D5D31EA03B1F00CA59E7 /* PulsatingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F80A141C1EA0050400263144 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
+		F80A14201EA00E5C00263144 /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
 		F894D7951E9D6CD500035764 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Invader.swift; path = ../Invader.swift; sourceTree = "<group>"; };
 		F894D7971E9D72D700035764 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F894D7991E9D764C00035764 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		F8B740081E9D3F4B00042272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameScene.swift; sourceTree = "<group>"; };
 		F8B740101E9D5E2600042272 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = SpaceInvadersMobile/images; sourceTree = "<group>"; };
+		F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsatingText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +83,18 @@
 			children = (
 				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8B73FFA1E9D3F4B00042272 /* Actions.sks */,
-				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
+				F80A14201EA00E5C00263144 /* StarField.sks */,
 				F894D79F1E9D7A7C00035764 /* Utilities.swift */,
 				F894D7991E9D764C00035764 /* Bullet.swift */,
 				F894D79B1E9D76CD00035764 /* InvaderBullet.swift */,
 				F894D79D1E9D771300035764 /* PlayerBullet.swift */,
 				F894D7951E9D6CD500035764 /* Invader.swift */,
 				F894D7971E9D72D700035764 /* Player.swift */,
-				F8B73FFE1E9D3F4B00042272 /* GameViewController.swift */,
+				F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */,
+				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
+				F80A141C1EA0050400263144 /* LevelCompleteScene.swift */,
 				F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */,
+				F8B73FFE1E9D3F4B00042272 /* GameViewController.swift */,
 				F8B740001E9D3F4B00042272 /* Main.storyboard */,
 				F8B740031E9D3F4B00042272 /* Assets.xcassets */,
 				F8B740051E9D3F4B00042272 /* LaunchScreen.storyboard */,
@@ -154,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80A14211EA00E5C00263144 /* StarField.sks in Resources */,
 				F8B740121E9D66AB00042272 /* images in Resources */,
 				F8B740021E9D3F4B00042272 /* Main.storyboard in Resources */,
 				F8B740041E9D3F4B00042272 /* Assets.xcassets in Resources */,
@@ -172,12 +182,14 @@
 				F894D79E1E9D771300035764 /* PlayerBullet.swift in Sources */,
 				F8B73FFD1E9D3F4B00042272 /* GameScene.swift in Sources */,
 				F8B7400F1E9D5ADB00042272 /* StartGameScene.swift in Sources */,
+				F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */,
 				F894D7961E9D6CD500035764 /* Invader.swift in Sources */,
 				F894D79A1E9D764C00035764 /* Bullet.swift in Sources */,
 				F8B73FFF1E9D3F4B00042272 /* GameViewController.swift in Sources */,
 				F894D7981E9D72D700035764 /* Player.swift in Sources */,
 				F8B73FF71E9D3F4B00042272 /* AppDelegate.swift in Sources */,
 				F894D7A01E9D7A7C00035764 /* Utilities.swift in Sources */,
+				F8D8D5D31EA03B1F00CA59E7 /* PulsatingText.swift in Sources */,
 				F894D79C1E9D76CD00035764 /* InvaderBullet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

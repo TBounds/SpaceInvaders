@@ -12,7 +12,9 @@ import SpriteKit
 class Bullet: SKSpriteNode {
     
     init(imageName: String, bulletSound: String?) {
+        
         let texture = SKTexture(imageNamed: imageName)
+        
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         
         if(bulletSound != nil){

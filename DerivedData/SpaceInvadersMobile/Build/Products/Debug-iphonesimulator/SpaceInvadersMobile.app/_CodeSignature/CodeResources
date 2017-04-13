@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		NNQ16Pi9iU9AnrBwvP2ylKJPJGw=
+		koLeUMpF1PB/YBn2D8gdxXNFJOA=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -94,11 +94,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gJ/Y7daUvtM8mUkRDgUYjNfwZYg=
+		a2uzLrLiorQPqCHgS9W+3YP72Sg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>StarField.sks</key>
+		<data>
+		p2NjLyvuQW2fGUpiJRntT8g2+P4=
 		</data>
 		<key>images/CONQUEST.ttf</key>
 		<data>
@@ -174,11 +178,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NNQ16Pi9iU9AnrBwvP2ylKJPJGw=
+			koLeUMpF1PB/YBn2D8gdxXNFJOA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iyPJJkOADVKAu+jzQdrcsn5BSLLLW2OyrwHxDqsDbPk=
+			6xBEsDfyJg7B3+mIy+gJImd6m+f7bHRWYbMUgw2z9BM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -399,6 +403,17 @@
 			<key>hash2</key>
 			<data>
 			yvSNu9Y8bcDQVwDItOasakYpNZz6CkNrxO72gos6bZw=
+			</data>
+		</dict>
+		<key>StarField.sks</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p2NjLyvuQW2fGUpiJRntT8g2+P4=
+			</data>
+			<key>hash2</key>
+			<data>
+			3J1zfrwOlmG0k9C9l4QA75Vyj7nIB4ZV8JxIAOfhoXE=
 			</data>
 		</dict>
 		<key>images/CONQUEST.ttf</key>

@@ -11,8 +11,11 @@ import SpriteKit
 
 class Player: SKSpriteNode {
     
+    let desiredWidthRatio : CGFloat = 12 // Percentage of screen width you want the player's width to take
+    
     private var canFire = true
     private var invincible = false
+    
     private var lives:Int = 3 {
         didSet {
             if (lives < 0) {
@@ -26,15 +29,19 @@ class Player: SKSpriteNode {
 
     init() {
         let texture = SKTexture(imageNamed: "images/player1")
-        super.init(texture: texture, color: SKColor.clear, size: texture.size())
         
-        self.physicsBody = SKPhysicsBody(texture: self.texture!,size:self.size)
+        let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
+        let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
+
+        super.init(texture: texture, color: SKColor.clear, size: newSize)
+        
+        self.physicsBody = SKPhysicsBody(texture: self.texture!, size: newSize)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Player
         self.physicsBody?.contactTestBitMask = CollisionCategories.InvaderBullet | CollisionCategories.Invader
-         self.physicsBody?.collisionBitMask = 0x0
-//        self.physicsBody?.collisionBitMask = CollisionCategories.InvaderBullet | CollisionCategories.Invader
+        self.physicsBody?.collisionBitMask = CollisionCategories.EdgeBody
+        self.physicsBody?.allowsRotation = false
         
         animate()
     }
@@ -56,13 +63,13 @@ class Player: SKSpriteNode {
     }
     
     func die() {
-        NSLog("\nXXX died\n")
         if(invincible == false){
             lives -= 1
         }
     }
     
     func kill() {
+        
         invaderNum = 1
         
         let gameOverScene = StartGameScene(size: self.scene!.size)
@@ -74,6 +81,7 @@ class Player: SKSpriteNode {
     }
     
     func respawn() {
+        
         invincible = true
         
         let fadeOutAction = SKAction.fadeOut(withDuration: 0.4)
@@ -90,12 +98,15 @@ class Player: SKSpriteNode {
     }
     
     func fireBullet(scene: SKScene) {
+        
         if(!canFire){
             return
-        }else{
+        }
+        else{
+            
             canFire = false
             
-            let bullet = PlayerBullet(imageName: "images/laser.png",bulletSound: "images/laser.mp3")
+            let bullet = PlayerBullet(imageName: "images/laser.png", bulletSound: "images/laser.mp3")
             bullet.position.x = self.position.x
             bullet.position.y = self.position.y + self.size.height/2
             scene.addChild(bullet)
