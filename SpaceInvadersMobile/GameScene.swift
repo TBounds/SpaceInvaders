@@ -267,12 +267,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { accelerometerData, error in
             
             let acceleration = accelerometerData!.acceleration
-            self.accelerationX = CGFloat(acceleration.x * 2)
+            self.accelerationX = CGFloat(acceleration.x)
         })
     }
     
     override func didSimulatePhysics() {
-        player.physicsBody?.velocity = CGVector(dx: accelerationX * 600, dy: 0)
+        player.physicsBody?.velocity = CGVector(dx: accelerationX * 1200, dy: 0)
     }
    
     
