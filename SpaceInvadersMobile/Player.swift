@@ -16,7 +16,7 @@ class Player: SKSpriteNode {
     private var canFire = true
     private var invincible = false
     
-    private var lives:Int = 3 {
+    private var lives:Int = 30 { // XXX Make sure lives are not 30 lol
         didSet {
             if (lives < 0) {
                 kill()
@@ -115,7 +115,7 @@ class Player: SKSpriteNode {
             let removeBulletAction = SKAction.removeFromParent()
             bullet.run(SKAction.sequence([moveBulletAction,removeBulletAction]))
             
-            let waitToEnableFire = SKAction.wait(forDuration: 0.5)
+            let waitToEnableFire = SKAction.wait(forDuration: 0.1) // XXX OG duration was 0.5
             run(waitToEnableFire,completion:{
                 self.canFire = true
             })

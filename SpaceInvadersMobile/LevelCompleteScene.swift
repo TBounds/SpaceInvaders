@@ -11,12 +11,19 @@ import SpriteKit
 
 class LevelCompleteScene:SKScene{
     
+    let desiredWidthRatio = CGFloat(50) // Percentage of screen width you want the button width to take
+    
     override func didMove(to view: SKView) {
         
         self.backgroundColor = SKColor.black
         
         let startGameButton = SKSpriteNode(imageNamed: "images/nextlevelbtn")
         startGameButton.position = CGPoint(x: size.width/2, y: size.height/2 - 100)
+        
+        let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
+        let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
+        startGameButton.size = newSize
+        
         startGameButton.name = "nextlevel"
         addChild(startGameButton)
         
