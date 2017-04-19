@@ -1,8 +1,16 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "1d004c345791094a08883964c75377fe"
-build_time: [545255032, 933022000]
+options: "a25f0f1aee2f3cc3a15dc48cc343fe73"
+build_time: [545960204, 137234000]
 inputs:
-  "/home-local/t.bounds/SpaceInvadersMobile/SpaceInvadersMobile/GameScene.swift": [545244235, 0]
-  "/home-local/t.bounds/SpaceInvadersMobile/SpaceInvadersMobile/StartGameScene.swift": [545254807, 0]
-  "/home-local/t.bounds/SpaceInvadersMobile/SpaceInvadersMobile/GameViewController.swift": [545251511, 0]
-  "/home-local/t.bounds/SpaceInvadersMobile/SpaceInvadersMobile/AppDelegate.swift": [545244235, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/PlayerBullet.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/GameScene.swift": [545960203, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/StartGameScene.swift": [545957940, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/LevelCompleteScene.swift": [545957921, 0]
+  "/home-local/t.bounds/SpaceInvaders/Invader.swift": [545955681, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/Bullet.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/GameViewController.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/Player.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/AppDelegate.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/Utilities.swift": [545769113, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/PulsatingText.swift": [545955930, 0]
+  "/home-local/t.bounds/SpaceInvaders/SpaceInvadersMobile/InvaderBullet.swift": [545769113, 0]

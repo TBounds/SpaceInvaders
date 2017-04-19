@@ -12,6 +12,7 @@ import SpriteKit
 class StartGameScene: SKScene {
     
     let desiredWidthRatio : CGFloat = 50 // Percentage of screen width you want the button width to take
+    let pulsatingTextScaler = CGFloat(0.657895)
     
     override func didMove(to view: SKView) {
         
@@ -25,7 +26,7 @@ class StartGameScene: SKScene {
         addChild(startGameButton)
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
-        invaderText.setTextFontSizeAndPulsate(theText: "INVADERZ", theFontSize: 50)
+        invaderText.setTextFontSizeAndPulsate(theText: "INVADERZ", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
         invaderText.position = CGPoint(x: size.width/2, y: size.height/2 + 200)
         addChild(invaderText)
         

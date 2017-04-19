@@ -221,6 +221,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile13InvaderBullet")
 SWIFT_CLASS("_TtC19SpaceInvadersMobile18LevelCompleteScene")
 @interface LevelCompleteScene : SKScene
 @property (nonatomic, readonly) CGFloat desiredWidthRatio;
+@property (nonatomic, readonly) CGFloat pulsatingTextScaler;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
@@ -261,6 +262,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile13PulsatingText")
 SWIFT_CLASS("_TtC19SpaceInvadersMobile14StartGameScene")
 @interface StartGameScene : SKScene
 @property (nonatomic, readonly) CGFloat desiredWidthRatio;
+@property (nonatomic, readonly) CGFloat pulsatingTextScaler;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;

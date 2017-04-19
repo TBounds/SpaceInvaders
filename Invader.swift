@@ -9,8 +9,6 @@
 import UIKit
 import SpriteKit
 
-
-
 class Invader: SKSpriteNode {
 
     var invaderRow = 0

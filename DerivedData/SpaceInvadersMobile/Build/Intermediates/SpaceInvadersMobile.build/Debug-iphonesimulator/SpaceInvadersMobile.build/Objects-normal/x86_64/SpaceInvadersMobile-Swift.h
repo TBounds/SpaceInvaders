@@ -118,7 +118,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import SpriteKit;
 @import CoreGraphics;
-@import Foundation;
+@import CoreFoundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -138,22 +138,51 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSCoder;
+@class SKTexture;
+@class UIColor;
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
+@interface Bullet : SKSpriteNode
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+@class Invader;
+@class Player;
+@class CMMotionManager;
 @class SKView;
 @class UITouch;
 @class UIEvent;
-@class NSCoder;
+@class SKPhysicsContact;
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
-@interface GameScene : SKScene
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
+@property (nonatomic, readonly) NSInteger rowsOfInvaders;
+@property (nonatomic) NSInteger invaderSpeed;
+@property (nonatomic, readonly) CGFloat enemySpacing;
+@property (nonatomic, readonly) CGFloat leftBounds;
+@property (nonatomic) CGFloat rightBounds;
+@property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
+@property (nonatomic, strong) Player * _Nonnull player;
+@property (nonatomic, readonly, strong) CMMotionManager * _Nonnull motionManager;
+@property (nonatomic) CGFloat accelerationX;
+@property (nonatomic) NSInteger maxLevels;
 - (void)didMoveToView:(SKView * _Nonnull)view;
-- (void)touchDownAtPoint:(CGPoint)pos;
-- (void)touchMovedToPoint:(CGPoint)pos;
-- (void)touchUpAtPoint:(CGPoint)pos;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)update:(NSTimeInterval)currentTime;
+- (void)update:(CFTimeInterval)currentTime;
+- (void)setupInvaders;
+- (void)setupPlayer;
+- (void)moveInvaders;
+- (void)invokeInvaderFire;
+- (void)fireInvaderBullet;
+- (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
+- (void)levelComplete;
+- (void)newGame;
+- (void)setupAccelerometer;
+- (void)didSimulatePhysics;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -170,9 +199,72 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile18GameViewController")
 @end
 
 
+SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
+@interface Invader : SKSpriteNode
+@property (nonatomic) NSInteger invaderRow;
+@property (nonatomic) NSInteger invaderCol;
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile13InvaderBullet")
+@interface InvaderBullet : Bullet
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile18LevelCompleteScene")
+@interface LevelCompleteScene : SKScene
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
+@property (nonatomic, readonly) CGFloat pulsatingTextScaler;
+- (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
+@interface Player : SKSpriteNode
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)die;
+- (void)kill;
+- (void)respawn;
+- (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile12PlayerBullet")
+@interface PlayerBullet : Bullet
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName bulletSound:(NSString * _Nullable)bulletSound OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC19SpaceInvadersMobile13PulsatingText")
+@interface PulsatingText : SKLabelNode
+- (void)setTextFontSizeAndPulsateWithTheText:(NSString * _Nonnull)theText theFontSize:(CGFloat)theFontSize;
+- (nonnull instancetype)initWithFontNamed:(NSString * _Nullable)fontName OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC19SpaceInvadersMobile14StartGameScene")
 @interface StartGameScene : SKScene
+@property (nonatomic, readonly) CGFloat desiredWidthRatio;
+@property (nonatomic, readonly) CGFloat pulsatingTextScaler;
 - (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

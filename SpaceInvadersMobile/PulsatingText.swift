@@ -16,7 +16,7 @@ class PulsatingText : SKLabelNode {
         self.text = theText;
         self.fontSize = theFontSize
         
-        let scaleSequence = SKAction.sequence([SKAction.scale(to: 2, duration: 1),SKAction.scale(to: 1.0, duration:1)])
+        let scaleSequence = SKAction.sequence([SKAction.scale(to: 1.5, duration: 1),SKAction.scale(to: 1.0, duration:1)])
         let scaleForever = SKAction.repeatForever(scaleSequence)
         
         self.run(scaleForever)
