@@ -90,7 +90,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 invaderCol = j
                 
-                let tempInvader: Invader = Invader()
+                var tempInvader: Invader = Invader(imageName: "invader1.png")
+                switch(Int(arc4random_uniform(3))){
+            
+                case 1:
+                    tempInvader = Invader(imageName: "invader2.png")
+                    break
+                case 2:
+                    tempInvader = Invader(imageName: "invader3.png")
+                    break
+                default:
+                    break
+                }
+                
+                
                 let invaderHalfWidth: CGFloat = tempInvader.size.width/2
                 let xPositionStart: CGFloat = size.width/2 - invaderHalfWidth - (CGFloat(invaderNum) * tempInvader.size.width) + CGFloat(10)
 

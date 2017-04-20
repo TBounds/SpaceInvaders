@@ -15,9 +15,9 @@ class Invader: SKSpriteNode {
     var invaderCol = 0
     let desiredWidthRatio : CGFloat = 5 // Percentage of screen width you want the enemies' width to take
     
-    init() {
+    init(imageName: String) {
         
-        let texture = SKTexture(imageNamed: "images/invader1.png")
+        let texture = SKTexture(imageNamed: ("images/" + imageName))
         let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
         

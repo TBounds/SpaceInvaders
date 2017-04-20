@@ -205,7 +205,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile7Invader")
 @property (nonatomic) NSInteger invaderRow;
 @property (nonatomic) NSInteger invaderCol;
 @property (nonatomic, readonly) CGFloat desiredWidthRatio;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImageName:(NSString * _Nonnull)imageName OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
