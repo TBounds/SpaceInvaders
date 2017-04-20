@@ -24,6 +24,8 @@ struct CollisionCategories{
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // Invader Variables
     let rowsOfInvaders = 4
     var invaderSpeed = (UIScreen.main.bounds.width/384)
@@ -37,16 +39,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player : Player = Player()
     let motionManager: CMMotionManager = CMMotionManager()
     var accelerationX: CGFloat = 0.0
-    let livesWidthRatio = CGFloat(5) // Percentage lives sprite width takes of screen width
+    
     
     // Level Variables
     var maxLevels = 3
+    
+    // HUD Variable
+    let livesWidthRatio = CGFloat(7) // Percentage lives sprite width takes of screen width
+    var livesVertPos : CGFloat = 10 // This gets set when setupLives() runs. Used to align the score label.
+    var scoreLabel: SKLabelNode!
+    var score : Int = 0
+    
+    
     
 
     override func didMove(to view: SKView) {
         
 //        NSLog("invaderSpeed = \(invaderSpeed)")
 //        NSLog("screen height = \(UIScreen.main.bounds.height)")
+        
+        NSLog("XXX HELLO XXX")
         
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -67,32 +79,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupPlayer()
         invokeInvaderFire()
         setupAccelerometer()
+        setupPlayersLives()
+        setupScore()
         
-        NSLog("\(player.getPlayersLives())")
-        
-        // Render player's lives to the screen
-        // http://stackoverflow.com/questions/31793607/adding-life-sprites-in-spritekit-with-swift
-        var positionAdd = CGFloat(10)
-        for _ in 1...player.getPlayersLives() {
-            
-            let life = SKSpriteNode(imageNamed: "images/player2.png")
-            life.name = "life"
-            
-            let lifeScale = (livesWidthRatio/((100 * life.size.width)/UIScreen.main.bounds.width))
-            life.size = CGSize(width: life.size.width * lifeScale, height: life.size.height * lifeScale)
-            
-            life.position = CGPoint(x: UIScreen.main.bounds.width + life.size.width, y: UIScreen.main.bounds.height - life.size.height)
-            
-            let lifeIndexMove = SKAction.move(to: CGPoint(x: (UIScreen.main.bounds.width - life.size.width - positionAdd),
-                                                          y: UIScreen.main.bounds.height - life.size.height),
-                                                          duration: TimeInterval(0.5))
-            
-            life.run(SKAction.sequence([lifeIndexMove]))
-            
-            addChild(life)
-            
-            positionAdd = positionAdd + (life.size.width * 1.25)
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -152,6 +141,62 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = CGPoint(x: self.frame.midX, y: player.size.height/2 + 10)
         addChild(player)
     }
+    
+    func setupPlayersLives() {
+        // Render player's lives to the screen
+        // http://stackoverflow.com/questions/31793607/adding-life-sprites-in-spritekit-with-swift
+        var positionAdd = CGFloat(10)
+        for _ in 1...player.getPlayersLives() {
+            
+            let life = SKSpriteNode(imageNamed: "images/player2.png")
+            life.name = "life"
+            
+            let lifeScale = (livesWidthRatio/((100 * life.size.width)/UIScreen.main.bounds.width))
+            life.size = CGSize(width: life.size.width * lifeScale, height: life.size.height * lifeScale)
+            
+            life.position = CGPoint(x: UIScreen.main.bounds.width + life.size.width, y: UIScreen.main.bounds.height - life.size.height)
+            
+            livesVertPos = life.size.height
+            
+            let lifeIndexMove = SKAction.move(to: CGPoint(x: (UIScreen.main.bounds.width - life.size.width - positionAdd),
+                                                          y: UIScreen.main.bounds.height - life.size.height),
+                                              duration: TimeInterval(0.5))
+            
+            life.run(SKAction.sequence([lifeIndexMove]))
+            
+            addChild(life)
+            
+            positionAdd = positionAdd + (life.size.width * 1.25)
+        }
+    }
+    
+    func setupScore() {
+        
+        NSLog("XXX \(appDelegate.score) XXX")
+        
+        score = appDelegate.score
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "\(score)"
+        scoreLabel.fontSize = 50 // XXX ADJUST TO SCREEN WIDTH
+        scoreLabel.position = CGPoint(x: UIScreen.main.bounds.width/2,
+                                      y: UIScreen.main.bounds.height - livesVertPos)
+        
+        addChild(scoreLabel)
+        
+    }
+    
+    func addScore(points: Int) {
+        score += points
+        
+        scoreLabel.text = "\(score)"
+        
+    }
+    
+    func resetMetrics() {
+        appDelegate.level = 1
+        appDelegate.score = 0
+    }
+    
     
     
     //------------------------------------------------------//
@@ -228,6 +273,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
+        //------------------------- Invader Dies -------------------------//
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.PlayerBullet != 0)){
             
@@ -261,9 +307,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             theInvader.removeFromParent()
             secondBody.node?.removeFromParent()
             
+            addScore(points: (10 * appDelegate.level))
+            
             
         }
         
+        //------------------------- Player Dies -------------------------//
         if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0)) {
             
@@ -285,9 +334,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         
+        //------------------------- Player Loses -------------------------//
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
-   
+            
             player.kill()
             
         }
@@ -305,7 +355,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func levelComplete(){
         
+        NSLog("LEVEL COMPLETE")
+        
         if(invaderNum <= maxLevels){
+            
+            appDelegate.level += 1
+            appDelegate.score = score
             
             let levelCompleteScene = LevelCompleteScene(size: size)
             levelCompleteScene.scaleMode = scaleMode
@@ -320,6 +375,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func newGame(){
+        
+        NSLog("NEW GAME")
+        
+        resetMetrics()
         
         let gameOverScene = StartGameScene(size: size)
         gameOverScene.scaleMode = scaleMode

@@ -128,6 +128,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+@property (nonatomic) NSInteger level;
+@property (nonatomic) NSInteger score;
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
@@ -153,6 +155,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 @class Invader;
 @class Player;
 @class CMMotionManager;
+@class SKLabelNode;
 @class SKView;
 @class UITouch;
 @class UIEvent;
@@ -160,6 +163,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
+@property (nonatomic, readonly, strong) AppDelegate * _Nonnull appDelegate;
 @property (nonatomic, readonly) NSInteger rowsOfInvaders;
 @property (nonatomic) CGFloat invaderSpeed;
 @property (nonatomic, readonly) CGFloat enemySpacing;
@@ -170,13 +174,20 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, strong) Player * _Nonnull player;
 @property (nonatomic, readonly, strong) CMMotionManager * _Nonnull motionManager;
 @property (nonatomic) CGFloat accelerationX;
-@property (nonatomic, readonly) CGFloat livesWidthRatio;
 @property (nonatomic) NSInteger maxLevels;
+@property (nonatomic, readonly) CGFloat livesWidthRatio;
+@property (nonatomic) CGFloat livesVertPos;
+@property (nonatomic, strong) SKLabelNode * _Null_unspecified scoreLabel;
+@property (nonatomic) NSInteger score;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)update:(CFTimeInterval)currentTime;
 - (void)setupInvaders;
 - (void)setupPlayer;
+- (void)setupPlayersLives;
+- (void)setupScore;
+- (void)addScoreWithPoints:(NSInteger)points;
+- (void)resetMetrics;
 - (void)moveInvaders;
 - (void)invokeInvaderFire;
 - (void)fireInvaderBullet;

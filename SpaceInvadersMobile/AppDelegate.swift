@@ -10,6 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var level : Int = 1
+    var score : Int = 0
 
     var window: UIWindow?
 

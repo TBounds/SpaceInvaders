@@ -24,7 +24,6 @@ class LevelCompleteScene:SKScene{
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         startGameButton.size = newSize
-        
         startGameButton.name = "nextlevel"
         addChild(startGameButton)
         
@@ -35,7 +34,6 @@ class LevelCompleteScene:SKScene{
         addChild(starField!)
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
-        NSLog("\(UIScreen.main.bounds.width)")
         invaderText.setTextFontSizeAndPulsate(theText: "LEVEL COMPLETE", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
         invaderText.position = CGPoint(x: size.width/2, y: size.height/2 + 200)
         addChild(invaderText)
