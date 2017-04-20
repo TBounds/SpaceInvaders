@@ -170,6 +170,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, strong) Player * _Nonnull player;
 @property (nonatomic, readonly, strong) CMMotionManager * _Nonnull motionManager;
 @property (nonatomic) CGFloat accelerationX;
+@property (nonatomic, readonly) CGFloat livesWidthRatio;
 @property (nonatomic) NSInteger maxLevels;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
@@ -241,6 +242,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
 - (void)respawn;
 - (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
 - (NSInteger)getPlayersLives;
+- (BOOL)isPlayerInvincible;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end
 

@@ -70,21 +70,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         NSLog("\(player.getPlayersLives())")
         
+        // Render player's lives to the screen
+        // http://stackoverflow.com/questions/31793607/adding-life-sprites-in-spritekit-with-swift
         var positionAdd = CGFloat(10)
         for _ in 1...player.getPlayersLives() {
-            let life = SKSpriteNode(imageNamed: "images/player2.png")
-            life.size = CGSize(width: 10, height: 10)
-            life.position = CGPoint(x: self.frame.size.width * -1.5, y: self.frame.size.height * 0.1)
             
-            let lifeIndexMove = SKAction.move(to: CGPoint(x: (size.width * 0.1) + positionAdd, y: size.height * 0.1), duration: TimeInterval(0.7))
+            let life = SKSpriteNode(imageNamed: "images/player2.png")
+            life.name = "life"
+            
+            let lifeScale = (livesWidthRatio/((100 * life.size.width)/UIScreen.main.bounds.width))
+            life.size = CGSize(width: life.size.width * lifeScale, height: life.size.height * lifeScale)
+            
+            life.position = CGPoint(x: UIScreen.main.bounds.width + life.size.width, y: UIScreen.main.bounds.height - life.size.height)
+            
+            let lifeIndexMove = SKAction.move(to: CGPoint(x: (UIScreen.main.bounds.width - life.size.width - positionAdd),
+                                                          y: UIScreen.main.bounds.height - life.size.height),
+                                                          duration: TimeInterval(0.5))
             
             life.run(SKAction.sequence([lifeIndexMove]))
             
             addChild(life)
             
-            positionAdd = positionAdd + 30.0
-            
-            
+            positionAdd = positionAdd + (life.size.width * 1.25)
         }
     }
     
@@ -128,7 +135,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let xPositionStart: CGFloat = size.width/2 - invaderHalfWidth - (CGFloat(invaderNum) * tempInvader.size.width) + CGFloat(10)
 
                 tempInvader.position = CGPoint(x:xPositionStart + ((tempInvader.size.width * enemySpacing)*(CGFloat(j-1))),
-                                               y:CGFloat(self.size.height - CGFloat(i) * (tempInvader.size.height) * enemySpacing))
+                                               y:CGFloat(self.size.height - CGFloat(i + 1) * (tempInvader.size.height) * enemySpacing))
                 tempInvader.invaderRow = invaderRow
                 tempInvader.invaderCol = invaderCol
                 
@@ -259,8 +266,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0)) {
-    
+            
+            if !player.isPlayerInvincible() {
+                
+                // Removing lives from the screen.
+                // http://stackoverflow.com/questions/26250862/beginner-xcode-swift-sprite-kit-remove-sprite-by-name-crash
+                var lifeToRemove = SKNode()
+                for child in self.children as [SKNode] {
+                    if child.name == "life" {
+                        lifeToRemove = child
+                    }
+                }
+                
+                self.removeChildren(in: [lifeToRemove])
+            }
+            
             player.die()
+            
         }
         
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&

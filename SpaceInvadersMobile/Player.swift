@@ -16,7 +16,7 @@ class Player: SKSpriteNode {
     private var canFire = true
     private var invincible = false
     
-    private var lives:Int = 3 { // XXX Make sure lives are not 30 lol
+    private var lives:Int = 3 {
         didSet {
             if (lives < 0) {
                 kill()
@@ -82,6 +82,8 @@ class Player: SKSpriteNode {
     
     func respawn() {
         
+        NSLog("Player is respawning.")
+        
         invincible = true
         
         let fadeOutAction = SKAction.fadeOut(withDuration: 0.4)
@@ -124,5 +126,9 @@ class Player: SKSpriteNode {
     
     public func getPlayersLives() -> Int {
         return lives
+    }
+    
+    public func isPlayerInvincible() -> Bool {
+        return invincible
     }
 }
