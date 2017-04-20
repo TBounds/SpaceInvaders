@@ -31,7 +31,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
     var invadersWhoCanFire: [Invader] = []
-    
+    let invaderVertShiftCount = CGFloat(20) // How many vertical shifts it would take the enemies to travel from the top to the bottom of the screen.
+
     // Player Variables
     var player : Player = Player()
     let motionManager: CMMotionManager = CMMotionManager()
@@ -43,8 +44,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         
-        NSLog("invaderSpeed = \(invaderSpeed)")
-        NSLog("screen width = \(UIScreen.main.bounds.width)")
+//        NSLog("invaderSpeed = \(invaderSpeed)")
+//        NSLog("screen height = \(UIScreen.main.bounds.height)")
+        
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
@@ -96,6 +98,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                                                y:CGFloat(self.size.height - CGFloat(i) * (tempInvader.size.height) * enemySpacing))
                 tempInvader.invaderRow = invaderRow
                 tempInvader.invaderCol = invaderCol
+                
+                NSLog("invsader higher = \(tempInvader.size.height)")
                 addChild(tempInvader)
                 
                 if i == rowsOfInvaders {
@@ -110,6 +114,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(player)
     }
     
+    
+    //------------------------------------------------------//
+    //------------------- Move Enemies ---------------------//
+    //------------------------------------------------------//
     func moveInvaders(){
         
         var changeDirection = false
@@ -123,6 +131,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 changeDirection = true
             }
             
+            NSLog("\(UIScreen.main.bounds.height/self.invaderVertShiftCount)")
+            
         }
         
         if(changeDirection == true){
@@ -130,11 +140,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.invaderSpeed *= -1
             self.enumerateChildNodes(withName: "invader") { node, stop in
                 let invader = node as! SKSpriteNode
-                invader.position.y -= CGFloat(invader.size.height)
+                invader.position.y -= CGFloat((UIScreen.main.bounds.height/self.invaderVertShiftCount))
             }
             
             changeDirection = false
         }
+        
+        
         
     }
     

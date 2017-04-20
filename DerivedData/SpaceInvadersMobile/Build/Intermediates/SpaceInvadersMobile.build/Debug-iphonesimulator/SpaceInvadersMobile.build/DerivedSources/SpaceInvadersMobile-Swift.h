@@ -166,6 +166,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @property (nonatomic, readonly) CGFloat leftBounds;
 @property (nonatomic) CGFloat rightBounds;
 @property (nonatomic, copy) NSArray<Invader *> * _Nonnull invadersWhoCanFire;
+@property (nonatomic, readonly) CGFloat invaderVertShiftCount;
 @property (nonatomic, strong) Player * _Nonnull player;
 @property (nonatomic, readonly, strong) CMMotionManager * _Nonnull motionManager;
 @property (nonatomic) CGFloat accelerationX;

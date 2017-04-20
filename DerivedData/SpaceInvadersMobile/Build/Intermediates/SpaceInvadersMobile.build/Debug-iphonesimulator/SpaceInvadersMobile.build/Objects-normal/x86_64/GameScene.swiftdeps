@@ -10,86 +10,87 @@ provides-member:
 - ["V19SpaceInvadersMobile19CollisionCategories", ""]
 - ["C19SpaceInvadersMobile9GameScene", ""]
 provides-dynamic-lookup:
-- "fireInvaderBullet"
-- "touchesBegan"
-- "maxLevels"
-- "invaderSpeed"
+- "levelComplete"
+- "didBegin"
+- "didSimulatePhysics"
+- "leftBounds"
 - "player"
+- "invadersWhoCanFire"
+- "setupAccelerometer"
+- "maxLevels"
+- "setupPlayer"
+- "fireInvaderBullet"
+- "update"
+- "invokeInvaderFire"
+- "didMove"
+- "newGame"
 - "rowsOfInvaders"
 - "enemySpacing"
 - "rightBounds"
-- "accelerationX"
-- "setupAccelerometer"
-- "update"
-- "levelComplete"
-- "setupPlayer"
-- "didMove"
-- "didBegin"
-- "invokeInvaderFire"
-- "setupInvaders"
-- "newGame"
-- "moveInvaders"
-- "leftBounds"
+- "invaderVertShiftCount"
 - "motionManager"
-- "didSimulatePhysics"
-- "invadersWhoCanFire"
+- "moveInvaders"
+- "accelerationX"
+- "setupInvaders"
+- "invaderSpeed"
+- "touchesBegan"
 depends-top-level:
-- !private "<"
-- "UIEvent"
-- "SKScene"
-- !private "||"
-- !private "StartGameScene"
-- "SKPhysicsContactDelegate"
-- "invaderNum"
-- "CFTimeInterval"
-- !private "..."
-- "UIScreen"
-- "SKView"
-- !private ">"
-- !private "BooleanLiteralType"
-- !private "SKSpriteNode"
-- "/"
-- !private "*"
-- "CGFloat"
-- !private "+="
 - !private "SKColor"
-- !private "LevelCompleteScene"
-- "Set"
-- !private "+"
-- !private "-"
-- !private "SKAction"
-- "Invader"
-- !private "SKPhysicsBody"
-- !private "StringLiteralType"
 - !private "OperationQueue"
+- "CollisionCategories"
+- !private "SKAction"
+- !private ">="
+- "<<"
+- !private "<"
+- "GameScene"
+- !private "<="
 - "UInt32"
+- !private "SKSpriteNode"
+- "SKView"
+- !private "||"
+- "UIEvent"
+- "UITouch"
+- "Int"
+- !private "CGPoint"
+- !private "..."
+- !private "BooleanLiteralType"
+- "SKScene"
+- !private "&&"
+- !private "StartGameScene"
+- "CGFloat"
+- !private ">"
 - !private "&"
-- !private "-="
+- !private "!="
+- "Player"
+- !private "StringLiteralType"
+- !private "Array"
+- "invaderNum"
+- !private "*"
+- !private "-"
+- "CFTimeInterval"
 - "AssignmentPrecedence"
 - !private "=="
 - "CastingPrecedence"
-- !private "<="
-- "SKPhysicsContact"
-- !private "CGPoint"
-- !private "Array"
-- !private "SKTransition"
-- "IntegerLiteralType"
-- "UITouch"
-- "<<"
-- !private "SKEmitterNode"
-- "CollisionCategories"
-- "Int"
-- "FloatLiteralType"
-- !private "*="
+- !private "-="
+- "UIScreen"
 - "Equatable"
-- "Player"
-- !private "&&"
-- !private "CGVector"
-- !private ">="
+- "SKPhysicsContact"
+- "IntegerLiteralType"
+- "/"
+- "FloatLiteralType"
+- !private "LevelCompleteScene"
+- "Invader"
 - "CMMotionManager"
-- "GameScene"
-- !private "!="
+- "SKPhysicsContactDelegate"
+- !private "SKEmitterNode"
+- !private "+="
 - !private "NSLog"
+- !private "*="
+- "Set"
+- !private "SKPhysicsBody"
+- !private "CGVector"
+- !private "+"
+- !private "SKTransition"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -143,6 +144,7 @@ depends-member:
 - !private ["Ps9AnyObject", "invaderNum"]
 - !private ["Ps9AnyObject", "invaderRow"]
 - ["Ps9AnyObject", "invaderSpeed"]
+- ["Ps9AnyObject", "invaderVertShiftCount"]
 - ["Ps9AnyObject", "invadersWhoCanFire"]
 - ["Ps9AnyObject", "invokeInvaderFire"]
 - !private ["Ps9AnyObject", "kill"]
@@ -302,6 +304,7 @@ depends-member:
 - !private ["Ps7CVarArg", "invaderNum"]
 - !private ["Ps7CVarArg", "invaderRow"]
 - ["Ps7CVarArg", "invaderSpeed"]
+- ["Ps7CVarArg", "invaderVertShiftCount"]
 - ["Ps7CVarArg", "invadersWhoCanFire"]
 - ["Ps7CVarArg", "invokeInvaderFire"]
 - !private ["Ps7CVarArg", "isEmpty"]
@@ -426,6 +429,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "invaderNum"]
 - !private ["Ps28CustomDebugStringConvertible", "invaderRow"]
 - ["Ps28CustomDebugStringConvertible", "invaderSpeed"]
+- ["Ps28CustomDebugStringConvertible", "invaderVertShiftCount"]
 - ["Ps28CustomDebugStringConvertible", "invadersWhoCanFire"]
 - ["Ps28CustomDebugStringConvertible", "invokeInvaderFire"]
 - !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
@@ -572,6 +576,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "invaderNum"]
 - !private ["Ps23CustomStringConvertible", "invaderRow"]
 - ["Ps23CustomStringConvertible", "invaderSpeed"]
+- ["Ps23CustomStringConvertible", "invaderVertShiftCount"]
 - ["Ps23CustomStringConvertible", "invadersWhoCanFire"]
 - ["Ps23CustomStringConvertible", "invokeInvaderFire"]
 - !private ["Ps23CustomStringConvertible", "isEmpty"]
@@ -672,6 +677,7 @@ depends-member:
 - !private ["Ps9Equatable", "invaderNum"]
 - !private ["Ps9Equatable", "invaderRow"]
 - ["Ps9Equatable", "invaderSpeed"]
+- ["Ps9Equatable", "invaderVertShiftCount"]
 - ["Ps9Equatable", "invadersWhoCanFire"]
 - ["Ps9Equatable", "invokeInvaderFire"]
 - !private ["Ps9Equatable", "kill"]
@@ -737,6 +743,7 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["Vs7Float80", "deinit"]
 - !private ["Ps13FloatingPoint", "RawValue"]
 - !private ["Ps13FloatingPoint", "Stride"]
 - ["Ps13FloatingPoint", "init"]
@@ -774,6 +781,7 @@ depends-member:
 - !private ["PSo19GKSceneRootNodeType", "init"]
 - !private ["PSo19GKSceneRootNodeType", "invaderNum"]
 - ["PSo19GKSceneRootNodeType", "invaderSpeed"]
+- ["PSo19GKSceneRootNodeType", "invaderVertShiftCount"]
 - ["PSo19GKSceneRootNodeType", "invadersWhoCanFire"]
 - ["PSo19GKSceneRootNodeType", "invokeInvaderFire"]
 - ["PSo19GKSceneRootNodeType", "leftBounds"]
@@ -841,6 +849,7 @@ depends-member:
 - ["C19SpaceInvadersMobile9GameScene", "init"]
 - !private ["C19SpaceInvadersMobile9GameScene", "invaderNum"]
 - ["C19SpaceInvadersMobile9GameScene", "invaderSpeed"]
+- ["C19SpaceInvadersMobile9GameScene", "invaderVertShiftCount"]
 - ["C19SpaceInvadersMobile9GameScene", "invadersWhoCanFire"]
 - ["C19SpaceInvadersMobile9GameScene", "invokeInvaderFire"]
 - ["C19SpaceInvadersMobile9GameScene", "leftBounds"]
@@ -917,6 +926,7 @@ depends-member:
 - !private ["Ps8Hashable", "invaderNum"]
 - !private ["Ps8Hashable", "invaderRow"]
 - ["Ps8Hashable", "invaderSpeed"]
+- ["Ps8Hashable", "invaderVertShiftCount"]
 - ["Ps8Hashable", "invadersWhoCanFire"]
 - ["Ps8Hashable", "invokeInvaderFire"]
 - !private ["Ps8Hashable", "kill"]
@@ -1068,6 +1078,7 @@ depends-member:
 - !private ["PSo8NSCoding", "invaderNum"]
 - !private ["PSo8NSCoding", "invaderRow"]
 - ["PSo8NSCoding", "invaderSpeed"]
+- ["PSo8NSCoding", "invaderVertShiftCount"]
 - ["PSo8NSCoding", "invadersWhoCanFire"]
 - ["PSo8NSCoding", "invokeInvaderFire"]
 - !private ["PSo8NSCoding", "kill"]
@@ -1145,6 +1156,7 @@ depends-member:
 - !private ["PSo9NSCopying", "invaderNum"]
 - !private ["PSo9NSCopying", "invaderRow"]
 - ["PSo9NSCopying", "invaderSpeed"]
+- ["PSo9NSCopying", "invaderVertShiftCount"]
 - ["PSo9NSCopying", "invadersWhoCanFire"]
 - ["PSo9NSCopying", "invokeInvaderFire"]
 - !private ["PSo9NSCopying", "kill"]
@@ -1180,6 +1192,7 @@ depends-member:
 - !private ["PSo9NSCopying", "zPosition"]
 - ["PSo9NSCopying", ""]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "CFTimeInterval"]
 - ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CGPoint"]
@@ -1238,6 +1251,7 @@ depends-member:
 - !private ["CSo8NSObject", "invaderNum"]
 - !private ["CSo8NSObject", "invaderRow"]
 - ["CSo8NSObject", "invaderSpeed"]
+- ["CSo8NSObject", "invaderVertShiftCount"]
 - ["CSo8NSObject", "invadersWhoCanFire"]
 - ["CSo8NSObject", "invokeInvaderFire"]
 - !private ["CSo8NSObject", "kill"]
@@ -1323,6 +1337,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "invaderNum"]
 - !private ["PSo16NSObjectProtocol", "invaderRow"]
 - ["PSo16NSObjectProtocol", "invaderSpeed"]
+- ["PSo16NSObjectProtocol", "invaderVertShiftCount"]
 - ["PSo16NSObjectProtocol", "invadersWhoCanFire"]
 - ["PSo16NSObjectProtocol", "invokeInvaderFire"]
 - !private ["PSo16NSObjectProtocol", "kill"]
@@ -1460,6 +1475,7 @@ depends-member:
 - ["CSo12SKEffectNode", "init"]
 - !private ["CSo12SKEffectNode", "invaderNum"]
 - ["CSo12SKEffectNode", "invaderSpeed"]
+- ["CSo12SKEffectNode", "invaderVertShiftCount"]
 - ["CSo12SKEffectNode", "invadersWhoCanFire"]
 - ["CSo12SKEffectNode", "invokeInvaderFire"]
 - ["CSo12SKEffectNode", "leftBounds"]
@@ -1535,6 +1551,7 @@ depends-member:
 - !private ["CSo6SKNode", "invaderNum"]
 - !private ["CSo6SKNode", "invaderRow"]
 - ["CSo6SKNode", "invaderSpeed"]
+- ["CSo6SKNode", "invaderVertShiftCount"]
 - ["CSo6SKNode", "invadersWhoCanFire"]
 - ["CSo6SKNode", "invokeInvaderFire"]
 - !private ["CSo6SKNode", "kill"]
@@ -1602,6 +1619,7 @@ depends-member:
 - !private ["PSo24SKPhysicsContactDelegate", "frame"]
 - !private ["PSo24SKPhysicsContactDelegate", "invaderNum"]
 - !private ["PSo24SKPhysicsContactDelegate", "invaderSpeed"]
+- !private ["PSo24SKPhysicsContactDelegate", "invaderVertShiftCount"]
 - !private ["PSo24SKPhysicsContactDelegate", "invadersWhoCanFire"]
 - !private ["PSo24SKPhysicsContactDelegate", "invokeInvaderFire"]
 - !private ["PSo24SKPhysicsContactDelegate", "leftBounds"]
@@ -1670,6 +1688,7 @@ depends-member:
 - ["CSo7SKScene", "init"]
 - !private ["CSo7SKScene", "invaderNum"]
 - ["CSo7SKScene", "invaderSpeed"]
+- ["CSo7SKScene", "invaderVertShiftCount"]
 - ["CSo7SKScene", "invadersWhoCanFire"]
 - ["CSo7SKScene", "invokeInvaderFire"]
 - ["CSo7SKScene", "leftBounds"]
@@ -1745,6 +1764,7 @@ depends-member:
 - !private ["PSo10SKWarpable", "invaderNum"]
 - !private ["PSo10SKWarpable", "invaderRow"]
 - ["PSo10SKWarpable", "invaderSpeed"]
+- ["PSo10SKWarpable", "invaderVertShiftCount"]
 - ["PSo10SKWarpable", "invadersWhoCanFire"]
 - ["PSo10SKWarpable", "invokeInvaderFire"]
 - !private ["PSo10SKWarpable", "kill"]
@@ -1846,6 +1866,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "invaderNum"]
 - !private ["PSo18UIFocusEnvironment", "invaderRow"]
 - ["PSo18UIFocusEnvironment", "invaderSpeed"]
+- ["PSo18UIFocusEnvironment", "invaderVertShiftCount"]
 - ["PSo18UIFocusEnvironment", "invadersWhoCanFire"]
 - ["PSo18UIFocusEnvironment", "invokeInvaderFire"]
 - !private ["PSo18UIFocusEnvironment", "kill"]
@@ -1914,6 +1935,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "invaderNum"]
 - !private ["PSo11UIFocusItem", "invaderRow"]
 - ["PSo11UIFocusItem", "invaderSpeed"]
+- ["PSo11UIFocusItem", "invaderVertShiftCount"]
 - ["PSo11UIFocusItem", "invadersWhoCanFire"]
 - ["PSo11UIFocusItem", "invokeInvaderFire"]
 - !private ["PSo11UIFocusItem", "kill"]
@@ -1991,6 +2013,7 @@ depends-member:
 - !private ["CSo11UIResponder", "invaderNum"]
 - !private ["CSo11UIResponder", "invaderRow"]
 - ["CSo11UIResponder", "invaderSpeed"]
+- ["CSo11UIResponder", "invaderVertShiftCount"]
 - ["CSo11UIResponder", "invadersWhoCanFire"]
 - ["CSo11UIResponder", "invokeInvaderFire"]
 - !private ["CSo11UIResponder", "kill"]
@@ -2058,6 +2081,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "invaderNum"]
 - !private ["PSo30UIResponderStandardEditActions", "invaderRow"]
 - ["PSo30UIResponderStandardEditActions", "invaderSpeed"]
+- ["PSo30UIResponderStandardEditActions", "invaderVertShiftCount"]
 - ["PSo30UIResponderStandardEditActions", "invadersWhoCanFire"]
 - ["PSo30UIResponderStandardEditActions", "invokeInvaderFire"]
 - !private ["PSo30UIResponderStandardEditActions", "kill"]
@@ -2192,6 +2216,7 @@ depends-member:
 - !private ["Ps9_Hashable", "invaderNum"]
 - !private ["Ps9_Hashable", "invaderRow"]
 - ["Ps9_Hashable", "invaderSpeed"]
+- ["Ps9_Hashable", "invaderVertShiftCount"]
 - ["Ps9_Hashable", "invadersWhoCanFire"]
 - ["Ps9_Hashable", "invokeInvaderFire"]
 - !private ["Ps9_Hashable", "kill"]
@@ -2314,6 +2339,7 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "Vs7Float80"
 - "Ps13FloatingPoint"
 - "PSo19GKSceneRootNodeType"
 - "C19SpaceInvadersMobile9GameScene"
@@ -2339,6 +2365,7 @@ depends-nominal:
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
@@ -2430,4 +2457,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
-interface-hash: "7597714a4e760ce39d4a780418a5dbaf"
+interface-hash: "8f2e1985ed169a22da1d54c4dd7b02c2"
