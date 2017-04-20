@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Invader Variables
     let rowsOfInvaders = 4
-    var invaderSpeed = 2
+    var invaderSpeed = (UIScreen.main.bounds.width/384)
     let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no vertical space between enemies.
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
@@ -42,6 +42,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
 
     override func didMove(to view: SKView) {
+        
+        NSLog("invaderSpeed = \(invaderSpeed)")
+        NSLog("screen width = \(UIScreen.main.bounds.width)")
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
@@ -127,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.invaderSpeed *= -1
             self.enumerateChildNodes(withName: "invader") { node, stop in
                 let invader = node as! SKSpriteNode
-                invader.position.y -= CGFloat(46)
+                invader.position.y -= CGFloat(invader.size.height)
             }
             
             changeDirection = false

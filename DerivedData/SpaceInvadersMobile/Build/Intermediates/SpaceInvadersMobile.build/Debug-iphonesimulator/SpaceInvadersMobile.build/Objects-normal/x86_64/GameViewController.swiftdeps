@@ -9,14 +9,14 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 - "prefersStatusBarHidden"
 depends-top-level:
-- "UIViewController"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
 - !private "SKView"
-- !private "StartGameScene"
-- !private "BooleanLiteralType"
 - "Bool"
+- "UIViewController"
+- !private "BooleanLiteralType"
 - "GameViewController"
+- !private "StartGameScene"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
 depends-member:
 - !private ["Ps9AnyObject", "StartGameScene"]
 - !private ["Ps9AnyObject", "bounds"]

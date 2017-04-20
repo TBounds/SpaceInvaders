@@ -161,7 +161,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Bullet")
 SWIFT_CLASS("_TtC19SpaceInvadersMobile9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic, readonly) NSInteger rowsOfInvaders;
-@property (nonatomic) NSInteger invaderSpeed;
+@property (nonatomic) CGFloat invaderSpeed;
 @property (nonatomic, readonly) CGFloat enemySpacing;
 @property (nonatomic, readonly) CGFloat leftBounds;
 @property (nonatomic) CGFloat rightBounds;
