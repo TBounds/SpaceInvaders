@@ -37,6 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player : Player = Player()
     let motionManager: CMMotionManager = CMMotionManager()
     var accelerationX: CGFloat = 0.0
+    let livesWidthRatio = CGFloat(5) // Percentage lives sprite width takes of screen width
     
     // Level Variables
     var maxLevels = 3
@@ -66,6 +67,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupPlayer()
         invokeInvaderFire()
         setupAccelerometer()
+        
+        NSLog("\(player.getPlayersLives())")
+        
+        var positionAdd = CGFloat(10)
+        for _ in 1...player.getPlayersLives() {
+            let life = SKSpriteNode(imageNamed: "images/player2.png")
+            life.size = CGSize(width: 10, height: 10)
+            life.position = CGPoint(x: self.frame.size.width * -1.5, y: self.frame.size.height * 0.1)
+            
+            let lifeIndexMove = SKAction.move(to: CGPoint(x: (size.width * 0.1) + positionAdd, y: size.height * 0.1), duration: TimeInterval(0.7))
+            
+            life.run(SKAction.sequence([lifeIndexMove]))
+            
+            addChild(life)
+            
+            positionAdd = positionAdd + 30.0
+            
+            
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -112,7 +132,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 tempInvader.invaderRow = invaderRow
                 tempInvader.invaderCol = invaderCol
                 
-                NSLog("invsader higher = \(tempInvader.size.height)")
                 addChild(tempInvader)
                 
                 if i == rowsOfInvaders {
@@ -143,8 +162,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if(invader.position.x > self.rightBounds - invaderHalfWidth || invader.position.x < self.leftBounds + invaderHalfWidth){
                 changeDirection = true
             }
-            
-            NSLog("\(UIScreen.main.bounds.height/self.invaderVertShiftCount)")
             
         }
         
@@ -242,13 +259,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.InvaderBullet != 0)) {
-            NSLog("Player and Invader Bullet Contact")
+    
             player.die()
         }
         
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
-            NSLog("Invader and Player Collision Contact")
+   
             player.kill()
             
         }

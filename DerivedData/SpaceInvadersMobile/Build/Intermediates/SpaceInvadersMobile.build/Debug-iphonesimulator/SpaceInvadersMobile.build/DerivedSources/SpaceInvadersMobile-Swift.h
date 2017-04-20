@@ -240,6 +240,7 @@ SWIFT_CLASS("_TtC19SpaceInvadersMobile6Player")
 - (void)kill;
 - (void)respawn;
 - (void)fireBulletWithScene:(SKScene * _Nonnull)scene;
+- (NSInteger)getPlayersLives;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end
 
