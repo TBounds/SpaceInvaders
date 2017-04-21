@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A141C1EA0050400263144 /* LevelCompleteScene.swift */; };
 		F80A14211EA00E5C00263144 /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = F80A14201EA00E5C00263144 /* StarField.sks */; };
+		F894488E1EAA7CD0009A2A5A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = F894488D1EAA7CD0009A2A5A /* star.png */; };
 		F894D7961E9D6CD500035764 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7951E9D6CD500035764 /* Invader.swift */; };
 		F894D7981E9D72D700035764 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7971E9D72D700035764 /* Player.swift */; };
 		F894D79A1E9D764C00035764 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D7991E9D764C00035764 /* Bullet.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		F80A141C1EA0050400263144 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
 		F80A14201EA00E5C00263144 /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
+		F894488D1EAA7CD0009A2A5A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = images/star.png; sourceTree = "<group>"; };
 		F894D7951E9D6CD500035764 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Invader.swift; path = ../Invader.swift; sourceTree = "<group>"; };
 		F894D7971E9D72D700035764 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F894D7991E9D764C00035764 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		F8B73FF51E9D3F4B00042272 /* SpaceInvadersMobile */ = {
 			isa = PBXGroup;
 			children = (
+				F894488D1EAA7CD0009A2A5A /* star.png */,
 				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8B73FFA1E9D3F4B00042272 /* Actions.sks */,
 				F80A14201EA00E5C00263144 /* StarField.sks */,
@@ -167,6 +170,7 @@
 				F8B740121E9D66AB00042272 /* images in Resources */,
 				F8B740021E9D3F4B00042272 /* Main.storyboard in Resources */,
 				F8B740041E9D3F4B00042272 /* Assets.xcassets in Resources */,
+				F894488E1EAA7CD0009A2A5A /* star.png in Resources */,
 				F8B740071E9D3F4B00042272 /* LaunchScreen.storyboard in Resources */,
 				F8B73FFB1E9D3F4B00042272 /* Actions.sks in Resources */,
 			);

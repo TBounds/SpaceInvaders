@@ -7,33 +7,33 @@ provides-member:
 - ["C19SpaceInvadersMobile14StartGameScene", ""]
 provides-dynamic-lookup:
 - "desiredWidthRatio"
-- "pulsatingTextScaler"
 - "didMove"
+- "pulsatingTextScaler"
 - "touchesBegan"
 depends-top-level:
-- "Set"
-- "UIEvent"
-- !private "StringLiteralType"
-- !private "CGSize"
-- !private "PulsatingText"
-- !private "/"
-- "SKView"
-- "UITouch"
-- !private "UIScreen"
-- !private "CGVector"
-- !private "GameScene"
-- !private "SKSpriteNode"
-- !private "+"
-- !private "SKEmitterNode"
-- "CGFloat"
-- "StartGameScene"
-- "SKScene"
-- !private "CGPoint"
-- "AssignmentPrecedence"
-- !private "=="
-- "CastingPrecedence"
 - !private "*"
+- !private "+"
+- !private "/"
+- !private "=="
+- "AssignmentPrecedence"
+- "CGFloat"
+- !private "CGPoint"
+- !private "CGSize"
+- !private "CGVector"
+- "CastingPrecedence"
+- !private "GameScene"
+- !private "PulsatingText"
+- !private "SKEmitterNode"
+- "SKScene"
+- !private "SKSpriteNode"
 - !private "SKTransition"
+- "SKView"
+- "Set"
+- "StartGameScene"
+- !private "StringLiteralType"
+- "UIEvent"
+- !private "UIScreen"
+- "UITouch"
 depends-member:
 - ["Ps16AbsoluteValuable", "init"]
 - ["Ps9AnyObject", "CGFloat"]
@@ -49,8 +49,7 @@ depends-member:
 - !private ["Ps9AnyObject", "addChild"]
 - !private ["Ps9AnyObject", "atPoint"]
 - !private ["Ps9AnyObject", "bounds"]
-- ["Ps9AnyObject", "desiredWidthRatio"]
-- ["Ps9AnyObject", "didMove"]
+- !private ["Ps9AnyObject", "desiredWidthRatio"]
 - !private ["Ps9AnyObject", "flipHorizontal"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "location"]
@@ -59,36 +58,28 @@ depends-member:
 - !private ["Ps9AnyObject", "particlePositionRange"]
 - !private ["Ps9AnyObject", "position"]
 - !private ["Ps9AnyObject", "presentScene"]
-- ["Ps9AnyObject", "pulsatingTextScaler"]
+- !private ["Ps9AnyObject", "pulsatingTextScaler"]
 - !private ["Ps9AnyObject", "scaleMode"]
 - !private ["Ps9AnyObject", "setTextFontSizeAndPulsate"]
 - !private ["Ps9AnyObject", "size"]
-- ["Ps9AnyObject", "touchesBegan"]
 - !private ["Ps9AnyObject", "view"]
 - !private ["Ps9AnyObject", "zPosition"]
 - ["Ps9AnyObject", ""]
 - ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "presentScene"]
-- ["V12CoreGraphics7CGFloat", "deinit"]
 - ["V12CoreGraphics7CGFloat", "init"]
-- ["VSC7CGPoint", "deinit"]
 - !private ["VSC7CGPoint", "init"]
-- ["VSC6CGRect", "deinit"]
 - !private ["VSC6CGRect", "width"]
-- ["VSC6CGSize", "deinit"]
 - !private ["VSC6CGSize", "height"]
 - !private ["VSC6CGSize", "init"]
 - !private ["VSC6CGSize", "width"]
-- ["VSC8CGVector", "deinit"]
 - !private ["VSC8CGVector", "init"]
 - ["Ps7CVarArg", "CGFloat"]
 - !private ["Ps7CVarArg", "CGPoint"]
 - !private ["Ps7CVarArg", "CGSize"]
 - !private ["Ps7CVarArg", "CGVector"]
 - !private ["Ps7CVarArg", "GameScene"]
-- !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "PulsatingText"]
 - !private ["Ps7CVarArg", "SKEmitterNode"]
 - !private ["Ps7CVarArg", "SKSpriteNode"]
@@ -97,8 +88,7 @@ depends-member:
 - !private ["Ps7CVarArg", "addChild"]
 - !private ["Ps7CVarArg", "atPoint"]
 - !private ["Ps7CVarArg", "bounds"]
-- ["Ps7CVarArg", "desiredWidthRatio"]
-- ["Ps7CVarArg", "didMove"]
+- !private ["Ps7CVarArg", "desiredWidthRatio"]
 - !private ["Ps7CVarArg", "first"]
 - !private ["Ps7CVarArg", "flipHorizontal"]
 - ["Ps7CVarArg", "init"]
@@ -108,15 +98,13 @@ depends-member:
 - !private ["Ps7CVarArg", "particlePositionRange"]
 - !private ["Ps7CVarArg", "position"]
 - !private ["Ps7CVarArg", "presentScene"]
-- ["Ps7CVarArg", "pulsatingTextScaler"]
+- !private ["Ps7CVarArg", "pulsatingTextScaler"]
 - !private ["Ps7CVarArg", "scaleMode"]
 - !private ["Ps7CVarArg", "setTextFontSizeAndPulsate"]
 - !private ["Ps7CVarArg", "size"]
-- ["Ps7CVarArg", "touchesBegan"]
 - !private ["Ps7CVarArg", "view"]
 - !private ["Ps7CVarArg", "zPosition"]
 - ["Ps7CVarArg", ""]
-- !private ["Ps10Collection", "Iterator"]
 - !private ["Ps10Collection", "first"]
 - ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "CGFloat"]
@@ -124,7 +112,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGSize"]
 - !private ["Ps28CustomDebugStringConvertible", "CGVector"]
 - !private ["Ps28CustomDebugStringConvertible", "GameScene"]
-- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "PulsatingText"]
 - !private ["Ps28CustomDebugStringConvertible", "SKEmitterNode"]
 - !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
@@ -133,8 +120,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addChild"]
 - !private ["Ps28CustomDebugStringConvertible", "atPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
-- ["Ps28CustomDebugStringConvertible", "desiredWidthRatio"]
-- ["Ps28CustomDebugStringConvertible", "didMove"]
+- !private ["Ps28CustomDebugStringConvertible", "desiredWidthRatio"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
 - !private ["Ps28CustomDebugStringConvertible", "flipHorizontal"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
@@ -145,11 +131,10 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "particlePositionRange"]
 - !private ["Ps28CustomDebugStringConvertible", "position"]
 - !private ["Ps28CustomDebugStringConvertible", "presentScene"]
-- ["Ps28CustomDebugStringConvertible", "pulsatingTextScaler"]
+- !private ["Ps28CustomDebugStringConvertible", "pulsatingTextScaler"]
 - !private ["Ps28CustomDebugStringConvertible", "scaleMode"]
 - !private ["Ps28CustomDebugStringConvertible", "setTextFontSizeAndPulsate"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
-- ["Ps28CustomDebugStringConvertible", "touchesBegan"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
 - !private ["Ps28CustomDebugStringConvertible", "zPosition"]
@@ -161,8 +146,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "position"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "size"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "width"]
-- !private ["Ps17CustomReflectable", "Element"]
-- !private ["Ps17CustomReflectable", "Iterator"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "first"]
 - !private ["Ps17CustomReflectable", "height"]
@@ -173,7 +156,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGSize"]
 - !private ["Ps23CustomStringConvertible", "CGVector"]
 - !private ["Ps23CustomStringConvertible", "GameScene"]
-- !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "PulsatingText"]
 - !private ["Ps23CustomStringConvertible", "SKEmitterNode"]
 - !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
@@ -183,8 +165,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addChild"]
 - !private ["Ps23CustomStringConvertible", "atPoint"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
-- ["Ps23CustomStringConvertible", "desiredWidthRatio"]
-- ["Ps23CustomStringConvertible", "didMove"]
+- !private ["Ps23CustomStringConvertible", "desiredWidthRatio"]
 - !private ["Ps23CustomStringConvertible", "first"]
 - !private ["Ps23CustomStringConvertible", "flipHorizontal"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -194,21 +175,18 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "particlePositionRange"]
 - !private ["Ps23CustomStringConvertible", "position"]
 - !private ["Ps23CustomStringConvertible", "presentScene"]
-- ["Ps23CustomStringConvertible", "pulsatingTextScaler"]
+- !private ["Ps23CustomStringConvertible", "pulsatingTextScaler"]
 - !private ["Ps23CustomStringConvertible", "scaleMode"]
 - !private ["Ps23CustomStringConvertible", "setTextFontSizeAndPulsate"]
 - !private ["Ps23CustomStringConvertible", "size"]
-- ["Ps23CustomStringConvertible", "touchesBegan"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - !private ["Ps23CustomStringConvertible", "zPosition"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Sd", "deinit"]
 - ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "CGPoint"]
 - !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "CGVector"]
 - !private ["Ps9Equatable", "GameScene"]
-- !private ["Ps9Equatable", "Iterator"]
 - !private ["Ps9Equatable", "PulsatingText"]
 - !private ["Ps9Equatable", "SKEmitterNode"]
 - !private ["Ps9Equatable", "SKSpriteNode"]
@@ -218,8 +196,7 @@ depends-member:
 - !private ["Ps9Equatable", "addChild"]
 - !private ["Ps9Equatable", "atPoint"]
 - !private ["Ps9Equatable", "bounds"]
-- ["Ps9Equatable", "desiredWidthRatio"]
-- ["Ps9Equatable", "didMove"]
+- !private ["Ps9Equatable", "desiredWidthRatio"]
 - !private ["Ps9Equatable", "first"]
 - !private ["Ps9Equatable", "flipHorizontal"]
 - !private ["Ps9Equatable", "height"]
@@ -230,22 +207,19 @@ depends-member:
 - !private ["Ps9Equatable", "particlePositionRange"]
 - !private ["Ps9Equatable", "position"]
 - !private ["Ps9Equatable", "presentScene"]
-- ["Ps9Equatable", "pulsatingTextScaler"]
+- !private ["Ps9Equatable", "pulsatingTextScaler"]
 - !private ["Ps9Equatable", "scaleMode"]
 - !private ["Ps9Equatable", "setTextFontSizeAndPulsate"]
 - !private ["Ps9Equatable", "size"]
-- ["Ps9Equatable", "touchesBegan"]
 - !private ["Ps9Equatable", "view"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "zPosition"]
 - ["Ps9Equatable", ""]
-- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "first"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - ["Ps25ExpressibleByFloatLiteral", "init"]
 - ["Ps27ExpressibleByIntegerLiteral", "init"]
-- !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["Ps13FloatingPoint", "init"]
@@ -261,16 +235,13 @@ depends-member:
 - !private ["PSo19GKSceneRootNodeType", "UIScreen"]
 - !private ["PSo19GKSceneRootNodeType", "addChild"]
 - !private ["PSo19GKSceneRootNodeType", "atPoint"]
-- ["PSo19GKSceneRootNodeType", "desiredWidthRatio"]
-- ["PSo19GKSceneRootNodeType", "didMove"]
+- !private ["PSo19GKSceneRootNodeType", "desiredWidthRatio"]
 - !private ["PSo19GKSceneRootNodeType", "init"]
-- ["PSo19GKSceneRootNodeType", "pulsatingTextScaler"]
+- !private ["PSo19GKSceneRootNodeType", "pulsatingTextScaler"]
 - !private ["PSo19GKSceneRootNodeType", "scaleMode"]
 - !private ["PSo19GKSceneRootNodeType", "size"]
-- ["PSo19GKSceneRootNodeType", "touchesBegan"]
 - !private ["PSo19GKSceneRootNodeType", "view"]
 - ["PSo19GKSceneRootNodeType", ""]
-- ["C19SpaceInvadersMobile9GameScene", "deinit"]
 - !private ["C19SpaceInvadersMobile9GameScene", "init"]
 - !private ["C19SpaceInvadersMobile9GameScene", "scaleMode"]
 - ["Ps8Hashable", "CGFloat"]
@@ -278,7 +249,6 @@ depends-member:
 - !private ["Ps8Hashable", "CGSize"]
 - !private ["Ps8Hashable", "CGVector"]
 - !private ["Ps8Hashable", "GameScene"]
-- !private ["Ps8Hashable", "Iterator"]
 - !private ["Ps8Hashable", "PulsatingText"]
 - !private ["Ps8Hashable", "SKEmitterNode"]
 - !private ["Ps8Hashable", "SKSpriteNode"]
@@ -288,8 +258,7 @@ depends-member:
 - !private ["Ps8Hashable", "addChild"]
 - !private ["Ps8Hashable", "atPoint"]
 - !private ["Ps8Hashable", "bounds"]
-- ["Ps8Hashable", "desiredWidthRatio"]
-- ["Ps8Hashable", "didMove"]
+- !private ["Ps8Hashable", "desiredWidthRatio"]
 - !private ["Ps8Hashable", "first"]
 - !private ["Ps8Hashable", "flipHorizontal"]
 - ["Ps8Hashable", "init"]
@@ -299,25 +268,16 @@ depends-member:
 - !private ["Ps8Hashable", "particlePositionRange"]
 - !private ["Ps8Hashable", "position"]
 - !private ["Ps8Hashable", "presentScene"]
-- ["Ps8Hashable", "pulsatingTextScaler"]
+- !private ["Ps8Hashable", "pulsatingTextScaler"]
 - !private ["Ps8Hashable", "scaleMode"]
 - !private ["Ps8Hashable", "setTextFontSizeAndPulsate"]
 - !private ["Ps8Hashable", "size"]
-- ["Ps8Hashable", "touchesBegan"]
 - !private ["Ps8Hashable", "view"]
 - !private ["Ps8Hashable", "zPosition"]
 - ["Ps8Hashable", ""]
-- ["SQ", "deinit"]
-- !private ["Ps9Indexable", "Iterator"]
-- !private ["Ps9Indexable", "first"]
-- !private ["Ps13IndexableBase", "Iterator"]
-- !private ["Ps13IndexableBase", "first"]
-- !private ["Si", "deinit"]
-- !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "init"]
-- ["CSo7NSCoder", "deinit"]
 - ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "CGPoint"]
 - !private ["PSo8NSCoding", "CGSize"]
@@ -330,18 +290,16 @@ depends-member:
 - !private ["PSo8NSCoding", "UIScreen"]
 - !private ["PSo8NSCoding", "addChild"]
 - !private ["PSo8NSCoding", "atPoint"]
-- ["PSo8NSCoding", "desiredWidthRatio"]
-- ["PSo8NSCoding", "didMove"]
+- !private ["PSo8NSCoding", "desiredWidthRatio"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "name"]
 - !private ["PSo8NSCoding", "particlePositionRange"]
 - !private ["PSo8NSCoding", "position"]
 - !private ["PSo8NSCoding", "presentScene"]
-- ["PSo8NSCoding", "pulsatingTextScaler"]
+- !private ["PSo8NSCoding", "pulsatingTextScaler"]
 - !private ["PSo8NSCoding", "scaleMode"]
 - !private ["PSo8NSCoding", "setTextFontSizeAndPulsate"]
 - !private ["PSo8NSCoding", "size"]
-- ["PSo8NSCoding", "touchesBegan"]
 - !private ["PSo8NSCoding", "view"]
 - !private ["PSo8NSCoding", "zPosition"]
 - ["PSo8NSCoding", ""]
@@ -357,18 +315,16 @@ depends-member:
 - !private ["PSo9NSCopying", "UIScreen"]
 - !private ["PSo9NSCopying", "addChild"]
 - !private ["PSo9NSCopying", "atPoint"]
-- ["PSo9NSCopying", "desiredWidthRatio"]
-- ["PSo9NSCopying", "didMove"]
+- !private ["PSo9NSCopying", "desiredWidthRatio"]
 - !private ["PSo9NSCopying", "flipHorizontal"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "name"]
 - !private ["PSo9NSCopying", "particlePositionRange"]
 - !private ["PSo9NSCopying", "position"]
-- ["PSo9NSCopying", "pulsatingTextScaler"]
+- !private ["PSo9NSCopying", "pulsatingTextScaler"]
 - !private ["PSo9NSCopying", "scaleMode"]
 - !private ["PSo9NSCopying", "setTextFontSizeAndPulsate"]
 - !private ["PSo9NSCopying", "size"]
-- ["PSo9NSCopying", "touchesBegan"]
 - !private ["PSo9NSCopying", "view"]
 - !private ["PSo9NSCopying", "zPosition"]
 - ["PSo9NSCopying", ""]
@@ -420,8 +376,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addChild"]
 - !private ["PSo16NSObjectProtocol", "atPoint"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
-- ["PSo16NSObjectProtocol", "desiredWidthRatio"]
-- ["PSo16NSObjectProtocol", "didMove"]
+- !private ["PSo16NSObjectProtocol", "desiredWidthRatio"]
 - !private ["PSo16NSObjectProtocol", "flipHorizontal"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "location"]
@@ -430,18 +385,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "particlePositionRange"]
 - !private ["PSo16NSObjectProtocol", "position"]
 - !private ["PSo16NSObjectProtocol", "presentScene"]
-- ["PSo16NSObjectProtocol", "pulsatingTextScaler"]
+- !private ["PSo16NSObjectProtocol", "pulsatingTextScaler"]
 - !private ["PSo16NSObjectProtocol", "scaleMode"]
 - !private ["PSo16NSObjectProtocol", "setTextFontSizeAndPulsate"]
 - !private ["PSo16NSObjectProtocol", "size"]
-- ["PSo16NSObjectProtocol", "touchesBegan"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - !private ["PSo16NSObjectProtocol", "zPosition"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
-- ["Sq", "deinit"]
-- ["C19SpaceInvadersMobile13PulsatingText", "deinit"]
 - !private ["C19SpaceInvadersMobile13PulsatingText", "init"]
 - !private ["C19SpaceInvadersMobile13PulsatingText", "position"]
 - !private ["C19SpaceInvadersMobile13PulsatingText", "setTextFontSizeAndPulsate"]
@@ -469,7 +421,6 @@ depends-member:
 - !private ["CSo12SKEffectNode", "size"]
 - ["CSo12SKEffectNode", "touchesBegan"]
 - !private ["CSo12SKEffectNode", "view"]
-- ["CSo13SKEmitterNode", "deinit"]
 - !private ["CSo13SKEmitterNode", "init"]
 - !private ["CSo13SKEmitterNode", "particlePositionRange"]
 - !private ["CSo13SKEmitterNode", "position"]
@@ -493,7 +444,6 @@ depends-member:
 - ["CSo6SKNode", "UITouch"]
 - !private ["CSo6SKNode", "addChild"]
 - !private ["CSo6SKNode", "atPoint"]
-- ["CSo6SKNode", "deinit"]
 - ["CSo6SKNode", "desiredWidthRatio"]
 - ["CSo6SKNode", "didMove"]
 - ["CSo6SKNode", "init"]
@@ -525,7 +475,6 @@ depends-member:
 - ["CSo7SKScene", "UITouch"]
 - !private ["CSo7SKScene", "addChild"]
 - !private ["CSo7SKScene", "atPoint"]
-- ["CSo7SKScene", "deinit"]
 - ["CSo7SKScene", "desiredWidthRatio"]
 - ["CSo7SKScene", "didMove"]
 - ["CSo7SKScene", "init"]
@@ -535,14 +484,11 @@ depends-member:
 - ["CSo7SKScene", "touchesBegan"]
 - !private ["CSo7SKScene", "view"]
 - ["CSo7SKScene", ""]
-- ["CSo12SKSpriteNode", "deinit"]
 - !private ["CSo12SKSpriteNode", "init"]
 - !private ["CSo12SKSpriteNode", "name"]
 - !private ["CSo12SKSpriteNode", "position"]
 - !private ["CSo12SKSpriteNode", "size"]
-- ["CSo12SKTransition", "deinit"]
 - !private ["CSo12SKTransition", "flipHorizontal"]
-- ["CSo6SKView", "deinit"]
 - !private ["CSo6SKView", "presentScene"]
 - ["PSo10SKWarpable", "CGFloat"]
 - !private ["PSo10SKWarpable", "CGPoint"]
@@ -556,25 +502,18 @@ depends-member:
 - !private ["PSo10SKWarpable", "UIScreen"]
 - !private ["PSo10SKWarpable", "addChild"]
 - !private ["PSo10SKWarpable", "atPoint"]
-- ["PSo10SKWarpable", "desiredWidthRatio"]
-- ["PSo10SKWarpable", "didMove"]
+- !private ["PSo10SKWarpable", "desiredWidthRatio"]
 - !private ["PSo10SKWarpable", "init"]
 - !private ["PSo10SKWarpable", "name"]
 - !private ["PSo10SKWarpable", "position"]
-- ["PSo10SKWarpable", "pulsatingTextScaler"]
+- !private ["PSo10SKWarpable", "pulsatingTextScaler"]
 - !private ["PSo10SKWarpable", "scaleMode"]
 - !private ["PSo10SKWarpable", "size"]
-- ["PSo10SKWarpable", "touchesBegan"]
 - !private ["PSo10SKWarpable", "view"]
 - ["PSo10SKWarpable", ""]
-- !private ["Ps8Sequence", "Iterator"]
 - !private ["Ps8Sequence", "first"]
-- !private ["Vs3Set", "Iterator"]
-- ["Vs3Set", "deinit"]
 - !private ["Vs3Set", "first"]
-- !private ["Ps10SetAlgebra", "Iterator"]
 - !private ["Ps10SetAlgebra", "first"]
-- !private ["Vs11SetIterator", "Element"]
 - ["Ps12SignedNumber", "init"]
 - ["C19SpaceInvadersMobile14StartGameScene", "CGFloat"]
 - !private ["C19SpaceInvadersMobile14StartGameScene", "CGPoint"]
@@ -602,7 +541,6 @@ depends-member:
 - ["C19SpaceInvadersMobile14StartGameScene", "touchesBegan"]
 - !private ["C19SpaceInvadersMobile14StartGameScene", "view"]
 - ["Ps10Strideable", "init"]
-- ["SS", "deinit"]
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
@@ -623,18 +561,16 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIScreen"]
 - !private ["PSo18UIFocusEnvironment", "addChild"]
 - !private ["PSo18UIFocusEnvironment", "atPoint"]
-- ["PSo18UIFocusEnvironment", "desiredWidthRatio"]
-- ["PSo18UIFocusEnvironment", "didMove"]
+- !private ["PSo18UIFocusEnvironment", "desiredWidthRatio"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "name"]
 - !private ["PSo18UIFocusEnvironment", "particlePositionRange"]
 - !private ["PSo18UIFocusEnvironment", "position"]
 - !private ["PSo18UIFocusEnvironment", "presentScene"]
-- ["PSo18UIFocusEnvironment", "pulsatingTextScaler"]
+- !private ["PSo18UIFocusEnvironment", "pulsatingTextScaler"]
 - !private ["PSo18UIFocusEnvironment", "scaleMode"]
 - !private ["PSo18UIFocusEnvironment", "setTextFontSizeAndPulsate"]
 - !private ["PSo18UIFocusEnvironment", "size"]
-- ["PSo18UIFocusEnvironment", "touchesBegan"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - !private ["PSo18UIFocusEnvironment", "zPosition"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -650,18 +586,16 @@ depends-member:
 - !private ["PSo11UIFocusItem", "UIScreen"]
 - !private ["PSo11UIFocusItem", "addChild"]
 - !private ["PSo11UIFocusItem", "atPoint"]
-- ["PSo11UIFocusItem", "desiredWidthRatio"]
-- ["PSo11UIFocusItem", "didMove"]
+- !private ["PSo11UIFocusItem", "desiredWidthRatio"]
 - !private ["PSo11UIFocusItem", "init"]
 - !private ["PSo11UIFocusItem", "name"]
 - !private ["PSo11UIFocusItem", "particlePositionRange"]
 - !private ["PSo11UIFocusItem", "position"]
 - !private ["PSo11UIFocusItem", "presentScene"]
-- ["PSo11UIFocusItem", "pulsatingTextScaler"]
+- !private ["PSo11UIFocusItem", "pulsatingTextScaler"]
 - !private ["PSo11UIFocusItem", "scaleMode"]
 - !private ["PSo11UIFocusItem", "setTextFontSizeAndPulsate"]
 - !private ["PSo11UIFocusItem", "size"]
-- ["PSo11UIFocusItem", "touchesBegan"]
 - !private ["PSo11UIFocusItem", "view"]
 - !private ["PSo11UIFocusItem", "zPosition"]
 - ["PSo11UIFocusItem", ""]
@@ -707,25 +641,21 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "UIScreen"]
 - !private ["PSo30UIResponderStandardEditActions", "addChild"]
 - !private ["PSo30UIResponderStandardEditActions", "atPoint"]
-- ["PSo30UIResponderStandardEditActions", "desiredWidthRatio"]
-- ["PSo30UIResponderStandardEditActions", "didMove"]
+- !private ["PSo30UIResponderStandardEditActions", "desiredWidthRatio"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "name"]
 - !private ["PSo30UIResponderStandardEditActions", "particlePositionRange"]
 - !private ["PSo30UIResponderStandardEditActions", "position"]
 - !private ["PSo30UIResponderStandardEditActions", "presentScene"]
-- ["PSo30UIResponderStandardEditActions", "pulsatingTextScaler"]
+- !private ["PSo30UIResponderStandardEditActions", "pulsatingTextScaler"]
 - !private ["PSo30UIResponderStandardEditActions", "scaleMode"]
 - !private ["PSo30UIResponderStandardEditActions", "setTextFontSizeAndPulsate"]
 - !private ["PSo30UIResponderStandardEditActions", "size"]
-- ["PSo30UIResponderStandardEditActions", "touchesBegan"]
 - !private ["PSo30UIResponderStandardEditActions", "view"]
 - !private ["PSo30UIResponderStandardEditActions", "zPosition"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - !private ["CSo8UIScreen", "bounds"]
-- ["CSo8UIScreen", "deinit"]
 - !private ["CSo8UIScreen", "main"]
-- ["CSo7UITouch", "deinit"]
 - !private ["CSo7UITouch", "location"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - !private ["PSo18UITraitEnvironment", "main"]
@@ -739,13 +669,13 @@ depends-member:
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "CGPoint"]
 - !private ["Ps9_Hashable", "CGSize"]
 - !private ["Ps9_Hashable", "CGVector"]
 - !private ["Ps9_Hashable", "GameScene"]
-- !private ["Ps9_Hashable", "Iterator"]
 - !private ["Ps9_Hashable", "PulsatingText"]
 - !private ["Ps9_Hashable", "SKEmitterNode"]
 - !private ["Ps9_Hashable", "SKSpriteNode"]
@@ -755,8 +685,7 @@ depends-member:
 - !private ["Ps9_Hashable", "addChild"]
 - !private ["Ps9_Hashable", "atPoint"]
 - !private ["Ps9_Hashable", "bounds"]
-- ["Ps9_Hashable", "desiredWidthRatio"]
-- ["Ps9_Hashable", "didMove"]
+- !private ["Ps9_Hashable", "desiredWidthRatio"]
 - !private ["Ps9_Hashable", "first"]
 - !private ["Ps9_Hashable", "flipHorizontal"]
 - ["Ps9_Hashable", "init"]
@@ -766,33 +695,32 @@ depends-member:
 - !private ["Ps9_Hashable", "particlePositionRange"]
 - !private ["Ps9_Hashable", "position"]
 - !private ["Ps9_Hashable", "presentScene"]
-- ["Ps9_Hashable", "pulsatingTextScaler"]
+- !private ["Ps9_Hashable", "pulsatingTextScaler"]
 - !private ["Ps9_Hashable", "scaleMode"]
 - !private ["Ps9_Hashable", "setTextFontSizeAndPulsate"]
 - !private ["Ps9_Hashable", "size"]
-- ["Ps9_Hashable", "touchesBegan"]
 - !private ["Ps9_Hashable", "view"]
 - !private ["Ps9_Hashable", "zPosition"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps10_Indexable", "first"]
+- !private ["Ps14_IndexableBase", "first"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "first"]
 - !private ["Ps21_ObjectiveCBridgeable", "height"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "width"]
-- !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - ["Ps11_Strideable", "init"]
 depends-nominal:
 - "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - "Ps19BinaryFloatingPoint"
-- "Sb"
+- !private "Sb"
 - !private "PSo15CALayerDelegate"
 - "V12CoreGraphics7CGFloat"
-- "VSC7CGPoint"
-- "VSC6CGRect"
-- "VSC6CGSize"
-- "VSC8CGVector"
+- !private "VSC7CGPoint"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
+- !private "VSC8CGVector"
 - "Ps7CVarArg"
 - !private "Ps10Collection"
 - "Ps10Comparable"
@@ -800,28 +728,20 @@ depends-nominal:
 - !private "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - "Ps25ExpressibleByFloatLiteral"
 - "Ps27ExpressibleByIntegerLiteral"
-- !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps13FloatingPoint"
 - "PSo19GKSceneRootNodeType"
-- "C19SpaceInvadersMobile9GameScene"
+- !private "C19SpaceInvadersMobile9GameScene"
 - "Ps8Hashable"
-- "SQ"
-- !private "Ps9Indexable"
-- !private "Ps13IndexableBase"
-- !private "Si"
-- !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
-- "CSo7NSCoder"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
@@ -829,26 +749,24 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- "Sq"
-- "C19SpaceInvadersMobile13PulsatingText"
+- !private "C19SpaceInvadersMobile13PulsatingText"
 - "CSo12SKEffectNode"
-- "CSo13SKEmitterNode"
+- !private "CSo13SKEmitterNode"
 - !private "CSo11SKLabelNode"
 - "CSo6SKNode"
 - !private "PSo24SKPhysicsContactDelegate"
 - "CSo7SKScene"
-- "CSo12SKSpriteNode"
-- "CSo12SKTransition"
-- "CSo6SKView"
+- !private "CSo12SKSpriteNode"
+- !private "CSo12SKTransition"
+- !private "CSo6SKView"
 - "PSo10SKWarpable"
 - !private "Ps8Sequence"
-- "Vs3Set"
+- !private "Vs3Set"
 - !private "Ps10SetAlgebra"
-- !private "Vs11SetIterator"
 - "Ps12SignedNumber"
 - "C19SpaceInvadersMobile14StartGameScene"
 - "Ps10Strideable"
-- "SS"
+- !private "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
@@ -860,8 +778,8 @@ depends-nominal:
 - "PSo11UIFocusItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
-- "CSo8UIScreen"
-- "CSo7UITouch"
+- !private "CSo8UIScreen"
+- !private "CSo7UITouch"
 - !private "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "Ps15_CVarArgAligned"
@@ -872,25 +790,36 @@ depends-nominal:
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
 - "Ps21_ObjectiveCBridgeable"
-- !private "Vs26_OptionalNilComparisonType"
 - "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 interface-hash: "710459625c673eaebffc4cf64b9d326b"

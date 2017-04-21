@@ -49,6 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var livesVertPos : CGFloat = 10 // This gets set when setupLives() runs. Used to align the score label.
     var scoreLabel: SKLabelNode!
     var score : Int = 0
+    let scoreTextScaler = CGFloat(0.657895)
     
     
     
@@ -170,16 +171,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    
     func setupScore() {
-        
-        NSLog("XXX \(appDelegate.score) XXX")
         
         score = appDelegate.score
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.text = "\(score)"
-        scoreLabel.fontSize = 50 // XXX ADJUST TO SCREEN WIDTH
+        scoreLabel.fontSize = CGFloat((UIScreen.main.bounds.width/10) * scoreTextScaler) // XXX ADJUST TO SCREEN WIDTH
         scoreLabel.position = CGPoint(x: UIScreen.main.bounds.width/2,
                                       y: UIScreen.main.bounds.height - livesVertPos)
+    
         
         addChild(scoreLabel)
         
@@ -308,7 +309,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody.node?.removeFromParent()
             
             addScore(points: (10 * appDelegate.level))
-            
             
         }
         
