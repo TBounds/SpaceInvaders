@@ -12,6 +12,9 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+// import "Shephertz_App42_iOS_API/Shephertz_App42_iOS_API.h"
+
+
 var invaderNum = 1
 
 struct CollisionCategories{
@@ -39,7 +42,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player : Player = Player()
     let motionManager: CMMotionManager = CMMotionManager()
     var accelerationX: CGFloat = 0.0
-    
     
     // Level Variables
     var maxLevels = 3
