@@ -16,14 +16,23 @@ class StartGameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
+        NSLog("print something plesae")
+        
         let startGameButton = SKSpriteNode(imageNamed: "images/newgamebtn.png")
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         
-        startGameButton.position = CGPoint(x: size.width/2, y: size.height/2)
+        startGameButton.position = CGPoint(x: size.width/2, y: (size.height/2 + startGameButton.size.height/2))
         startGameButton.size = newSize
         startGameButton.name = "startgame"
         addChild(startGameButton)
+        
+        let highscoreButton = SKSpriteNode(imageNamed: "images/nextlevelbtn.png")
+        highscoreButton.position = CGPoint(x: size.width/2, y: (size.height/2 - highscoreButton.size.height/2))
+        highscoreButton.size = newSize
+        highscoreButton.name = "highscore"
+        addChild(highscoreButton)
+        
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
         invaderText.setTextFontSizeAndPulsate(theText: "INVADERZ", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
@@ -47,11 +56,21 @@ class StartGameScene: SKScene {
         
         if touchedNode.name == "startgame" {
             
-            let gameOverScene = GameScene(size: size)
-            gameOverScene.scaleMode = scaleMode
+            let gameScene = GameScene(size: size)
+            gameScene.scaleMode = scaleMode
             
             let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
-            view?.presentScene(gameOverScene, transition: transitionType)
+            view?.presentScene(gameScene, transition: transitionType)
+        }
+        else if touchedNode.name == "highscore" {
+            
+            NSLog("Display highscores.")
+            
+//            let gameScene = GameScene(size: size)
+//            gameScene.scaleMode = scaleMode
+//            
+//            let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
+//            view?.presentScene(gameScene, transition: transitionType)
         }
         
     }

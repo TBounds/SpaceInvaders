@@ -25,6 +25,7 @@
 		F8B7400F1E9D5ADB00042272 /* StartGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */; };
 		F8B740121E9D66AB00042272 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F8B740101E9D5E2600042272 /* images */; };
 		F8D8D5D31EA03B1F00CA59E7 /* PulsatingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */; };
+		F8E4458B1EB017CD009B9A81 /* Highscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4458A1EB017CD009B9A81 /* Highscore.swift */; };
 		F8FEB0651EAAD3AD00F2BEF8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FEB0641EAAD3AD00F2BEF8 /* SystemConfiguration.framework */; };
 		F8FEB0671EAAD3B900F2BEF8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FEB0661EAAD3B900F2BEF8 /* libsqlite3.tbd */; };
 		F8FEB0691EAAD3C200F2BEF8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FEB0681EAAD3C200F2BEF8 /* libz.tbd */; };
@@ -63,6 +64,7 @@
 		F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameScene.swift; sourceTree = "<group>"; };
 		F8B740101E9D5E2600042272 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = SpaceInvadersMobile/images; sourceTree = "<group>"; };
 		F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsatingText.swift; sourceTree = "<group>"; };
+		F8E4458A1EB017CD009B9A81 /* Highscore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Highscore.swift; path = ../Highscore.swift; sourceTree = "<group>"; };
 		F8FEB0641EAAD3AD00F2BEF8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F8FEB0661EAAD3B900F2BEF8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F8FEB0681EAAD3C200F2BEF8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -461,8 +463,9 @@
 			isa = PBXGroup;
 			children = (
 				F894488D1EAA7CD0009A2A5A /* star.png */,
-				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8FEB1E61EAAD52100F2BEF8 /* links.rtf */,
+				F8E4458A1EB017CD009B9A81 /* Highscore.swift */,
+				F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */,
 				F8B73FFA1E9D3F4B00042272 /* Actions.sks */,
 				F80A14201EA00E5C00263144 /* StarField.sks */,
 				F8D8D5D21EA03B1F00CA59E7 /* PulsatingText.swift */,
@@ -1101,6 +1104,7 @@
 				F8B73FFD1E9D3F4B00042272 /* GameScene.swift in Sources */,
 				F8B7400F1E9D5ADB00042272 /* StartGameScene.swift in Sources */,
 				F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */,
+				F8E4458B1EB017CD009B9A81 /* Highscore.swift in Sources */,
 				F894D7961E9D6CD500035764 /* Invader.swift in Sources */,
 				F894D79A1E9D764C00035764 /* Bullet.swift in Sources */,
 				F8B73FFF1E9D3F4B00042272 /* GameViewController.swift in Sources */,
@@ -1238,6 +1242,7 @@
 					"$(PROJECT_DIR)/lib/MediaLibiOS3x",
 					"$(PROJECT_DIR)/lib/speex-1.2rc2/lib",
 					"$(PROJECT_DIR)/lib/x264/lib",
+					"$(PROJECT_DIR)/lib/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.vancouver.wsu.edu.SpaceInvadersMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1265,6 +1270,7 @@
 					"$(PROJECT_DIR)/lib/MediaLibiOS3x",
 					"$(PROJECT_DIR)/lib/speex-1.2rc2/lib",
 					"$(PROJECT_DIR)/lib/x264/lib",
+					"$(PROJECT_DIR)/lib/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.vancouver.wsu.edu.SpaceInvadersMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
