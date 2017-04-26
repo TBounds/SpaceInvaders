@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class LevelCompleteScene:SKScene{
+class LevelCompleteScene: SKScene{
     
     let desiredWidthRatio = CGFloat(50) // Percentage of screen width you want the button width to take
     let pulsatingTextScaler = CGFloat(0.657895)

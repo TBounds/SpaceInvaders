@@ -13,16 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var level : Int = 1
     var score : Int = 0
+    
+    var highscore : Int = 0
+    var highscores : [Highscore] = []
 
     var window: UIWindow?
     
-    var highscores : [Highscore] = []
-    
-    
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch. 
+        
+//        var a1 = Array(1...10)
+//        NSLog("\(a1)")
+//        a1.insert(7, at: 4)
+//        NSLog("\(a1)")
+        
         
         return true
     }

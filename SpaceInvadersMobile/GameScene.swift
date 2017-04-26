@@ -200,6 +200,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         appDelegate.score = 0
     }
     
+    //------------------------------------------------------//
+    //--------------------- Highscore ----------------------//
+    //------------------------------------------------------//
+    
+    func getUsername() {
+        
+    }
+    
+    func saveHighscore(name: String, score: Int) {
+        
+        let newScore = Highscore(name: name, score: score)
+        
+        // Add the new score and sort the highscore list.
+        if appDelegate.highscores.count < 10 {
+            
+            appDelegate.highscores.append(newScore)
+            
+            appDelegate.highscores = appDelegate.highscores.sorted(by: {$0.score < $1.score})
+        }
+        else {
+            // Insert new score in the correct spot and remove the last score.
+            for i in 0 ..< 10 {
+                if score >= appDelegate.highscores[i].score {
+                    appDelegate.highscores.insert(newScore, at: i)
+                    appDelegate.highscores.remove(at: 9)
+                    break
+                }
+            }
+        }
+    }
+    
+    func isHighScore(score: Int) -> Bool {
+        for i in 0 ..< appDelegate.highscores.count {
+            if score >= appDelegate.highscores[i].score {
+                return true
+            }
+        }
+        
+        return false
+    }
     
     
     //------------------------------------------------------//

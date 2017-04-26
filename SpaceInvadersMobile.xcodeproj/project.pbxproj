@@ -16,6 +16,7 @@
 		F894D79C1E9D76CD00035764 /* InvaderBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D79B1E9D76CD00035764 /* InvaderBullet.swift */; };
 		F894D79E1E9D771300035764 /* PlayerBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D79D1E9D771300035764 /* PlayerBullet.swift */; };
 		F894D7A01E9D7A7C00035764 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894D79F1E9D7A7C00035764 /* Utilities.swift */; };
+		F8A698EA1EB1410400091EB6 /* HighscoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A698E91EB1410400091EB6 /* HighscoreScene.swift */; };
 		F8B73FF71E9D3F4B00042272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */; };
 		F8B73FFB1E9D3F4B00042272 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8B73FFA1E9D3F4B00042272 /* Actions.sks */; };
 		F8B73FFD1E9D3F4B00042272 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B73FFC1E9D3F4B00042272 /* GameScene.swift */; };
@@ -39,6 +40,7 @@
 		F894D79B1E9D76CD00035764 /* InvaderBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvaderBullet.swift; sourceTree = "<group>"; };
 		F894D79D1E9D771300035764 /* PlayerBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerBullet.swift; sourceTree = "<group>"; };
 		F894D79F1E9D7A7C00035764 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F8A698E91EB1410400091EB6 /* HighscoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreScene.swift; sourceTree = "<group>"; };
 		F8B73FF31E9D3F4B00042272 /* SpaceInvadersMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceInvadersMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B73FF61E9D3F4B00042272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B73FFA1E9D3F4B00042272 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -99,9 +101,10 @@
 				F894D79D1E9D771300035764 /* PlayerBullet.swift */,
 				F894D7951E9D6CD500035764 /* Invader.swift */,
 				F894D7971E9D72D700035764 /* Player.swift */,
-				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
 				F80A141C1EA0050400263144 /* LevelCompleteScene.swift */,
+				F8A698E91EB1410400091EB6 /* HighscoreScene.swift */,
 				F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */,
+				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
 				F8B73FFE1E9D3F4B00042272 /* GameViewController.swift */,
 				F8B740001E9D3F4B00042272 /* Main.storyboard */,
 				F8B740031E9D3F4B00042272 /* Assets.xcassets */,
@@ -205,6 +208,7 @@
 				F894D7981E9D72D700035764 /* Player.swift in Sources */,
 				F8B73FF71E9D3F4B00042272 /* AppDelegate.swift in Sources */,
 				F894D7A01E9D7A7C00035764 /* Utilities.swift in Sources */,
+				F8A698EA1EB1410400091EB6 /* HighscoreScene.swift in Sources */,
 				F8D8D5D31EA03B1F00CA59E7 /* PulsatingText.swift in Sources */,
 				F894D79C1E9D76CD00035764 /* InvaderBullet.swift in Sources */,
 			);
