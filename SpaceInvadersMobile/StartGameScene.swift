@@ -11,6 +11,8 @@ import SpriteKit
 
 class StartGameScene: SKScene {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     let desiredWidthRatio : CGFloat = 50 // Percentage of screen width you want the button width to take
     let pulsatingTextScaler = CGFloat(0.657895)
     
@@ -66,11 +68,7 @@ class StartGameScene: SKScene {
             
             NSLog("Display highscores.")
             
-//            let gameScene = GameScene(size: size)
-//            gameScene.scaleMode = scaleMode
-//            
-//            let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
-//            view?.presentScene(gameScene, transition: transitionType)
+            
         }
         
     }
