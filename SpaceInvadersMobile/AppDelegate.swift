@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var highscore : Int = 0
     var highscores : [Highscore] = []
+    
+    
 
     var window: UIWindow?
     
@@ -26,6 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        NSLog("\(a1)")
 //        a1.insert(7, at: 4)
 //        NSLog("\(a1)")
+        
+        for i in 0 ..< 6 {
+            
+            let name = "Player" + "\(i)"
+            let score = i * 3
+            let temp = Highscore(name: name, score: score)
+            
+            highscores.append(temp)
+            
+            
+        }
         
         
         return true

@@ -69,10 +69,11 @@ class HighscoreScene: SKScene {
     func displayHighscores() {
         
         let horOffset = UIScreen.main.bounds.width/4
-        let vertOffset = 10
+        let vertOffset = CGFloat(30)
         let vertStart = UIScreen.main.bounds.height - 200
         let fontSize = CGFloat(16)       // SCALE THIS
         
+        // Dispay column labels for highscore.
         let rankLabel = SKLabelNode(fontNamed: "Chalkduster")
         let nameLabel = SKLabelNode(fontNamed: "Chalkduster")
         let scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -93,9 +94,27 @@ class HighscoreScene: SKScene {
         addChild(nameLabel)
         addChild(scoreLabel)
         
-        
+        // Display highscores
         for i in 0 ..< appDelegate.highscores.count {
+            let rank = SKLabelNode(fontNamed: "Chalkduster")
+            let name = SKLabelNode(fontNamed: "Chalkduster")
+            let score = SKLabelNode(fontNamed: "Chalkduster")
             
+            rank.text = "\(i + 1)"
+            rank.fontSize = fontSize
+            rank.position = CGPoint(x: horOffset/2, y: vertStart - (vertOffset * CGFloat(i + 1)))
+            
+            name.text = appDelegate.highscores[i].name
+            name.fontSize = fontSize
+            name.position = CGPoint(x: horOffset*2, y: vertStart - (vertOffset * CGFloat(i + 1)))
+            
+            score.text = "\(appDelegate.highscores[i].score)"
+            score.fontSize = fontSize
+            score.position = CGPoint(x: horOffset*3 + horOffset/2, y: vertStart - (vertOffset * CGFloat(i + 1)))
+            
+            addChild(rank)
+            addChild(name)
+            addChild(score)
         }
     }
 

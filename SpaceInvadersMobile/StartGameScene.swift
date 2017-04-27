@@ -44,8 +44,7 @@ class StartGameScene: SKScene {
         starField?.position = CGPoint(x: size.width/2, y: size.height)
         starField?.particlePositionRange = CGVector(dx: size.width, dy: size.height)
         addChild(starField!)
-        
-        
+       
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,7 +65,7 @@ class StartGameScene: SKScene {
             
             NSLog("Display highscores.")
             
-            let highscoreScene = HighscoreScene(size: size)
+            let highscoreScene = GameOverScene(size: size)
             highscoreScene.scaleMode = scaleMode
             
             let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)

@@ -25,6 +25,16 @@ class GameViewController: UIViewController {
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
         
+//        let ac = UIAlertController(title: "Enter Name", message: nil, preferredStyle: .alert)
+//        ac.addTextField(configurationHandler: nil)
+//        
+//        ac.addAction(UIAlertAction(title: "OK", style: .default) { [unowned self, ac] _ in
+//            let playerName = ac.textFields![0]
+//            
+//        })
+//        
+//        self.present(ac, animated: true, completion: nil)
+        
         
     }
     

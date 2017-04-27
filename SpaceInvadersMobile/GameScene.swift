@@ -48,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // HUD Variable
     let livesWidthRatio = CGFloat(7) // Percentage lives sprite width takes of screen width
-    var livesVertPos : CGFloat = 10 // This gets set when setupLives() runs. Used to align the score label.
+    var livesVertPos : CGFloat = 10 // This gets set when setupPlayersLives() runs. Used to align the score label.
     var scoreLabel: SKLabelNode!
     var score : Int = 0
     let scoreTextScaler = CGFloat(0.657895)
@@ -60,8 +60,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 //        NSLog("invaderSpeed = \(invaderSpeed)")
 //        NSLog("screen height = \(UIScreen.main.bounds.height)")
-        
-        NSLog("XXX HELLO XXX")
         
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
