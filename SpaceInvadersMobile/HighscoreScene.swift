@@ -76,6 +76,8 @@ class HighscoreScene: SKScene {
             NSLog("Clear highscores.")
             
             
+            
+            
         }
         
     }
