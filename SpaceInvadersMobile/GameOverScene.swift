@@ -19,6 +19,8 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     
     let maxNameLength = 16
     
+    // var temp : UITextField = UITextField()
+    
     override func didMove(to view: SKView) {
         
         let startGameButton = SKSpriteNode(imageNamed: "images/newgamebtn.png")
@@ -31,11 +33,15 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         startGameButton.name = "startgame"
         addChild(startGameButton)
         
-        let highscoreButton = SKSpriteNode(imageNamed: "images/nextlevelbtn.png")
-        highscoreButton.size = newSize
-        highscoreButton.position = CGPoint(x: startGameButton.size.width/2 + edgeSpacing, y: startGameButton.size.height)
-        highscoreButton.name = "savescore"
-        addChild(highscoreButton)
+        // Only let user save their score if it is a highscore.
+        if appDelegate.isHighScore() {
+            let highscoreButton = SKSpriteNode(imageNamed: "images/nextlevelbtn.png")
+            highscoreButton.size = newSize
+            highscoreButton.position = CGPoint(x: startGameButton.size.width/2 + edgeSpacing, y: startGameButton.size.height)
+            highscoreButton.name = "savescore"
+            addChild(highscoreButton)
+        }
+        
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
         invaderText.setTextFontSizeAndPulsate(theText: "GAME OVER!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
@@ -122,6 +128,8 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         if touchedNode.name == "startgame" {
             
+            appDelegate.score = 0
+            
             let gameScene = GameScene(size: size)
             gameScene.scaleMode = scaleMode
             
@@ -132,20 +140,30 @@ class GameOverScene: SKScene, UITextFieldDelegate {
             
             NSLog("Pop up box to enter name.")
             
-            let nameField = UITextField(frame: CGRect(x: 50, y: 50, width: 300, height: 25))
+            let nameFieldLength = CGFloat(300)
+            let nameField = UITextField(frame: CGRect(x: (UIScreen.main.bounds.width - nameFieldLength)/2,
+                                                      y: UIScreen.main.bounds.height/2,
+                                                      width: nameFieldLength,
+                                                      height: 40))
+            
             nameField.placeholder = "Enter your name."
             nameField.textColor = UIColor.black
-            nameField.returnKeyType = UIReturnKeyType.done
             nameField.borderStyle = UITextBorderStyle.roundedRect
             nameField.backgroundColor = UIColor.white
+            
+            nameField.tag = 100
+            nameField.autocorrectionType = UITextAutocorrectionType.no
+            nameField.keyboardType = UIKeyboardType.namePhonePad
+            nameField.returnKeyType = UIReturnKeyType.done
+            nameField.textAlignment = NSTextAlignment.center
+            nameField.tintColor = UIColor.clear
+            
             nameField.delegate = self
+            nameField.becomeFirstResponder()
+            
             view?.addSubview(nameField)
             
-//            let highscoreScene = GameOverScene(size: size)
-//            highscoreScene.scaleMode = scaleMode
-//            
-//            let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
-//            view?.presentScene(highscoreScene, transition: transitionType)
+
             
             
         }
@@ -178,7 +196,32 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         NSLog("TextField should return method called")
+        
+        appDelegate.saveHighscore(name: textField.text!, score: appDelegate.score)
+        
+        // Removes keyboard
         textField.resignFirstResponder();
+        
+        // Removes textfield
+        // http://stackoverflow.com/questions/28197079/swift-addsubview-and-remove-it
+        if let viewWithTag = self.view?.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
+        
+        
+        if (textField.text?.characters.count)! > 0 {
+            
+            appDelegate.score = 0
+            
+            // Changes to the main scene.
+            let startGameScene = StartGameScene(size: size)
+            startGameScene.scaleMode = scaleMode
+            
+            let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
+            view?.presentScene(startGameScene, transition: transitionType)
+            
+            
+        }
         return true;
     }
 

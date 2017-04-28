@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var level : Int = 1
-    var score : Int = 0
+    var score : Int = 50
     
     var highscore : Int = 0
     var highscores : [Highscore] = []
@@ -29,19 +29,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        a1.insert(7, at: 4)
 //        NSLog("\(a1)")
         
-        for i in 0 ..< 6 {
+        for i in 0 ..< 10 {
             
-            let name = "Player" + "\(i)"
-            let score = i * 3
-            let temp = Highscore(name: name, score: score)
-            
-            highscores.append(temp)
+            let name = "Player " + "\(i)"
+            let score = 50
+            saveHighscore(name: name, score: score)
             
             
         }
         
         
         return true
+    }
+    
+    func isHighScore() -> Bool {
+        for i in 0 ..< highscores.count {
+            if score >= highscores[i].score {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func saveHighscore(name: String, score: Int) {
+        
+        let newScore = Highscore(name: name, score: score)
+        
+        // Add the new score and sort the highscore list.
+        if highscores.count < 10 {
+            
+            highscores.append(newScore)
+            
+            highscores = highscores.sorted(by: {$0.score > $1.score})
+        }
+        else {
+            // Insert new score in the correct spot and remove the last score.
+            for i in 0 ... 10 {
+                if score >= highscores[i].score {
+                    highscores.insert(newScore, at: i)
+                    highscores.remove(at: 10)
+                    break
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

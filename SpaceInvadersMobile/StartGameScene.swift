@@ -55,6 +55,8 @@ class StartGameScene: SKScene {
         
         if touchedNode.name == "startgame" {
             
+            appDelegate.score = 0
+            
             let gameScene = GameScene(size: size)
             gameScene.scaleMode = scaleMode
             
@@ -65,7 +67,7 @@ class StartGameScene: SKScene {
             
             NSLog("Display highscores.")
             
-            let highscoreScene = GameOverScene(size: size)
+            let highscoreScene = HighscoreScene(size: size)
             highscoreScene.scaleMode = scaleMode
             
             let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)

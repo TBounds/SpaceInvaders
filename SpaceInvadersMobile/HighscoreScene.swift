@@ -14,13 +14,19 @@ class HighscoreScene: SKScene {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     let desiredWidthRatio : CGFloat = 50 // Percentage of screen width you want the button width to take
+    let deleteWidthRatio : CGFloat = 5
     let pulsatingTextScaler = CGFloat(0.657895)
     
     override func didMove(to view: SKView) {
         
         let startGameButton = SKSpriteNode(imageNamed: "images/newgamebtn.png")
+        let clearHighscoresButton = SKSpriteNode(imageNamed: "images/delete.png")
+        
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
+        let deleteScale = (deleteWidthRatio/((100 * clearHighscoresButton.size.width)/UIScreen.main.bounds.width))
+        
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
+        let newDeleteSize = CGSize(width: clearHighscoresButton.size.width * deleteScale, height: clearHighscoresButton.size.height * deleteScale)
         
         startGameButton.position = CGPoint(x: size.width/2, y: startGameButton.size.height/2)
         startGameButton.size = newSize
@@ -32,11 +38,19 @@ class HighscoreScene: SKScene {
         invaderText.position = CGPoint(x: size.width/2, y: size.height - 50) // XXX THIS MAY NEED TO BE SCALED BETTER
         addChild(invaderText)
         
+        clearHighscoresButton.size = newDeleteSize
+        clearHighscoresButton.position = CGPoint(x: UIScreen.main.bounds.width - 2 * clearHighscoresButton.size.width,
+                                                 y: invaderText.position.y)
+        clearHighscoresButton.name = "clearHighscores"
+        addChild(clearHighscoresButton)
+        
         let starField = SKEmitterNode(fileNamed: "StarField")
         starField?.zPosition = -1000
         starField?.position = CGPoint(x: size.width/2, y: size.height)
         starField?.particlePositionRange = CGVector(dx: size.width, dy: size.height)
         addChild(starField!)
+        
+        
         
         displayHighscores()
         
@@ -57,7 +71,7 @@ class HighscoreScene: SKScene {
             let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
             view?.presentScene(gameScene, transition: transitionType)
         }
-        else if touchedNode.name == "clear" {
+        else if touchedNode.name == "clearHighscores" {
             
             NSLog("Clear highscores.")
             
