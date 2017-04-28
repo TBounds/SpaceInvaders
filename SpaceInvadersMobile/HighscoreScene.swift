@@ -16,6 +16,7 @@ class HighscoreScene: SKScene {
     let desiredWidthRatio : CGFloat = 50 // Percentage of screen width you want the button width to take
     let deleteWidthRatio : CGFloat = 5
     let pulsatingTextScaler = CGFloat(0.657895)
+    let deleteWarningScaler = CGFloat(0.6 )
     
     var deleteScoresPrompt : Bool = false
     
@@ -100,9 +101,39 @@ class HighscoreScene: SKScene {
                 
                 let yesButton = SKSpriteNode(imageNamed: "yes_button.png")
                 yesButton.size = newSize
+                yesButton.zPosition = 5
                 yesButton.position = CGPoint(x: noButton.size.width/2 + edgeSpacing, y: UIScreen.main.bounds.height/2)
                 yesButton.name = "yes"
                 addChild(yesButton)
+                
+                let deleteWarningLabel_1 = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
+                deleteWarningLabel_1.name = "warning1"
+                deleteWarningLabel_1.fontColor = UIColor.red
+                deleteWarningLabel_1.zPosition = 5
+                deleteWarningLabel_1.text = "Permanently removing highscores."
+                deleteWarningLabel_1.fontSize = CGFloat((UIScreen.main.bounds.width/10) * deleteWarningScaler) // XXX ADJUST TO SCREEN WIDTH
+                deleteWarningLabel_1.position = CGPoint(x: UIScreen.main.bounds.width/2,
+                                              y: UIScreen.main.bounds.height/2 + 250)
+                addChild(deleteWarningLabel_1)
+                
+                let deleteWarningLabel_2 = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
+                deleteWarningLabel_2.name = "warning2"
+                deleteWarningLabel_2.fontColor = UIColor.red
+                deleteWarningLabel_2.zPosition = 5
+                deleteWarningLabel_2.text = "Are you sure?"
+                deleteWarningLabel_2.fontSize = CGFloat((UIScreen.main.bounds.width/10) * deleteWarningScaler) // XXX ADJUST TO SCREEN WIDTH
+                deleteWarningLabel_2.position = CGPoint(x: UIScreen.main.bounds.width/2,
+                                                        y: UIScreen.main.bounds.height/2 + 200)
+                addChild(deleteWarningLabel_2)
+                
+                let blurElement = SKShapeNode(rectOf: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+                blurElement.name = "blur"
+                blurElement.zPosition = 4
+                blurElement.fillColor = SKColor.white
+                blurElement.alpha = 0.6
+                blurElement.position = CGPoint(x: UIScreen.main.bounds.width/2, y:UIScreen.main.bounds.height/2)
+                addChild(blurElement)
+                
                 
                 deleteScoresPrompt = true
             }
@@ -151,6 +182,9 @@ class HighscoreScene: SKScene {
     func removePrompt() {
         scene?.childNode(withName: "no")?.removeFromParent()
         scene?.childNode(withName: "yes")?.removeFromParent()
+        scene?.childNode(withName: "blur")?.removeFromParent()
+        scene?.childNode(withName: "warning1")?.removeFromParent()
+        scene?.childNode(withName: "warning2")?.removeFromParent()
         
     }
     
