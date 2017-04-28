@@ -72,7 +72,7 @@ class Player: SKSpriteNode {
         
         invaderNum = 1
         
-        let gameOverScene = StartGameScene(size: self.scene!.size)
+        let gameOverScene = GameOverScene(size: self.scene!.size)
         gameOverScene.scaleMode = self.scene!.scaleMode
         
         let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)

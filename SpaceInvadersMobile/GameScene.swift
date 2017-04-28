@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Invader Variables
     let rowsOfInvaders = 4
-    var invaderSpeed = (UIScreen.main.bounds.width/384)
+    var invaderSpeed = 50 //(UIScreen.main.bounds.width/384)
     let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no vertical space between enemies.
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
@@ -332,9 +332,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         
-        //------------------------- Player Loses -------------------------//
+        //------------------------- Player Gameover -------------------------//
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
+            
+            appDelegate.score = score
+            
+            NSLog("Gamescene. Gameover. Score: \(appDelegate.score)")
             
             player.kill()
             

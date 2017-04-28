@@ -18,7 +18,7 @@ class LevelCompleteScene: SKScene{
         
         self.backgroundColor = SKColor.black
         
-        let startGameButton = SKSpriteNode(imageNamed: "images/nextlevelbtn")
+        let startGameButton = SKSpriteNode(imageNamed: "continue_button")
         startGameButton.position = CGPoint(x: size.width/2, y: size.height/2 - 100)
         
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))

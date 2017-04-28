@@ -43,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func isHighScore() -> Bool {
+        
+        if highscores.count < 10 {
+            return true
+        }
+        
         for i in 0 ..< highscores.count {
             if score >= highscores[i].score {
                 return true

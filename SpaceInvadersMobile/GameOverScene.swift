@@ -23,6 +23,8 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     
     override func didMove(to view: SKView) {
         
+        NSLog("GameOver, score: \(appDelegate.score)")
+        
         let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
@@ -45,7 +47,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
         invaderText.setTextFontSizeAndPulsate(theText: "GAME OVER!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
-        invaderText.position = CGPoint(x: size.width/2, y: size.height/2 + 300)
+        invaderText.position = CGPoint(x: size.width/2, y: size.height  - 50 )
         addChild(invaderText)
         
         let starField = SKEmitterNode(fileNamed: "StarField")
