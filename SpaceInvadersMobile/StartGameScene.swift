@@ -18,7 +18,7 @@ class StartGameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        let startGameButton = SKSpriteNode(imageNamed: "images/newgamebtn.png")
+        let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         
@@ -27,7 +27,7 @@ class StartGameScene: SKScene {
         startGameButton.name = "startgame"
         addChild(startGameButton)
         
-        let highscoreButton = SKSpriteNode(imageNamed: "images/nextlevelbtn.png")
+        let highscoreButton = SKSpriteNode(imageNamed: "highscores_button.png")
         highscoreButton.position = CGPoint(x: size.width/2, y: (size.height/2 - highscoreButton.size.height/2))
         highscoreButton.size = newSize
         highscoreButton.name = "highscore"

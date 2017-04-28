@@ -23,7 +23,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     
     override func didMove(to view: SKView) {
         
-        let startGameButton = SKSpriteNode(imageNamed: "images/newgamebtn.png")
+        let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         let edgeSpacing = CGFloat(newSize.width/12)
@@ -35,7 +35,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         // Only let user save their score if it is a highscore.
         if appDelegate.isHighScore() {
-            let highscoreButton = SKSpriteNode(imageNamed: "images/nextlevelbtn.png")
+            let highscoreButton = SKSpriteNode(imageNamed: "savescore_button.png")
             highscoreButton.size = newSize
             highscoreButton.position = CGPoint(x: startGameButton.size.width/2 + edgeSpacing, y: startGameButton.size.height)
             highscoreButton.name = "savescore"
