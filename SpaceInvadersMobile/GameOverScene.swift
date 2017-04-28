@@ -16,6 +16,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     let desiredWidthRatio : CGFloat = 45 // Percentage of screen width you want the button width to take
     let pulsatingTextScaler = CGFloat(0.657895)
     let scoreTextScaler = CGFloat(0.657895)
+    let highscoreTextScaler = CGFloat(0.6)
     
     let maxNameLength = 16
     
@@ -25,7 +26,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         NSLog("GameOver, score: \(appDelegate.score)")
         
-        let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
+        let startGameButton = SKSpriteNode(imageNamed: "menu_button.png")
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         let edgeSpacing = CGFloat(newSize.width/12)
@@ -46,8 +47,14 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
-        invaderText.setTextFontSizeAndPulsate(theText: "GAME OVER!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
-        invaderText.position = CGPoint(x: size.width/2, y: size.height  - 50 )
+        if !appDelegate.won {
+            invaderText.setTextFontSizeAndPulsate(theText: "GAME OVER!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
+        }
+        else {
+            invaderText.setTextFontSizeAndPulsate(theText: "YOU WIN!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
+        }
+        invaderText.position = CGPoint(x: size.width/2,
+                                       y: size.height - (invaderText.fontSize * 1.5) )
         addChild(invaderText)
         
         let starField = SKEmitterNode(fileNamed: "StarField")
@@ -61,7 +68,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         scoreLabel.text = "\(appDelegate.score)"
         scoreLabel.fontSize = CGFloat((UIScreen.main.bounds.width/10) * scoreTextScaler) // XXX ADJUST TO SCREEN WIDTH
         scoreLabel.position = CGPoint(x: UIScreen.main.bounds.width/2,
-                                      y: invaderText.position.y - 50)
+                                      y: invaderText.position.y - (invaderText.fontSize * 1.25))
         addChild(scoreLabel)
         
         displayHighscores()
@@ -73,9 +80,9 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     func displayHighscores() {
         
         let horOffset = UIScreen.main.bounds.width/4
-        let vertOffset = CGFloat(30)
-        let vertStart = UIScreen.main.bounds.height - 200
-        let fontSize = CGFloat(16)       // SCALE THIS
+        let vertStart = UIScreen.main.bounds.height - UIScreen.main.bounds.height/5
+        let fontSize = CGFloat((UIScreen.main.bounds.width/10) * highscoreTextScaler)       // SCALE THIS
+        let vertOffset = fontSize * 1.5
         
         // Dispay column labels for highscore.
         let rankLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -131,8 +138,9 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         if touchedNode.name == "startgame" {
             
             appDelegate.score = 0
+            appDelegate.won = false
             
-            let gameScene = GameScene(size: size)
+            let gameScene = StartGameScene(size: size)
             gameScene.scaleMode = scaleMode
             
             let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
@@ -199,7 +207,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         NSLog("TextField should return method called")
         
-        appDelegate.saveHighscore(name: textField.text!, score: appDelegate.score)
+        
         
         // Removes keyboard
         textField.resignFirstResponder();
@@ -213,6 +221,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         if (textField.text?.characters.count)! > 0 {
             
+            appDelegate.saveHighscore(name: textField.text!, score: appDelegate.score)
             appDelegate.score = 0
             
             // Changes to the main scene.

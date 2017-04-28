@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80753061EB409E3003DFD01 /* menu_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F80753051EB409E3003DFD01 /* menu_button.png */; };
 		F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A141C1EA0050400263144 /* LevelCompleteScene.swift */; };
 		F80A14211EA00E5C00263144 /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = F80A14201EA00E5C00263144 /* StarField.sks */; };
 		F84A79811EB3A90A00501EA4 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A783B1EB3A90A00501EA4 /* black.png */; };
@@ -352,6 +353,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F80753051EB409E3003DFD01 /* menu_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_button.png; sourceTree = "<group>"; };
 		F80A141C1EA0050400263144 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
 		F80A14201EA00E5C00263144 /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
 		F84A783B1EB3A90A00501EA4 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
@@ -1091,6 +1093,7 @@
 				F84A79611EB3A90A00501EA4 /* cursor.png */,
 				F84A79621EB3A90A00501EA4 /* numeral0.png */,
 				F84A79631EB3A90A00501EA4 /* numeral1.png */,
+				F80753051EB409E3003DFD01 /* menu_button.png */,
 				F84A7ABB1EB3B74B00501EA4 /* continue_button.png */,
 				F84A7ABC1EB3B74B00501EA4 /* highscores_button.png */,
 				F84A7ABD1EB3B74B00501EA4 /* newgame_button.png */,
@@ -1178,8 +1181,8 @@
 				F8B73FFC1E9D3F4B00042272 /* GameScene.swift */,
 				F80A141C1EA0050400263144 /* LevelCompleteScene.swift */,
 				F8A698E91EB1410400091EB6 /* HighscoreScene.swift */,
-				F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */,
 				F85489841EB28A1B00E46A05 /* GameOverScene.swift */,
+				F8B7400E1E9D5ADB00042272 /* StartGameScene.swift */,
 				F8B73FFE1E9D3F4B00042272 /* GameViewController.swift */,
 				F8B740001E9D3F4B00042272 /* Main.storyboard */,
 				F8B740031E9D3F4B00042272 /* Assets.xcassets */,
@@ -1473,6 +1476,7 @@
 				F84A7A061EB3A90A00501EA4 /* meteorGrey_med2.png in Resources */,
 				F84A79891EB3A90A00501EA4 /* sfx_lose.ogg in Resources */,
 				F84A79EE1EB3A90A00501EA4 /* laserRed08.png in Resources */,
+				F80753061EB409E3003DFD01 /* menu_button.png in Resources */,
 				F84A79C01EB3A90A00501EA4 /* enemyGreen4.png in Resources */,
 				F84A79F31EB3A90A00501EA4 /* laserRed13.png in Resources */,
 				F84A7A611EB3A90B00501EA4 /* wingYellow_0.png in Resources */,

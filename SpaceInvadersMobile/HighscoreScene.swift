@@ -15,17 +15,18 @@ class HighscoreScene: SKScene {
     
     let desiredWidthRatio : CGFloat = 50 // Percentage of screen width you want the button width to take
     let deleteWidthRatio : CGFloat = 5
+    
     let pulsatingTextScaler = CGFloat(0.657895)
-    let deleteWarningScaler = CGFloat(0.6 )
+    let deleteWarningScaler = CGFloat(0.6)
+    let highscoreTextScaler = CGFloat(0.6)
     
     var deleteScoresPrompt : Bool = false
-    
     var eraserStart : CGPoint = CGPoint()
+    // var scoreTextFontSize : CGSize = CGSize()
     
     override func didMove(to view: SKView) {
         
         displayHighscores() // Called first in order to set eraserStart
-        
         
         let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
         let clearHighscoresButton = SKSpriteNode(imageNamed: "images/eraser.png")
@@ -36,14 +37,15 @@ class HighscoreScene: SKScene {
         let newSize = CGSize(width: startGameButton.size.width * textureScale, height: startGameButton.size.height * textureScale)
         let newDeleteSize = CGSize(width: clearHighscoresButton.size.width * deleteScale, height: clearHighscoresButton.size.height * deleteScale)
         
-        startGameButton.position = CGPoint(x: size.width/2, y: startGameButton.size.height)
         startGameButton.size = newSize
+        startGameButton.position = CGPoint(x: size.width/2, y: startGameButton.size.height)
         startGameButton.name = "startgame"
         addChild(startGameButton)
         
         let invaderText = PulsatingText(fontNamed: "ChalkDuster")
         invaderText.setTextFontSizeAndPulsate(theText: "HIGHSCORES!", theFontSize: CGFloat((UIScreen.main.bounds.width/10) * pulsatingTextScaler))
-        invaderText.position = CGPoint(x: size.width/2, y: size.height - 50) // XXX THIS MAY NEED TO BE SCALED BETTER
+        invaderText.position = CGPoint(x: size.width/2,
+                                       y: size.height - (invaderText.fontSize * 2)) // XXX THIS MAY NEED TO BE SCALED BETTER
         addChild(invaderText)
         
         // Only show eraser if there are scores to delete
@@ -72,6 +74,10 @@ class HighscoreScene: SKScene {
         if touchedNode.name == "startgame" {
             
             if !deleteScoresPrompt {
+                
+                appDelegate.score = 0
+                appDelegate.won = false
+                
                 let gameScene = GameScene(size: size)
                 gameScene.scaleMode = scaleMode
                 
@@ -109,30 +115,44 @@ class HighscoreScene: SKScene {
                 let deleteWarningLabel_1 = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
                 deleteWarningLabel_1.name = "warning1"
                 deleteWarningLabel_1.fontColor = UIColor.red
-                deleteWarningLabel_1.zPosition = 5
+                deleteWarningLabel_1.zPosition = 6
                 deleteWarningLabel_1.text = "Permanently removing highscores."
                 deleteWarningLabel_1.fontSize = CGFloat((UIScreen.main.bounds.width/10) * deleteWarningScaler) // XXX ADJUST TO SCREEN WIDTH
                 deleteWarningLabel_1.position = CGPoint(x: UIScreen.main.bounds.width/2,
-                                              y: UIScreen.main.bounds.height/2 + 250)
+                                                        y: UIScreen.main.bounds.height - deleteWarningLabel_1.fontSize * 5)
                 addChild(deleteWarningLabel_1)
                 
                 let deleteWarningLabel_2 = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
                 deleteWarningLabel_2.name = "warning2"
                 deleteWarningLabel_2.fontColor = UIColor.red
-                deleteWarningLabel_2.zPosition = 5
+                deleteWarningLabel_2.zPosition = 6
                 deleteWarningLabel_2.text = "Are you sure?"
                 deleteWarningLabel_2.fontSize = CGFloat((UIScreen.main.bounds.width/10) * deleteWarningScaler) // XXX ADJUST TO SCREEN WIDTH
                 deleteWarningLabel_2.position = CGPoint(x: UIScreen.main.bounds.width/2,
-                                                        y: UIScreen.main.bounds.height/2 + 200)
+                                                        y: deleteWarningLabel_1.position.y - deleteWarningLabel_1.fontSize)
                 addChild(deleteWarningLabel_2)
                 
                 let blurElement = SKShapeNode(rectOf: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
                 blurElement.name = "blur"
                 blurElement.zPosition = 4
-                blurElement.fillColor = SKColor.white
+                blurElement.fillColor = SKColor.gray
                 blurElement.alpha = 0.6
                 blurElement.position = CGPoint(x: UIScreen.main.bounds.width/2, y:UIScreen.main.bounds.height/2)
                 addChild(blurElement)
+                
+                let warningBackground = SKShapeNode(rectOf: CGSize(width: UIScreen.main.bounds.width,
+                                                                   height: deleteWarningLabel_1.fontSize * 2.5))
+                
+                // height: deleteWarningLabel_1.fontSize
+                
+                warningBackground.name = "warningBkgnd"
+                warningBackground.zPosition = 5
+                warningBackground.fillColor = SKColor.white
+                warningBackground.position = CGPoint(x: UIScreen.main.bounds.width/2,
+                                                     y: deleteWarningLabel_1.position.y - deleteWarningLabel_1.fontSize/4)
+                // y: deleteWarningLabel_1.position.y
+                // deleteWarningLabel_1.position.y - (deleteWarningLabel_1.position.y - deleteWarningLabel_2.position.y)/2
+                addChild(warningBackground)
                 
                 
                 deleteScoresPrompt = true
@@ -185,15 +205,16 @@ class HighscoreScene: SKScene {
         scene?.childNode(withName: "blur")?.removeFromParent()
         scene?.childNode(withName: "warning1")?.removeFromParent()
         scene?.childNode(withName: "warning2")?.removeFromParent()
+        scene?.childNode(withName: "warningBkgnd")?.removeFromParent()
         
     }
     
     func displayHighscores() {
         
         let horOffset = UIScreen.main.bounds.width/4
-        let vertOffset = CGFloat(30)
-        let vertStart = UIScreen.main.bounds.height - 200
-        let fontSize = CGFloat(16)       // SCALE THIS
+        let vertStart = UIScreen.main.bounds.height - UIScreen.main.bounds.height/5
+        let fontSize = CGFloat((UIScreen.main.bounds.width/10) * highscoreTextScaler)
+        let vertOffset = fontSize * 1.5
         
         // Dispay column labels for highscore.
         let rankLabel = SKLabelNode(fontNamed: "Chalkduster")

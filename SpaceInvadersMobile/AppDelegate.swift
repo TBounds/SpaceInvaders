@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var level : Int = 1
-    var score : Int = 50
+    var score : Int = 100
+    var won : Bool = false
     
     var highscore : Int = 0
     var highscores : [Highscore] = []
@@ -44,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func isHighScore() -> Bool {
         
-        if highscores.count < 10 {
+        if highscores.count < 10  && score > 0 {
             return true
         }
         
@@ -70,10 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else {
             // Insert new score in the correct spot and remove the last score.
-            for i in 0 ... 10 {
+            for i in 0 ..< 10 {
                 if score >= highscores[i].score {
                     highscores.insert(newScore, at: i)
-                    highscores.remove(at: 10)
+                    highscores.remove(at: 9)
                     break
                 }
             }

@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Invader Variables
     let rowsOfInvaders = 4
-    var invaderSpeed = 50 //(UIScreen.main.bounds.width/384)
+    var invaderSpeed = (UIScreen.main.bounds.width/384)
     let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no vertical space between enemies.
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
@@ -196,6 +196,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func resetMetrics() {
         appDelegate.level = 1
         appDelegate.score = 0
+        appDelegate.won = false
     }
     
     //------------------------------------------------------//
@@ -359,34 +360,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         NSLog("LEVEL COMPLETE")
         
-        if(invaderNum <= maxLevels){
-            
-            appDelegate.level += 1
-            appDelegate.score = score
-            
-            let levelCompleteScene = LevelCompleteScene(size: size)
-            levelCompleteScene.scaleMode = scaleMode
-            
-            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
-            view?.presentScene(levelCompleteScene,transition: transitionType)
-        }
-        else{
+//        if(invaderNum <= maxLevels){
+//            
+//            appDelegate.level += 1
+//            appDelegate.score = score
+//            
+//            let levelCompleteScene = LevelCompleteScene(size: size)
+//            levelCompleteScene.scaleMode = scaleMode
+//            
+//            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+//            view?.presentScene(levelCompleteScene,transition: transitionType)
+//        }
+//        else{
             invaderNum = 1
-            newGame()
-        }
+            appDelegate.won = true
+            appDelegate.score = score
+            gameOver()
+//        }
     }
     
-    func newGame(){
+    func gameOver(){
         
         NSLog("NEW GAME")
         
-        resetMetrics()
-        
-        let gameOverScene = StartGameScene(size: size)
+        let gameOverScene = GameOverScene(size: size)
         gameOverScene.scaleMode = scaleMode
         
         let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
         view?.presentScene(gameOverScene,transition: transitionType)
+        
+        // resetMetrics()
     }
     
     func setupAccelerometer(){
