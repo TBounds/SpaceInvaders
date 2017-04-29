@@ -150,11 +150,8 @@ class HighscoreScene: SKScene {
                 warningBackground.fillColor = SKColor.white
                 warningBackground.position = CGPoint(x: UIScreen.main.bounds.width/2,
                                                      y: deleteWarningLabel_1.position.y - deleteWarningLabel_1.fontSize/4)
-                // y: deleteWarningLabel_1.position.y
-                // deleteWarningLabel_1.position.y - (deleteWarningLabel_1.position.y - deleteWarningLabel_2.position.y)/2
                 addChild(warningBackground)
-                
-                
+
                 deleteScoresPrompt = true
             }
             

@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F80753061EB409E3003DFD01 /* menu_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F80753051EB409E3003DFD01 /* menu_button.png */; };
+		F80753101EB416AA003DFD01 /* enemyBlack1.png in Resources */ = {isa = PBXBuildFile; fileRef = F80753081EB416AA003DFD01 /* enemyBlack1.png */; };
+		F80753111EB416AA003DFD01 /* enemyBlue2.png in Resources */ = {isa = PBXBuildFile; fileRef = F80753091EB416AA003DFD01 /* enemyBlue2.png */; };
+		F80753121EB416AA003DFD01 /* enemyGreen3.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530A1EB416AA003DFD01 /* enemyGreen3.png */; };
+		F80753131EB416AA003DFD01 /* enemyRed4.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530B1EB416AA003DFD01 /* enemyRed4.png */; };
+		F80753141EB416AA003DFD01 /* laserBlue01.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530C1EB416AA003DFD01 /* laserBlue01.png */; };
+		F80753151EB416AA003DFD01 /* laserRed01.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530D1EB416AA003DFD01 /* laserRed01.png */; };
+		F80753161EB416AA003DFD01 /* playerShip1_blue1.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530E1EB416AA003DFD01 /* playerShip1_blue1.png */; };
+		F80753171EB416AA003DFD01 /* playerShip1_blue2.png in Resources */ = {isa = PBXBuildFile; fileRef = F807530F1EB416AA003DFD01 /* playerShip1_blue2.png */; };
+		F80753191EB425F5003DFD01 /* Light-Years_V001_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F80753181EB425F5003DFD01 /* Light-Years_V001_Looping.mp3 */; };
+		F80753211EB42AEB003DFD01 /* sfx_laser1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531A1EB42AEB003DFD01 /* sfx_laser1.mp3 */; };
+		F80753221EB42AEB003DFD01 /* sfx_laser2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531B1EB42AEB003DFD01 /* sfx_laser2.mp3 */; };
+		F80753231EB42AEB003DFD01 /* sfx_lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531C1EB42AEB003DFD01 /* sfx_lose.mp3 */; };
+		F80753241EB42AEB003DFD01 /* sfx_shieldDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531D1EB42AEB003DFD01 /* sfx_shieldDown.mp3 */; };
+		F80753251EB42AEB003DFD01 /* sfx_shieldUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531E1EB42AEB003DFD01 /* sfx_shieldUp.mp3 */; };
+		F80753261EB42AEB003DFD01 /* sfx_twoTone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F807531F1EB42AEB003DFD01 /* sfx_twoTone.mp3 */; };
+		F80753271EB42AEB003DFD01 /* sfx_zap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F80753201EB42AEB003DFD01 /* sfx_zap.mp3 */; };
+		F807532D1EB431E3003DFD01 /* playerExplosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = F807532C1EB431E3003DFD01 /* playerExplosion.wav */; };
+		F807532F1EB4328C003DFD01 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = F807532E1EB4328C003DFD01 /* explosion.wav */; };
 		F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A141C1EA0050400263144 /* LevelCompleteScene.swift */; };
 		F80A14211EA00E5C00263144 /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = F80A14201EA00E5C00263144 /* StarField.sks */; };
 		F84A79811EB3A90A00501EA4 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A783B1EB3A90A00501EA4 /* black.png */; };
@@ -16,13 +34,6 @@
 		F84A79841EB3A90A00501EA4 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A783E1EB3A90A00501EA4 /* purple.png */; };
 		F84A79851EB3A90A00501EA4 /* kenvector_future.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84A78401EB3A90A00501EA4 /* kenvector_future.ttf */; };
 		F84A79861EB3A90A00501EA4 /* kenvector_future_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84A78411EB3A90A00501EA4 /* kenvector_future_thin.ttf */; };
-		F84A79871EB3A90A00501EA4 /* sfx_laser1.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78421EB3A90A00501EA4 /* sfx_laser1.ogg */; };
-		F84A79881EB3A90A00501EA4 /* sfx_laser2.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78431EB3A90A00501EA4 /* sfx_laser2.ogg */; };
-		F84A79891EB3A90A00501EA4 /* sfx_lose.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78441EB3A90A00501EA4 /* sfx_lose.ogg */; };
-		F84A798A1EB3A90A00501EA4 /* sfx_shieldDown.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78451EB3A90A00501EA4 /* sfx_shieldDown.ogg */; };
-		F84A798B1EB3A90A00501EA4 /* sfx_shieldUp.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78461EB3A90A00501EA4 /* sfx_shieldUp.ogg */; };
-		F84A798C1EB3A90A00501EA4 /* sfx_twoTone.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78471EB3A90A00501EA4 /* sfx_twoTone.ogg */; };
-		F84A798D1EB3A90A00501EA4 /* sfx_zap.ogg in Resources */ = {isa = PBXBuildFile; fileRef = F84A78481EB3A90A00501EA4 /* sfx_zap.ogg */; };
 		F84A798E1EB3A90A00501EA4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = F84A78491EB3A90A00501EA4 /* license.txt */; };
 		F84A798F1EB3A90A00501EA4 /* playerShip1_damage1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A784C1EB3A90A00501EA4 /* playerShip1_damage1.png */; };
 		F84A79901EB3A90A00501EA4 /* playerShip1_damage2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A784D1EB3A90A00501EA4 /* playerShip1_damage2.png */; };
@@ -60,27 +71,22 @@
 		F84A79B01EB3A90A00501EA4 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A786E1EB3A90A00501EA4 /* star1.png */; };
 		F84A79B11EB3A90A00501EA4 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A786F1EB3A90A00501EA4 /* star2.png */; };
 		F84A79B21EB3A90A00501EA4 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78701EB3A90A00501EA4 /* star3.png */; };
-		F84A79B31EB3A90A00501EA4 /* enemyBlack1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78721EB3A90A00501EA4 /* enemyBlack1.png */; };
 		F84A79B41EB3A90A00501EA4 /* enemyBlack2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78731EB3A90A00501EA4 /* enemyBlack2.png */; };
 		F84A79B51EB3A90A00501EA4 /* enemyBlack3.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78741EB3A90A00501EA4 /* enemyBlack3.png */; };
 		F84A79B61EB3A90A00501EA4 /* enemyBlack4.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78751EB3A90A00501EA4 /* enemyBlack4.png */; };
 		F84A79B71EB3A90A00501EA4 /* enemyBlack5.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78761EB3A90A00501EA4 /* enemyBlack5.png */; };
 		F84A79B81EB3A90A00501EA4 /* enemyBlue1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78771EB3A90A00501EA4 /* enemyBlue1.png */; };
-		F84A79B91EB3A90A00501EA4 /* enemyBlue2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78781EB3A90A00501EA4 /* enemyBlue2.png */; };
 		F84A79BA1EB3A90A00501EA4 /* enemyBlue3.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78791EB3A90A00501EA4 /* enemyBlue3.png */; };
 		F84A79BB1EB3A90A00501EA4 /* enemyBlue4.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787A1EB3A90A00501EA4 /* enemyBlue4.png */; };
 		F84A79BC1EB3A90A00501EA4 /* enemyBlue5.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787B1EB3A90A00501EA4 /* enemyBlue5.png */; };
 		F84A79BD1EB3A90A00501EA4 /* enemyGreen1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787C1EB3A90A00501EA4 /* enemyGreen1.png */; };
 		F84A79BE1EB3A90A00501EA4 /* enemyGreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787D1EB3A90A00501EA4 /* enemyGreen2.png */; };
-		F84A79BF1EB3A90A00501EA4 /* enemyGreen3.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787E1EB3A90A00501EA4 /* enemyGreen3.png */; };
 		F84A79C01EB3A90A00501EA4 /* enemyGreen4.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A787F1EB3A90A00501EA4 /* enemyGreen4.png */; };
 		F84A79C11EB3A90A00501EA4 /* enemyGreen5.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78801EB3A90A00501EA4 /* enemyGreen5.png */; };
 		F84A79C21EB3A90A00501EA4 /* enemyRed1.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78811EB3A90A00501EA4 /* enemyRed1.png */; };
 		F84A79C31EB3A90A00501EA4 /* enemyRed2.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78821EB3A90A00501EA4 /* enemyRed2.png */; };
 		F84A79C41EB3A90A00501EA4 /* enemyRed3.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78831EB3A90A00501EA4 /* enemyRed3.png */; };
-		F84A79C51EB3A90A00501EA4 /* enemyRed4.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78841EB3A90A00501EA4 /* enemyRed4.png */; };
 		F84A79C61EB3A90A00501EA4 /* enemyRed5.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78851EB3A90A00501EA4 /* enemyRed5.png */; };
-		F84A79C71EB3A90A00501EA4 /* laserBlue01.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78871EB3A90A00501EA4 /* laserBlue01.png */; };
 		F84A79C81EB3A90A00501EA4 /* laserBlue02.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78881EB3A90A00501EA4 /* laserBlue02.png */; };
 		F84A79C91EB3A90A00501EA4 /* laserBlue03.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78891EB3A90A00501EA4 /* laserBlue03.png */; };
 		F84A79CA1EB3A90A00501EA4 /* laserBlue04.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A788A1EB3A90A00501EA4 /* laserBlue04.png */; };
@@ -112,7 +118,6 @@
 		F84A79E41EB3A90A00501EA4 /* laserGreen14.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A41EB3A90A00501EA4 /* laserGreen14.png */; };
 		F84A79E51EB3A90A00501EA4 /* laserGreen15.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A51EB3A90A00501EA4 /* laserGreen15.png */; };
 		F84A79E61EB3A90A00501EA4 /* laserGreen16.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A61EB3A90A00501EA4 /* laserGreen16.png */; };
-		F84A79E71EB3A90A00501EA4 /* laserRed01.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A71EB3A90A00501EA4 /* laserRed01.png */; };
 		F84A79E81EB3A90A00501EA4 /* laserRed02.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A81EB3A90A00501EA4 /* laserRed02.png */; };
 		F84A79E91EB3A90A00501EA4 /* laserRed03.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78A91EB3A90A00501EA4 /* laserRed03.png */; };
 		F84A79EA1EB3A90A00501EA4 /* laserRed04.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A78AA1EB3A90A00501EA4 /* laserRed04.png */; };
@@ -354,6 +359,24 @@
 
 /* Begin PBXFileReference section */
 		F80753051EB409E3003DFD01 /* menu_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_button.png; sourceTree = "<group>"; };
+		F80753081EB416AA003DFD01 /* enemyBlack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack1.png; sourceTree = "<group>"; };
+		F80753091EB416AA003DFD01 /* enemyBlue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue2.png; sourceTree = "<group>"; };
+		F807530A1EB416AA003DFD01 /* enemyGreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen3.png; sourceTree = "<group>"; };
+		F807530B1EB416AA003DFD01 /* enemyRed4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed4.png; sourceTree = "<group>"; };
+		F807530C1EB416AA003DFD01 /* laserBlue01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserBlue01.png; sourceTree = "<group>"; };
+		F807530D1EB416AA003DFD01 /* laserRed01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserRed01.png; sourceTree = "<group>"; };
+		F807530E1EB416AA003DFD01 /* playerShip1_blue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip1_blue1.png; sourceTree = "<group>"; };
+		F807530F1EB416AA003DFD01 /* playerShip1_blue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip1_blue2.png; sourceTree = "<group>"; };
+		F80753181EB425F5003DFD01 /* Light-Years_V001_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Light-Years_V001_Looping.mp3"; sourceTree = "<group>"; };
+		F807531A1EB42AEB003DFD01 /* sfx_laser1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_laser1.mp3; sourceTree = "<group>"; };
+		F807531B1EB42AEB003DFD01 /* sfx_laser2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_laser2.mp3; sourceTree = "<group>"; };
+		F807531C1EB42AEB003DFD01 /* sfx_lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_lose.mp3; sourceTree = "<group>"; };
+		F807531D1EB42AEB003DFD01 /* sfx_shieldDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_shieldDown.mp3; sourceTree = "<group>"; };
+		F807531E1EB42AEB003DFD01 /* sfx_shieldUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_shieldUp.mp3; sourceTree = "<group>"; };
+		F807531F1EB42AEB003DFD01 /* sfx_twoTone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_twoTone.mp3; sourceTree = "<group>"; };
+		F80753201EB42AEB003DFD01 /* sfx_zap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_zap.mp3; sourceTree = "<group>"; };
+		F807532C1EB431E3003DFD01 /* playerExplosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerExplosion.wav; sourceTree = "<group>"; };
+		F807532E1EB4328C003DFD01 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		F80A141C1EA0050400263144 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
 		F80A14201EA00E5C00263144 /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
 		F84A783B1EB3A90A00501EA4 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
@@ -362,13 +385,6 @@
 		F84A783E1EB3A90A00501EA4 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 		F84A78401EB3A90A00501EA4 /* kenvector_future.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenvector_future.ttf; sourceTree = "<group>"; };
 		F84A78411EB3A90A00501EA4 /* kenvector_future_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenvector_future_thin.ttf; sourceTree = "<group>"; };
-		F84A78421EB3A90A00501EA4 /* sfx_laser1.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_laser1.ogg; sourceTree = "<group>"; };
-		F84A78431EB3A90A00501EA4 /* sfx_laser2.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_laser2.ogg; sourceTree = "<group>"; };
-		F84A78441EB3A90A00501EA4 /* sfx_lose.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_lose.ogg; sourceTree = "<group>"; };
-		F84A78451EB3A90A00501EA4 /* sfx_shieldDown.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_shieldDown.ogg; sourceTree = "<group>"; };
-		F84A78461EB3A90A00501EA4 /* sfx_shieldUp.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_shieldUp.ogg; sourceTree = "<group>"; };
-		F84A78471EB3A90A00501EA4 /* sfx_twoTone.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_twoTone.ogg; sourceTree = "<group>"; };
-		F84A78481EB3A90A00501EA4 /* sfx_zap.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_zap.ogg; sourceTree = "<group>"; };
 		F84A78491EB3A90A00501EA4 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 		F84A784C1EB3A90A00501EA4 /* playerShip1_damage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip1_damage1.png; sourceTree = "<group>"; };
 		F84A784D1EB3A90A00501EA4 /* playerShip1_damage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip1_damage2.png; sourceTree = "<group>"; };
@@ -406,27 +422,22 @@
 		F84A786E1EB3A90A00501EA4 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
 		F84A786F1EB3A90A00501EA4 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		F84A78701EB3A90A00501EA4 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
-		F84A78721EB3A90A00501EA4 /* enemyBlack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack1.png; sourceTree = "<group>"; };
 		F84A78731EB3A90A00501EA4 /* enemyBlack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack2.png; sourceTree = "<group>"; };
 		F84A78741EB3A90A00501EA4 /* enemyBlack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack3.png; sourceTree = "<group>"; };
 		F84A78751EB3A90A00501EA4 /* enemyBlack4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack4.png; sourceTree = "<group>"; };
 		F84A78761EB3A90A00501EA4 /* enemyBlack5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlack5.png; sourceTree = "<group>"; };
 		F84A78771EB3A90A00501EA4 /* enemyBlue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue1.png; sourceTree = "<group>"; };
-		F84A78781EB3A90A00501EA4 /* enemyBlue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue2.png; sourceTree = "<group>"; };
 		F84A78791EB3A90A00501EA4 /* enemyBlue3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue3.png; sourceTree = "<group>"; };
 		F84A787A1EB3A90A00501EA4 /* enemyBlue4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue4.png; sourceTree = "<group>"; };
 		F84A787B1EB3A90A00501EA4 /* enemyBlue5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyBlue5.png; sourceTree = "<group>"; };
 		F84A787C1EB3A90A00501EA4 /* enemyGreen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen1.png; sourceTree = "<group>"; };
 		F84A787D1EB3A90A00501EA4 /* enemyGreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen2.png; sourceTree = "<group>"; };
-		F84A787E1EB3A90A00501EA4 /* enemyGreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen3.png; sourceTree = "<group>"; };
 		F84A787F1EB3A90A00501EA4 /* enemyGreen4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen4.png; sourceTree = "<group>"; };
 		F84A78801EB3A90A00501EA4 /* enemyGreen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyGreen5.png; sourceTree = "<group>"; };
 		F84A78811EB3A90A00501EA4 /* enemyRed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed1.png; sourceTree = "<group>"; };
 		F84A78821EB3A90A00501EA4 /* enemyRed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed2.png; sourceTree = "<group>"; };
 		F84A78831EB3A90A00501EA4 /* enemyRed3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed3.png; sourceTree = "<group>"; };
-		F84A78841EB3A90A00501EA4 /* enemyRed4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed4.png; sourceTree = "<group>"; };
 		F84A78851EB3A90A00501EA4 /* enemyRed5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemyRed5.png; sourceTree = "<group>"; };
-		F84A78871EB3A90A00501EA4 /* laserBlue01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserBlue01.png; sourceTree = "<group>"; };
 		F84A78881EB3A90A00501EA4 /* laserBlue02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserBlue02.png; sourceTree = "<group>"; };
 		F84A78891EB3A90A00501EA4 /* laserBlue03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserBlue03.png; sourceTree = "<group>"; };
 		F84A788A1EB3A90A00501EA4 /* laserBlue04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserBlue04.png; sourceTree = "<group>"; };
@@ -458,7 +469,6 @@
 		F84A78A41EB3A90A00501EA4 /* laserGreen14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserGreen14.png; sourceTree = "<group>"; };
 		F84A78A51EB3A90A00501EA4 /* laserGreen15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserGreen15.png; sourceTree = "<group>"; };
 		F84A78A61EB3A90A00501EA4 /* laserGreen16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserGreen16.png; sourceTree = "<group>"; };
-		F84A78A71EB3A90A00501EA4 /* laserRed01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserRed01.png; sourceTree = "<group>"; };
 		F84A78A81EB3A90A00501EA4 /* laserRed02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserRed02.png; sourceTree = "<group>"; };
 		F84A78A91EB3A90A00501EA4 /* laserRed03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserRed03.png; sourceTree = "<group>"; };
 		F84A78AA1EB3A90A00501EA4 /* laserRed04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserRed04.png; sourceTree = "<group>"; };
@@ -711,6 +721,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80753071EB416AA003DFD01 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				F80753081EB416AA003DFD01 /* enemyBlack1.png */,
+				F80753091EB416AA003DFD01 /* enemyBlue2.png */,
+				F807530A1EB416AA003DFD01 /* enemyGreen3.png */,
+				F807530B1EB416AA003DFD01 /* enemyRed4.png */,
+				F807530C1EB416AA003DFD01 /* laserBlue01.png */,
+				F807530D1EB416AA003DFD01 /* laserRed01.png */,
+				F807530E1EB416AA003DFD01 /* playerShip1_blue1.png */,
+				F807530F1EB416AA003DFD01 /* playerShip1_blue2.png */,
+				F807532C1EB431E3003DFD01 /* playerExplosion.wav */,
+				F807532E1EB4328C003DFD01 /* explosion.wav */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
 		F84A78391EB3A90A00501EA4 /* SpaceShooterRedux */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,13 +769,13 @@
 			children = (
 				F84A78401EB3A90A00501EA4 /* kenvector_future.ttf */,
 				F84A78411EB3A90A00501EA4 /* kenvector_future_thin.ttf */,
-				F84A78421EB3A90A00501EA4 /* sfx_laser1.ogg */,
-				F84A78431EB3A90A00501EA4 /* sfx_laser2.ogg */,
-				F84A78441EB3A90A00501EA4 /* sfx_lose.ogg */,
-				F84A78451EB3A90A00501EA4 /* sfx_shieldDown.ogg */,
-				F84A78461EB3A90A00501EA4 /* sfx_shieldUp.ogg */,
-				F84A78471EB3A90A00501EA4 /* sfx_twoTone.ogg */,
-				F84A78481EB3A90A00501EA4 /* sfx_zap.ogg */,
+				F807531A1EB42AEB003DFD01 /* sfx_laser1.mp3 */,
+				F807531B1EB42AEB003DFD01 /* sfx_laser2.mp3 */,
+				F807531C1EB42AEB003DFD01 /* sfx_lose.mp3 */,
+				F807531D1EB42AEB003DFD01 /* sfx_shieldDown.mp3 */,
+				F807531E1EB42AEB003DFD01 /* sfx_shieldUp.mp3 */,
+				F807531F1EB42AEB003DFD01 /* sfx_twoTone.mp3 */,
+				F80753201EB42AEB003DFD01 /* sfx_zap.mp3 */,
 			);
 			path = Bonus;
 			sourceTree = "<group>";
@@ -837,25 +864,21 @@
 		F84A78711EB3A90A00501EA4 /* Enemies */ = {
 			isa = PBXGroup;
 			children = (
-				F84A78721EB3A90A00501EA4 /* enemyBlack1.png */,
 				F84A78731EB3A90A00501EA4 /* enemyBlack2.png */,
 				F84A78741EB3A90A00501EA4 /* enemyBlack3.png */,
 				F84A78751EB3A90A00501EA4 /* enemyBlack4.png */,
 				F84A78761EB3A90A00501EA4 /* enemyBlack5.png */,
 				F84A78771EB3A90A00501EA4 /* enemyBlue1.png */,
-				F84A78781EB3A90A00501EA4 /* enemyBlue2.png */,
 				F84A78791EB3A90A00501EA4 /* enemyBlue3.png */,
 				F84A787A1EB3A90A00501EA4 /* enemyBlue4.png */,
 				F84A787B1EB3A90A00501EA4 /* enemyBlue5.png */,
 				F84A787C1EB3A90A00501EA4 /* enemyGreen1.png */,
 				F84A787D1EB3A90A00501EA4 /* enemyGreen2.png */,
-				F84A787E1EB3A90A00501EA4 /* enemyGreen3.png */,
 				F84A787F1EB3A90A00501EA4 /* enemyGreen4.png */,
 				F84A78801EB3A90A00501EA4 /* enemyGreen5.png */,
 				F84A78811EB3A90A00501EA4 /* enemyRed1.png */,
 				F84A78821EB3A90A00501EA4 /* enemyRed2.png */,
 				F84A78831EB3A90A00501EA4 /* enemyRed3.png */,
-				F84A78841EB3A90A00501EA4 /* enemyRed4.png */,
 				F84A78851EB3A90A00501EA4 /* enemyRed5.png */,
 			);
 			path = Enemies;
@@ -864,7 +887,6 @@
 		F84A78861EB3A90A00501EA4 /* Lasers */ = {
 			isa = PBXGroup;
 			children = (
-				F84A78871EB3A90A00501EA4 /* laserBlue01.png */,
 				F84A78881EB3A90A00501EA4 /* laserBlue02.png */,
 				F84A78891EB3A90A00501EA4 /* laserBlue03.png */,
 				F84A788A1EB3A90A00501EA4 /* laserBlue04.png */,
@@ -896,7 +918,6 @@
 				F84A78A41EB3A90A00501EA4 /* laserGreen14.png */,
 				F84A78A51EB3A90A00501EA4 /* laserGreen15.png */,
 				F84A78A61EB3A90A00501EA4 /* laserGreen16.png */,
-				F84A78A71EB3A90A00501EA4 /* laserRed01.png */,
 				F84A78A81EB3A90A00501EA4 /* laserRed02.png */,
 				F84A78A91EB3A90A00501EA4 /* laserRed03.png */,
 				F84A78AA1EB3A90A00501EA4 /* laserRed04.png */,
@@ -1146,6 +1167,8 @@
 		F8B73FEA1E9D3F4B00042272 = {
 			isa = PBXGroup;
 			children = (
+				F80753181EB425F5003DFD01 /* Light-Years_V001_Looping.mp3 */,
+				F80753071EB416AA003DFD01 /* Sprites */,
 				F84A78391EB3A90A00501EA4 /* SpaceShooterRedux */,
 				F8B740101E9D5E2600042272 /* images */,
 				F8B73FF51E9D3F4B00042272 /* SpaceInvadersMobile */,
@@ -1260,17 +1283,21 @@
 			files = (
 				F84A7AB21EB3A90B00501EA4 /* playerLife3_green.png in Resources */,
 				F84A79E61EB3A90A00501EA4 /* laserGreen16.png in Resources */,
+				F80753221EB42AEB003DFD01 /* sfx_laser2.mp3 in Resources */,
 				F84A7A671EB3A90B00501EA4 /* wingYellow_6.png in Resources */,
 				F84A7A4F1EB3A90B00501EA4 /* wingBlue_6.png in Resources */,
 				F84A79BA1EB3A90A00501EA4 /* enemyBlue3.png in Resources */,
 				F84A79EF1EB3A90A00501EA4 /* laserRed09.png in Resources */,
 				F84A79DC1EB3A90A00501EA4 /* laserGreen06.png in Resources */,
 				F84A7A1E1EB3A90A00501EA4 /* cockpitGreen_2.png in Resources */,
+				F80753231EB42AEB003DFD01 /* sfx_lose.mp3 in Resources */,
 				F84A79B71EB3A90A00501EA4 /* enemyBlack5.png in Resources */,
+				F80753131EB416AA003DFD01 /* enemyRed4.png in Resources */,
 				F84A79A01EB3A90A00501EA4 /* fire08.png in Resources */,
 				F84A7A381EB3A90B00501EA4 /* engine5.png in Resources */,
 				F84A7AB61EB3A90B00501EA4 /* sample.png in Resources */,
 				F84A7A211EB3A90A00501EA4 /* cockpitGreen_5.png in Resources */,
+				F80753121EB416AA003DFD01 /* enemyGreen3.png in Resources */,
 				F84A7A811EB3A90B00501EA4 /* powerupGreen_bolt.png in Resources */,
 				F84A7AA41EB3A90B00501EA4 /* numeral6.png in Resources */,
 				F84A79901EB3A90A00501EA4 /* playerShip1_damage2.png in Resources */,
@@ -1298,6 +1325,7 @@
 				F84A79E01EB3A90A00501EA4 /* laserGreen10.png in Resources */,
 				F84A79B81EB3A90A00501EA4 /* enemyBlue1.png in Resources */,
 				F84A7AC51EB3B74B00501EA4 /* savescore_button.png in Resources */,
+				F80753251EB42AEB003DFD01 /* sfx_shieldUp.mp3 in Resources */,
 				F84A7A241EB3A90A00501EA4 /* cockpitRed_0.png in Resources */,
 				F84A7A151EB3A90A00501EA4 /* cockpitBlue_1.png in Resources */,
 				F84A7A681EB3A90B00501EA4 /* wingYellow_7.png in Resources */,
@@ -1322,11 +1350,13 @@
 				F84A79971EB3A90A00501EA4 /* playerShip3_damage3.png in Resources */,
 				F84A79E21EB3A90A00501EA4 /* laserGreen12.png in Resources */,
 				F84A7A1D1EB3A90A00501EA4 /* cockpitGreen_1.png in Resources */,
+				F80753261EB42AEB003DFD01 /* sfx_twoTone.mp3 in Resources */,
 				F84A7A741EB3A90B00501EA4 /* playerShip3_red.png in Resources */,
 				F84A7AC21EB3B74B00501EA4 /* highscores_button.png in Resources */,
 				F84A7A071EB3A90A00501EA4 /* meteorGrey_small1.png in Resources */,
 				F84A7A8B1EB3A90B00501EA4 /* powerupYellow_star.png in Resources */,
 				F84A7AC61EB3B74B00501EA4 /* yes_button.png in Resources */,
+				F80753191EB425F5003DFD01 /* Light-Years_V001_Looping.mp3 in Resources */,
 				F84A7A731EB3A90B00501EA4 /* playerShip3_orange.png in Resources */,
 				F84A7A621EB3A90B00501EA4 /* wingYellow_1.png in Resources */,
 				F84A79C21EB3A90A00501EA4 /* enemyRed1.png in Resources */,
@@ -1340,16 +1370,14 @@
 				F84A79A91EB3A90A00501EA4 /* fire17.png in Resources */,
 				F84A79E81EB3A90A00501EA4 /* laserRed02.png in Resources */,
 				F84A7A9C1EB3A90B00501EA4 /* buttonYellow.png in Resources */,
-				F84A798C1EB3A90A00501EA4 /* sfx_twoTone.ogg in Resources */,
 				F84A79F51EB3A90A00501EA4 /* laserRed15.png in Resources */,
 				F84A7AAF1EB3A90B00501EA4 /* playerLife2_orange.png in Resources */,
-				F84A798D1EB3A90A00501EA4 /* sfx_zap.ogg in Resources */,
 				F84A7AAC1EB3A90B00501EA4 /* playerLife1_red.png in Resources */,
 				F84A7AA51EB3A90B00501EA4 /* numeral7.png in Resources */,
 				F84A79F61EB3A90A00501EA4 /* laserRed16.png in Resources */,
+				F80753161EB416AA003DFD01 /* playerShip1_blue1.png in Resources */,
 				F84A7A371EB3A90B00501EA4 /* engine4.png in Resources */,
 				F84A7AB01EB3A90B00501EA4 /* playerLife2_red.png in Resources */,
-				F84A79C71EB3A90A00501EA4 /* laserBlue01.png in Resources */,
 				F84A7A0F1EB3A90A00501EA4 /* beam4.png in Resources */,
 				F84A7A9E1EB3A90B00501EA4 /* numeral0.png in Resources */,
 				F84A79A11EB3A90A00501EA4 /* fire09.png in Resources */,
@@ -1360,11 +1388,9 @@
 				F84A79DA1EB3A90A00501EA4 /* laserGreen04.png in Resources */,
 				F84A7AB91EB3A90B00501EA4 /* sheet.svg in Resources */,
 				F84A79FE1EB3A90A00501EA4 /* meteorBrown_small2.png in Resources */,
-				F84A798B1EB3A90A00501EA4 /* sfx_shieldUp.ogg in Resources */,
 				F84A7A3A1EB3A90B00501EA4 /* gun01.png in Resources */,
 				F84A799D1EB3A90A00501EA4 /* fire05.png in Resources */,
 				F84A7A861EB3A90B00501EA4 /* powerupRed_shield.png in Resources */,
-				F84A79B31EB3A90A00501EA4 /* enemyBlack1.png in Resources */,
 				F84A79AF1EB3A90A00501EA4 /* speed.png in Resources */,
 				F84A7A411EB3A90B00501EA4 /* gun08.png in Resources */,
 				F84A7A771EB3A90B00501EA4 /* bolt_gold.png in Resources */,
@@ -1376,10 +1402,10 @@
 				F84A7A8F1EB3A90B00501EA4 /* star_bronze.png in Resources */,
 				F84A79CE1EB3A90A00501EA4 /* laserBlue08.png in Resources */,
 				F84A79DE1EB3A90A00501EA4 /* laserGreen08.png in Resources */,
-				F84A79B91EB3A90A00501EA4 /* enemyBlue2.png in Resources */,
 				F84A7A441EB3A90B00501EA4 /* scratch1.png in Resources */,
 				F84A7A781EB3A90B00501EA4 /* pill_blue.png in Resources */,
 				F84A7A981EB3A90B00501EA4 /* ufoYellow.png in Resources */,
+				F80753151EB416AA003DFD01 /* laserRed01.png in Resources */,
 				F8B740121E9D66AB00042272 /* images in Resources */,
 				F84A79C11EB3A90A00501EA4 /* enemyGreen5.png in Resources */,
 				F8B740021E9D3F4B00042272 /* Main.storyboard in Resources */,
@@ -1392,6 +1418,7 @@
 				F84A79D91EB3A90A00501EA4 /* laserGreen03.png in Resources */,
 				F84A79961EB3A90A00501EA4 /* playerShip3_damage2.png in Resources */,
 				F84A7A961EB3A90B00501EA4 /* ufoGreen.png in Resources */,
+				F80753101EB416AA003DFD01 /* enemyBlack1.png in Resources */,
 				F84A7A461EB3A90B00501EA4 /* scratch3.png in Resources */,
 				F84A79E11EB3A90A00501EA4 /* laserGreen11.png in Resources */,
 				F84A79D11EB3A90A00501EA4 /* laserBlue11.png in Resources */,
@@ -1405,7 +1432,6 @@
 				F84A79A41EB3A90A00501EA4 /* fire12.png in Resources */,
 				F84A79851EB3A90A00501EA4 /* kenvector_future.ttf in Resources */,
 				F84A79EC1EB3A90A00501EA4 /* laserRed06.png in Resources */,
-				F84A79BF1EB3A90A00501EA4 /* enemyGreen3.png in Resources */,
 				F84A7A431EB3A90B00501EA4 /* gun10.png in Resources */,
 				F84A7A451EB3A90B00501EA4 /* scratch2.png in Resources */,
 				F84A7A001EB3A90A00501EA4 /* meteorBrown_tiny2.png in Resources */,
@@ -1432,6 +1458,8 @@
 				F84A7A131EB3A90A00501EA4 /* beamLong2.png in Resources */,
 				F84A7A111EB3A90A00501EA4 /* beam6.png in Resources */,
 				F84A7A591EB3A90B00501EA4 /* wingRed_0.png in Resources */,
+				F80753111EB416AA003DFD01 /* enemyBlue2.png in Resources */,
+				F807532D1EB431E3003DFD01 /* playerExplosion.wav in Resources */,
 				F84A7A6C1EB3A90B00501EA4 /* playerShip1_red.png in Resources */,
 				F84A79E41EB3A90A00501EA4 /* laserGreen14.png in Resources */,
 				F84A79D31EB3A90A00501EA4 /* laserBlue13.png in Resources */,
@@ -1455,6 +1483,7 @@
 				F84A7A331EB3A90B00501EA4 /* cockpitYellow_7.png in Resources */,
 				F84A7A101EB3A90A00501EA4 /* beam5.png in Resources */,
 				F84A79941EB3A90A00501EA4 /* playerShip2_damage3.png in Resources */,
+				F80753141EB416AA003DFD01 /* laserBlue01.png in Resources */,
 				F84A7A221EB3A90A00501EA4 /* cockpitGreen_6.png in Resources */,
 				F84A7AC31EB3B74B00501EA4 /* newgame_button.png in Resources */,
 				F84A7A291EB3A90B00501EA4 /* cockpitRed_5.png in Resources */,
@@ -1471,14 +1500,13 @@
 				F84A799B1EB3A90A00501EA4 /* fire03.png in Resources */,
 				F84A7A8E1EB3A90B00501EA4 /* shield_silver.png in Resources */,
 				F84A7A641EB3A90B00501EA4 /* wingYellow_3.png in Resources */,
-				F84A79C51EB3A90A00501EA4 /* enemyRed4.png in Resources */,
 				F84A7AC41EB3B74B00501EA4 /* no_button.png in Resources */,
 				F84A7A061EB3A90A00501EA4 /* meteorGrey_med2.png in Resources */,
-				F84A79891EB3A90A00501EA4 /* sfx_lose.ogg in Resources */,
 				F84A79EE1EB3A90A00501EA4 /* laserRed08.png in Resources */,
 				F80753061EB409E3003DFD01 /* menu_button.png in Resources */,
 				F84A79C01EB3A90A00501EA4 /* enemyGreen4.png in Resources */,
 				F84A79F31EB3A90A00501EA4 /* laserRed13.png in Resources */,
+				F807532F1EB4328C003DFD01 /* explosion.wav in Resources */,
 				F84A7A611EB3A90B00501EA4 /* wingYellow_0.png in Resources */,
 				F84A7A7E1EB3A90B00501EA4 /* powerupBlue_shield.png in Resources */,
 				F84A7A941EB3A90B00501EA4 /* things_silver.png in Resources */,
@@ -1491,9 +1519,11 @@
 				F84A79EA1EB3A90A00501EA4 /* laserRed04.png in Resources */,
 				F84A7A4A1EB3A90B00501EA4 /* wingBlue_1.png in Resources */,
 				F84A7A5D1EB3A90B00501EA4 /* wingRed_4.png in Resources */,
+				F80753211EB42AEB003DFD01 /* sfx_laser1.mp3 in Resources */,
 				F84A79931EB3A90A00501EA4 /* playerShip2_damage2.png in Resources */,
 				F84A7A7D1EB3A90B00501EA4 /* powerupBlue_bolt.png in Resources */,
 				F84A7A601EB3A90B00501EA4 /* wingRed_7.png in Resources */,
+				F80753171EB416AA003DFD01 /* playerShip1_blue2.png in Resources */,
 				F84A79B41EB3A90A00501EA4 /* enemyBlack2.png in Resources */,
 				F84A79F91EB3A90A00501EA4 /* meteorBrown_big3.png in Resources */,
 				F84A7A851EB3A90B00501EA4 /* powerupRed_bolt.png in Resources */,
@@ -1533,9 +1563,9 @@
 				F84A79AB1EB3A90A00501EA4 /* fire19.png in Resources */,
 				F84A7A951EB3A90B00501EA4 /* ufoBlue.png in Resources */,
 				F894488E1EAA7CD0009A2A5A /* star.png in Resources */,
+				F80753241EB42AEB003DFD01 /* sfx_shieldDown.mp3 in Resources */,
 				F84A7A6E1EB3A90B00501EA4 /* playerShip2_green.png in Resources */,
 				F84A79F01EB3A90A00501EA4 /* laserRed10.png in Resources */,
-				F84A79871EB3A90A00501EA4 /* sfx_laser1.ogg in Resources */,
 				F84A79CD1EB3A90A00501EA4 /* laserBlue07.png in Resources */,
 				F84A7A9B1EB3A90B00501EA4 /* buttonRed.png in Resources */,
 				F84A7A3C1EB3A90B00501EA4 /* gun03.png in Resources */,
@@ -1556,6 +1586,7 @@
 				F84A7A2C1EB3A90B00501EA4 /* cockpitYellow_0.png in Resources */,
 				F84A79831EB3A90A00501EA4 /* darkPurple.png in Resources */,
 				F84A79C81EB3A90A00501EA4 /* laserBlue02.png in Resources */,
+				F80753271EB42AEB003DFD01 /* sfx_zap.mp3 in Resources */,
 				F84A7A581EB3A90B00501EA4 /* wingGreen_7.png in Resources */,
 				F84A79E91EB3A90A00501EA4 /* laserRed03.png in Resources */,
 				F84A7A3D1EB3A90B00501EA4 /* gun04.png in Resources */,
@@ -1563,7 +1594,6 @@
 				F84A7AA21EB3A90B00501EA4 /* numeral4.png in Resources */,
 				F84A7A701EB3A90B00501EA4 /* playerShip2_red.png in Resources */,
 				F84A79F11EB3A90A00501EA4 /* laserRed11.png in Resources */,
-				F84A79881EB3A90A00501EA4 /* sfx_laser2.ogg in Resources */,
 				F84A79FB1EB3A90A00501EA4 /* meteorBrown_med1.png in Resources */,
 				F84A7A311EB3A90B00501EA4 /* cockpitYellow_5.png in Resources */,
 				F84A7A571EB3A90B00501EA4 /* wingGreen_6.png in Resources */,
@@ -1572,9 +1602,7 @@
 				F84A7A421EB3A90B00501EA4 /* gun09.png in Resources */,
 				F84A7A041EB3A90A00501EA4 /* meteorGrey_big4.png in Resources */,
 				F84A79A21EB3A90A00501EA4 /* fire10.png in Resources */,
-				F84A79E71EB3A90A00501EA4 /* laserRed01.png in Resources */,
 				F84A799C1EB3A90A00501EA4 /* fire04.png in Resources */,
-				F84A798A1EB3A90A00501EA4 /* sfx_shieldDown.ogg in Resources */,
 				F84A79EB1EB3A90A00501EA4 /* laserRed05.png in Resources */,
 				F84A7A911EB3A90B00501EA4 /* star_silver.png in Resources */,
 				F84A798F1EB3A90A00501EA4 /* playerShip1_damage1.png in Resources */,

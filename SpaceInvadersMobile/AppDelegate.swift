@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var level : Int = 1
     var score : Int = 100
     var won : Bool = false
+    var spareLives : Int = 0
     
     var highscore : Int = 0
     var highscores : [Highscore] = []

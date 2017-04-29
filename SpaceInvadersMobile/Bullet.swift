@@ -22,9 +22,9 @@ class Bullet: SKSpriteNode {
         
         super.init(texture: texture, color: SKColor.clear, size: newSize)
         
-//        if(bulletSound != nil){
-//            run(SKAction.playSoundFileNamed(bulletSound!, waitForCompletion: false))
-//        }
+        if(bulletSound != nil){
+            run(SKAction.playSoundFileNamed(bulletSound!, waitForCompletion: false))
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

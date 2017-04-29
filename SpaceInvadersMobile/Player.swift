@@ -16,7 +16,7 @@ class Player: SKSpriteNode {
     private var canFire = true
     private var invincible = false
     
-    private var lives:Int = 3 {
+    private var lives:Int = 1 {
         didSet {
             if (lives < 0) {
                 kill()
@@ -29,7 +29,7 @@ class Player: SKSpriteNode {
 
     init() {
         
-        let texture = SKTexture(imageNamed: "images/player1")
+        let texture = SKTexture(imageNamed: "playerShip1_blue1")
         let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
 
@@ -54,7 +54,7 @@ class Player: SKSpriteNode {
         var playerTextures: [SKTexture] = []
         
         for i in 1...2 {
-            playerTextures.append(SKTexture(imageNamed: "images/player\(i)"))
+            playerTextures.append(SKTexture(imageNamed: "playerShip1_blue\(i)"))
         }
         
         let playerAnimation = SKAction.repeatForever(SKAction.animate(with: playerTextures, timePerFrame: 0.1))
@@ -69,6 +69,8 @@ class Player: SKSpriteNode {
     }
     
     func kill() {
+        
+        NSLog("Player kill")
         
         invaderNum = 1
         
@@ -108,7 +110,7 @@ class Player: SKSpriteNode {
             
             canFire = false
             
-            let bullet = PlayerBullet(imageName: "images/laser.png", bulletSound: "images/laser.mp3")
+            let bullet = PlayerBullet(imageName: "laserBlue01", bulletSound: "sfx_laser1")
             bullet.position.x = self.position.x
             bullet.position.y = self.position.y + self.size.height/2
             scene.addChild(bullet)

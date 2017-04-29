@@ -8,6 +8,8 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
+
 // import GameplayKit
 
 class GameViewController: UIViewController {
@@ -19,23 +21,13 @@ class GameViewController: UIViewController {
         let scene = StartGameScene(size: view.bounds.size)
         let skView = view as! SKView
         
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+//        skView.showsFPS = true
+//        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
         
-//        let ac = UIAlertController(title: "Enter Name", message: nil, preferredStyle: .alert)
-//        ac.addTextField(configurationHandler: nil)
-//        
-//        ac.addAction(UIAlertAction(title: "OK", style: .default) { [unowned self, ac] _ in
-//            let playerName = ac.textFields![0]
-//            
-//        })
-//        
-//        self.present(ac, animated: true, completion: nil)
-        
-        
+  
     }
     
     override var prefersStatusBarHidden: Bool {

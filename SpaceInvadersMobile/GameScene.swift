@@ -32,7 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Invader Variables
     let rowsOfInvaders = 4
     var invaderSpeed = (UIScreen.main.bounds.width/384)
-    let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no vertical space between enemies.
+    let enemySpacing = CGFloat(1.5) // Spacing mutliplier based on invader height. x1 leaves no space between enemies.
     let leftBounds = CGFloat(30)
     var rightBounds = CGFloat(0)
     var invadersWhoCanFire: [Invader] = []
@@ -107,14 +107,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 invaderCol = j
                 
-                var tempInvader: Invader = Invader(imageName: "invader1.png")
-                switch(Int(arc4random_uniform(3))){
+                var tempInvader: Invader = Invader(imageName: "enemyBlack1")
+                switch(Int(arc4random_uniform(4))){
             
                 case 1:
-                    tempInvader = Invader(imageName: "invader2.png")
+                    tempInvader = Invader(imageName: "enemyBlue2")
                     break
                 case 2:
-                    tempInvader = Invader(imageName: "invader3.png")
+                    tempInvader = Invader(imageName: "enemyGreen3")
+                    break
+                case 3:
+                    tempInvader = Invader(imageName: "enemyRed4")
                     break
                 default:
                     break
@@ -149,7 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var positionAdd = CGFloat(10)
         for _ in 1...player.getPlayersLives() {
             
-            let life = SKSpriteNode(imageNamed: "images/player2.png")
+            let life = SKSpriteNode(imageNamed: "playerShip1_blue.png")
             life.name = "life"
             
             let lifeScale = (livesWidthRatio/((100 * life.size.width)/UIScreen.main.bounds.width))
@@ -180,8 +183,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontSize = CGFloat((UIScreen.main.bounds.width/10) * scoreTextScaler) // XXX ADJUST TO SCREEN WIDTH
         scoreLabel.position = CGPoint(x: UIScreen.main.bounds.width/2,
                                       y: UIScreen.main.bounds.height - livesVertPos)
-    
-        
         addChild(scoreLabel)
         
     }
@@ -281,7 +282,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 return
             }
             
-//            let invadersPerRow = invaderNum * 2 + 1
+            run(SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false))
+
             let theInvader = firstBody.node as! Invader
             let newInvaderRow = theInvader.invaderRow - 1
             let newInvaderCol = theInvader.invaderCol
@@ -317,6 +319,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if !player.isPlayerInvincible() {
                 
+                run(SKAction.playSoundFileNamed("playerExplosion.wav", waitForCompletion: false))
+                
                 // Removing lives from the screen.
                 // http://stackoverflow.com/questions/26250862/beginner-xcode-swift-sprite-kit-remove-sprite-by-name-crash
                 var lifeToRemove = SKNode()
@@ -329,17 +333,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.removeChildren(in: [lifeToRemove])
             }
             
+            appDelegate.score = score
             player.die()
             
         }
         
-        //------------------------- Player Gameover -------------------------//
+        //------------------------- Player Collides With Invaders -------------------------//
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
             (secondBody.categoryBitMask & CollisionCategories.Player != 0)) {
             
             appDelegate.score = score
-            
-            NSLog("Gamescene. Gameover. Score: \(appDelegate.score)")
             
             player.kill()
             
@@ -360,23 +363,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         NSLog("LEVEL COMPLETE")
         
-//        if(invaderNum <= maxLevels){
-//            
-//            appDelegate.level += 1
-//            appDelegate.score = score
-//            
-//            let levelCompleteScene = LevelCompleteScene(size: size)
-//            levelCompleteScene.scaleMode = scaleMode
-//            
-//            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
-//            view?.presentScene(levelCompleteScene,transition: transitionType)
-//        }
-//        else{
+        // Assign bonus points
+        appDelegate.spareLives = player.getPlayersLives()
+        score += (player.getPlayersLives() * 100)
+        score += (appDelegate.level * 1000)
+        
+        if(invaderNum <= maxLevels){
+            
+            appDelegate.level += 1
+            appDelegate.score = score
+            
+            let levelCompleteScene = LevelCompleteScene(size: size)
+            levelCompleteScene.scaleMode = scaleMode
+            
+            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+            view?.presentScene(levelCompleteScene,transition: transitionType)
+        }
+        else{
+            NSLog("Game Completed")
+            
             invaderNum = 1
             appDelegate.won = true
             appDelegate.score = score
             gameOver()
-//        }
+        }
     }
     
     func gameOver(){

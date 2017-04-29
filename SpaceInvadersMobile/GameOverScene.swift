@@ -18,9 +18,11 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     let scoreTextScaler = CGFloat(0.657895)
     let highscoreTextScaler = CGFloat(0.6)
     
-    let maxNameLength = 16
+    let maxNameLength = 12
     
     override func didMove(to view: SKView) {
+        
+        appDelegate.level = 1
         
         NSLog("GameOver, score: \(appDelegate.score)")
         

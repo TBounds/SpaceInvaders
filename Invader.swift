@@ -13,11 +13,11 @@ class Invader: SKSpriteNode {
 
     var invaderRow = 0
     var invaderCol = 0
-    let desiredWidthRatio : CGFloat = 5 // Percentage of screen width you want the enemies' width to take
+    let desiredWidthRatio : CGFloat = 6 // Percentage of screen width you want the enemies' width to take
     
     init(imageName: String) {
         
-        let texture = SKTexture(imageNamed: ("images/" + imageName))
+        let texture = SKTexture(imageNamed: (imageName))
         let textureScale = (desiredWidthRatio/((100 * texture.size().width)/UIScreen.main.bounds.width))
         let newSize = CGSize(width: texture.size().width * textureScale, height: texture.size().height * textureScale)
         
@@ -25,7 +25,7 @@ class Invader: SKSpriteNode {
         self.name = "invader"
         
         self.physicsBody = SKPhysicsBody(texture: self.texture!, size: newSize)
-        self.physicsBody?.isDynamic = true
+        self.physicsBody?.isDynamic = false
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Invader
         self.physicsBody?.contactTestBitMask = CollisionCategories.PlayerBullet | CollisionCategories.Player
@@ -39,7 +39,7 @@ class Invader: SKSpriteNode {
     
     func fireBullet(scene: SKScene){
         
-        let bullet = InvaderBullet(imageName: "images/laser.png", bulletSound: nil)
+        let bullet = InvaderBullet(imageName: "laserRed01", bulletSound: "sfx_laser2")
         bullet.position.x = self.position.x
         bullet.position.y = self.position.y - self.size.height/2
         scene.addChild(bullet)

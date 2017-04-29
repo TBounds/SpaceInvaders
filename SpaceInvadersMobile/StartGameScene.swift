@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class StartGameScene: SKScene {
     
@@ -46,6 +47,9 @@ class StartGameScene: SKScene {
         starField?.position = CGPoint(x: size.width/2, y: size.height)
         starField?.particlePositionRange = CGVector(dx: size.width, dy: size.height)
         addChild(starField!)
+        
+        // http://stackoverflow.com/questions/22107219/sprite-kit-keep-playing-audio-when-changing-scene
+        self.run(SKAction.playSoundFileNamed("Light-Years_V001_Looping.mp3", waitForCompletion: false))
        
     }
     
