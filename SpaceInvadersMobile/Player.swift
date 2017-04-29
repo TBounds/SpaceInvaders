@@ -16,7 +16,7 @@ class Player: SKSpriteNode {
     private var canFire = true
     private var invincible = false
     
-    private var lives:Int = 1 {
+    private var lives:Int = 3 {
         didSet {
             if (lives < 0) {
                 kill()
@@ -110,16 +110,29 @@ class Player: SKSpriteNode {
             
             canFire = false
             
-            let bullet = PlayerBullet(imageName: "laserBlue01", bulletSound: "sfx_laser1")
-            bullet.position.x = self.position.x
-            bullet.position.y = self.position.y + self.size.height/2
-            scene.addChild(bullet)
+            let bullet1 = PlayerBullet(imageName: "laserBlue01", bulletSound: "sfx_laser1")
+            bullet1.position.x = self.position.x - self.size.width/2
+            bullet1.position.y = self.position.y + self.size.height/2
+            scene.addChild(bullet1)
             
-            let moveBulletAction = SKAction.move(to: CGPoint(x:self.position.x,y:scene.size.height + bullet.size.height), duration: 1.0)
+            let bullet2 = PlayerBullet(imageName: "laserBlue01", bulletSound: nil)
+            bullet2.position.x = self.position.x + self.size.width/2
+            bullet2.position.y = self.position.y + self.size.height/2
+            scene.addChild(bullet2)
+            
+            let moveBulletAction1 = SKAction.move(to: CGPoint(x:self.position.x - self.size.width/2,
+                                                              y: scene.size.height + bullet1.size.height),
+                                                              duration: 1.0)
+            let moveBulletAction2 = SKAction.move(to: CGPoint(x:self.position.x + self.size.width/2,
+                                                              y: scene.size.height + bullet2.size.height),
+                                                              duration: 1.0)
+            
             let removeBulletAction = SKAction.removeFromParent()
-            bullet.run(SKAction.sequence([moveBulletAction,removeBulletAction]))
             
-            let waitToEnableFire = SKAction.wait(forDuration: 0.1) // XXX OG duration was 0.5
+            bullet1.run(SKAction.sequence([moveBulletAction1, removeBulletAction]))
+            bullet2.run(SKAction.sequence([moveBulletAction2, removeBulletAction]))
+            
+            let waitToEnableFire = SKAction.wait(forDuration: 0.5) // XXX OG duration was 0.5
             run(waitToEnableFire,completion:{
                 self.canFire = true
             })
