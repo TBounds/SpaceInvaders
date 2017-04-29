@@ -29,7 +29,7 @@ class HighscoreScene: SKScene {
         displayHighscores() // Called first in order to set eraserStart
         
         let startGameButton = SKSpriteNode(imageNamed: "newgame_button.png")
-        let clearHighscoresButton = SKSpriteNode(imageNamed: "images/eraser.png")
+        let clearHighscoresButton = SKSpriteNode(imageNamed: "eraser.png")
         
         let textureScale = (desiredWidthRatio/((100 * startGameButton.size.width)/UIScreen.main.bounds.width))
         let deleteScale = (deleteWidthRatio/((100 * clearHighscoresButton.size.width)/UIScreen.main.bounds.width))

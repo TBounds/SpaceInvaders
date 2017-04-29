@@ -26,6 +26,7 @@
 		F80753271EB42AEB003DFD01 /* sfx_zap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F80753201EB42AEB003DFD01 /* sfx_zap.mp3 */; };
 		F807532D1EB431E3003DFD01 /* playerExplosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = F807532C1EB431E3003DFD01 /* playerExplosion.wav */; };
 		F807532F1EB4328C003DFD01 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = F807532E1EB4328C003DFD01 /* explosion.wav */; };
+		F80753311EB44083003DFD01 /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = F80753301EB44083003DFD01 /* eraser.png */; };
 		F80A141D1EA0050400263144 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A141C1EA0050400263144 /* LevelCompleteScene.swift */; };
 		F80A14211EA00E5C00263144 /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = F80A14201EA00E5C00263144 /* StarField.sks */; };
 		F84A79811EB3A90A00501EA4 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = F84A783B1EB3A90A00501EA4 /* black.png */; };
@@ -377,6 +378,7 @@
 		F80753201EB42AEB003DFD01 /* sfx_zap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_zap.mp3; sourceTree = "<group>"; };
 		F807532C1EB431E3003DFD01 /* playerExplosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerExplosion.wav; sourceTree = "<group>"; };
 		F807532E1EB4328C003DFD01 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		F80753301EB44083003DFD01 /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser.png; sourceTree = "<group>"; };
 		F80A141C1EA0050400263144 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
 		F80A14201EA00E5C00263144 /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
 		F84A783B1EB3A90A00501EA4 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				F80753091EB416AA003DFD01 /* enemyBlue2.png */,
 				F807530A1EB416AA003DFD01 /* enemyGreen3.png */,
 				F807530B1EB416AA003DFD01 /* enemyRed4.png */,
+				F80753301EB44083003DFD01 /* eraser.png */,
 				F807530C1EB416AA003DFD01 /* laserBlue01.png */,
 				F807530D1EB416AA003DFD01 /* laserRed01.png */,
 				F807530E1EB416AA003DFD01 /* playerShip1_blue1.png */,
@@ -1514,6 +1517,7 @@
 				F84A7A7C1EB3A90B00501EA4 /* powerupBlue.png in Resources */,
 				F84A7A281EB3A90B00501EA4 /* cockpitRed_4.png in Resources */,
 				F84A7A841EB3A90B00501EA4 /* powerupRed.png in Resources */,
+				F80753311EB44083003DFD01 /* eraser.png in Resources */,
 				F84A7A721EB3A90B00501EA4 /* playerShip3_green.png in Resources */,
 				F84A7A2D1EB3A90B00501EA4 /* cockpitYellow_1.png in Resources */,
 				F84A79EA1EB3A90A00501EA4 /* laserRed04.png in Resources */,

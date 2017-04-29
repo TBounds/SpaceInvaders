@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
+        else {
+            saveHighscore(name: "Some Chump", score: 1200)
+        }
 
         return true
     }
