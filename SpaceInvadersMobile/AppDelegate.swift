@@ -22,24 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    func sandboxArchivePath() -> String {
+        let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+        return dir.appendingPathComponent("highscores.plist")
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch. 
+        // Override point for customization after application launch.
         
-//        var a1 = Array(1...10)
-//        NSLog("\(a1)")
-//        a1.insert(7, at: 4)
-//        NSLog("\(a1)")
+        let archiveName = sandboxArchivePath()
         
-        for i in 0 ..< 10 {
+        if FileManager.default.fileExists(atPath: archiveName) {
             
-            let name = "Player " + "\(i)"
-            let score = 50
-            saveHighscore(name: name, score: score)
+            let saveState = NSArray(contentsOfFile: archiveName)
             
+            for i in 0 ..< saveState!.count {
+                saveHighscore(name: (saveState?[i] as! NSDictionary).value(forKey: "name") as! String,
+                              score: (saveState?[i] as! NSDictionary).value(forKey: "score") as! Int)
+            }
             
         }
-        
-        
+
         return true
     }
     
@@ -87,8 +90,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let archiveName = sandboxArchivePath()
+        
+        let savedState : NSMutableArray = []
+        
+        for i in 0 ..< highscores.count {
+            
+            let scoreDict : NSDictionary = [
+                "name" : highscores[i].name as String,
+                "score" : highscores[i].score as Int
+            ]
+    
+            savedState.add(scoreDict)
+            
+        }
+        
+        savedState.write(toFile: archiveName, atomically : true)
+
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

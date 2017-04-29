@@ -20,8 +20,6 @@ class GameOverScene: SKScene, UITextFieldDelegate {
     
     let maxNameLength = 16
     
-    // var temp : UITextField = UITextField()
-    
     override func didMove(to view: SKView) {
         
         NSLog("GameOver, score: \(appDelegate.score)")
@@ -66,7 +64,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         let scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.text = "\(appDelegate.score)"
-        scoreLabel.fontSize = CGFloat((UIScreen.main.bounds.width/10) * scoreTextScaler) // XXX ADJUST TO SCREEN WIDTH
+        scoreLabel.fontSize = CGFloat((UIScreen.main.bounds.width/10) * scoreTextScaler)
         scoreLabel.position = CGPoint(x: UIScreen.main.bounds.width/2,
                                       y: invaderText.position.y - (invaderText.fontSize * 1.25))
         addChild(scoreLabel)
@@ -81,7 +79,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
         
         let horOffset = UIScreen.main.bounds.width/4
         let vertStart = UIScreen.main.bounds.height - UIScreen.main.bounds.height/5
-        let fontSize = CGFloat((UIScreen.main.bounds.width/10) * highscoreTextScaler)       // SCALE THIS
+        let fontSize = CGFloat((UIScreen.main.bounds.width/10) * highscoreTextScaler)
         let vertOffset = fontSize * 1.5
         
         // Dispay column labels for highscore.
@@ -173,23 +171,11 @@ class GameOverScene: SKScene, UITextFieldDelegate {
             
             view?.addSubview(nameField)
             
-
-            
-            
         }
         
     }
     
     // http://stackoverflow.com/questions/24710041/adding-uitextfield-on-uiview-programmatically-swift/32602425
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        NSLog("TextField did begin editing method called")
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        NSLog("poop")
-
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         let newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
@@ -199,15 +185,7 @@ class GameOverScene: SKScene, UITextFieldDelegate {
 
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        NSLog("TextField should snd editing method called")
-        return true;
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        NSLog("TextField should return method called")
-        
-        
         
         // Removes keyboard
         textField.resignFirstResponder();
